@@ -58,7 +58,7 @@
     .om-btn-gold::after { content:'';position:absolute;top:0;left:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);transform:translateX(-100%) skewX(-20deg);pointer-events:none; }
     .om-btn-gold:hover::after { animation:shimmerSlide 0.75s ease forwards; }
     @keyframes omLineGrow { from{transform:scaleX(0);} to{transform:scaleX(1);} }
-    @keyframes omPageIn { from{opacity:0;transform:translateY(12px);} to{opacity:1;transform:translateY(0);} }
+    @keyframes omPageIn { from{opacity:0;} to{opacity:1;} }
     body { animation: omPageIn 0.5s cubic-bezier(.16,1,.3,1) both; }
 
     .ring-card { animation:floatY2 5s ease-in-out infinite; }
