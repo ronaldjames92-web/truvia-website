@@ -896,7 +896,11 @@
 
       <!-- RIGHT — Premium glass form card -->
       <div class="reveal-right">
-        <div style="position:relative;background:linear-gradient(145deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.055) 100%);backdrop-filter:blur(48px) saturate(200%);-webkit-backdrop-filter:blur(48px) saturate(200%);border:1px solid rgba(255,255,255,0.14);border-radius:28px;padding:44px;box-shadow:0 40px 80px rgba(0,0,0,0.45),0 0 0 0.5px rgba(255,255,255,0.06) inset,0 1px 0 rgba(255,255,255,0.18) inset;">
+        <form id="ctaForm" action="https://api.web3forms.com/submit" method="POST" style="position:relative;background:linear-gradient(145deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.055) 100%);backdrop-filter:blur(48px) saturate(200%);-webkit-backdrop-filter:blur(48px) saturate(200%);border:1px solid rgba(255,255,255,0.14);border-radius:28px;padding:44px;box-shadow:0 40px 80px rgba(0,0,0,0.45),0 0 0 0.5px rgba(255,255,255,0.06) inset,0 1px 0 rgba(255,255,255,0.18) inset;">
+          <input type="hidden" name="access_key" value="c47f94ec-38c0-43e3-b6e7-b47aed48767c">
+          <input type="hidden" name="subject" value="New Free Consultation Request — Truvia Website">
+          <input type="hidden" name="from_name" value="Truvia Website">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <!-- Gold top accent -->
           <div style="position:absolute;top:0;left:44px;right:44px;height:1.5px;background:linear-gradient(90deg,transparent,rgba(232,200,112,0.7) 30%,rgba(232,200,112,0.9) 50%,rgba(232,200,112,0.7) 70%,transparent);border-radius:0 0 2px 2px;"></div>
           <!-- Inner ambient glow -->
@@ -911,17 +915,17 @@
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
             <div>
               <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Full Name</label>
-              <input type="text" placeholder="Your name" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
+              <input type="text" name="name" required placeholder="Your name" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
             </div>
             <div>
               <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">WhatsApp</label>
-              <input type="tel" placeholder="+965 XXXX XXXX" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
+              <input type="tel" name="whatsapp" required placeholder="+965 XXXX XXXX" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
             </div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
             <div>
               <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Occupation</label>
-              <select style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
+              <select name="occupation" style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
                 <option value="">Select occupation</option>
                 <option>Engineering</option>
                 <option>Healthcare / Nursing</option>
@@ -934,7 +938,7 @@
             </div>
             <div>
               <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Destination</label>
-              <select style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
+              <select name="destination" style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
                 <option value="">Preferred country</option>
                 <option>Australia</option>
                 <option>Canada</option>
@@ -946,19 +950,53 @@
           </div>
           <div style="margin-bottom:20px;">
             <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Anything specific you'd like to discuss? <span style="color:rgba(255,255,255,0.18);font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
-            <textarea rows="3" placeholder="e.g. I'm a nurse with 5 years experience, interested in Subclass 190…" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:13px;color:#F8FBFF;outline:none;resize:none;transition:border-color 0.25s,background 0.25s;line-height:1.6;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'"></textarea>
+            <textarea name="message" rows="3" placeholder="e.g. I'm a nurse with 5 years experience, interested in Subclass 190…" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:13px;color:#F8FBFF;outline:none;resize:none;transition:border-color 0.25s,background 0.25s;line-height:1.6;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'"></textarea>
           </div>
 
-          <button id="ctaSubmitBtn" class="btn-gold" style="width:100%;justify-content:center;font-size:15px;padding:17px;border-radius:13px;cursor:pointer;letter-spacing:0.01em;position:relative;overflow:hidden;"
-            onclick="var b=document.getElementById('ctaSubmitBtn');b.innerHTML='<svg width=16 height=16 viewBox=\'0 0 16 16\' fill=none style=\'margin-right:8px\'><path d=\'M2 8h12M8 3l5 5-5 5\' stroke=\'currentColor\' stroke-width=1.5 stroke-linecap=\'round\'/></svg> Request received — we\'ll be in touch within 24 hrs';b.style.background='linear-gradient(135deg,#1a7a3a,#22a050)';b.style.pointerEvents='none';">
+          <button type="submit" id="ctaSubmitBtn" class="btn-gold" style="width:100%;justify-content:center;font-size:15px;padding:17px;border-radius:13px;cursor:pointer;letter-spacing:0.01em;position:relative;overflow:hidden;">
             Request Free Consultation &nbsp;→
           </button>
+          <div id="ctaFormError" style="display:none;color:#ff8080;font-family:'Inter',sans-serif;font-size:12.5px;text-align:center;margin-top:12px;">Something went wrong. Please try again or WhatsApp us directly.</div>
           <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;">
             <div style="width:5px;height:5px;border-radius:50%;background:rgba(158,133,72,0.5);"></div>
             <p style="font-family:'Inter',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.22);margin:0;">No spam. Confidential. Response within 24 hours.</p>
           </div>
-        </div>
+        </form>
       </div>
+      <script>
+      (function(){
+        var form = document.getElementById('ctaForm');
+        if (!form) return;
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var btn = document.getElementById('ctaSubmitBtn');
+          var errorEl = document.getElementById('ctaFormError');
+          errorEl.style.display = 'none';
+          var originalHTML = btn.innerHTML;
+          btn.innerHTML = 'Sending…';
+          btn.style.pointerEvents = 'none';
+          fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+          }).then(function(res){ return res.json(); }).then(function(data){
+            if (data.success) {
+              btn.innerHTML = '<svg width=16 height=16 viewBox=\'0 0 16 16\' fill=none style=\'margin-right:8px\'><path d=\'M2 8h12M8 3l5 5-5 5\' stroke=\'currentColor\' stroke-width=1.5 stroke-linecap=\'round\'/></svg> Request received — we\'ll be in touch within 24 hrs';
+              btn.style.background = 'linear-gradient(135deg,#1a7a3a,#22a050)';
+              form.reset();
+            } else {
+              btn.innerHTML = originalHTML;
+              btn.style.pointerEvents = 'auto';
+              errorEl.style.display = 'block';
+            }
+          }).catch(function(){
+            btn.innerHTML = originalHTML;
+            btn.style.pointerEvents = 'auto';
+            errorEl.style.display = 'block';
+          });
+        });
+      })();
+      </script>
 
     </div>
   </div>
