@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us — Truvia Consultants</title>
+<meta name="description" content="Kuwait's leading immigration consultancy. MARA-registered specialists in Australian skilled migration and more.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @media(max-width:900px){.mara-chip{display:none !important;}}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #EBE8E8; color: #1C2B3A; overflow-x: hidden; }
+    .nav-link { font-family:'Inter',sans-serif; font-size:13px; font-weight:500; color:#4A5568; text-decoration:none; padding:7px 11px; border-radius:6px; transition:color 0.2s,background 0.2s; white-space:nowrap; background:none; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:4px; line-height:1; }
+    .nav-link:hover { color:#2F486D; background:rgba(47,72,109,0.07); }
+    .dd-panel { position:absolute; top:calc(100% + 10px); left:0; background:#ffffff; border:1px solid #E2DDD9; border-radius:10px; padding:6px; min-width:190px; box-shadow:0 8px 28px rgba(47,72,109,0.13); opacity:0; pointer-events:none; transform:translateY(-6px); transition:opacity 0.18s,transform 0.18s; z-index:300; }
+    .dd-wrap::after { content:''; position:absolute; left:0; right:0; top:100%; height:14px; }
+    .dd-panel.open { opacity:1; pointer-events:auto; transform:translateY(0); }
+    .dd-wrap:hover .dd-panel { opacity:1; pointer-events:auto; transform:translateY(0); }
+    .dd-link { display:block; font-family:'Inter',sans-serif; font-size:13px; font-weight:500; color:#374151; text-decoration:none; padding:8px 12px; border-radius:6px; transition:color 0.15s,background 0.15s; white-space:nowrap; }
+    .dd-link:hover { color:#2F486D; background:rgba(47,72,109,0.07); }
+    .dd-sub-wrap{position:relative;} .dd-sub-parent{display:flex;align-items:center;justify-content:space-between;gap:10px;} .dd-sub-panel{position:absolute;top:-7px;left:calc(100% + 8px);background:#ffffff;border:1px solid #E2DDD9;border-radius:10px;padding:6px;min-width:210px;box-shadow:0 12px 34px rgba(47,72,109,0.16);opacity:0;pointer-events:none;transform:translateX(-6px);transition:opacity .2s cubic-bezier(.16,1,.3,1),transform .2s cubic-bezier(.16,1,.3,1);z-index:400;} .dd-sub-wrap:hover .dd-sub-panel{opacity:1;pointer-events:auto;transform:translateX(0);}
+    .section-tag { display:inline-flex; align-items:center; background:rgba(158,133,72,0.1); border:1px solid rgba(158,133,72,0.25); border-radius:100px; padding:5px 14px; font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#9E8548; letter-spacing:0.08em; text-transform:uppercase; }
+    .btn-primary { background:#2F486D; color:#ffffff; font-family:'Inter',sans-serif; font-weight:600; font-size:14px; padding:13px 26px; border-radius:8px; text-decoration:none; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:background 0.2s; }
+    .btn-primary:hover { background:#3d5f8f; }
+    ::-webkit-scrollbar { width:5px; } ::-webkit-scrollbar-track { background:#EBE8E8; } ::-webkit-scrollbar-thumb { background:#C8C4C4; border-radius:3px; }
+  
+    @keyframes tsGlow { 0%,100%{box-shadow:0 0 0 0 rgba(158,133,72,0);} 50%{box-shadow:0 0 28px 4px rgba(158,133,72,0.18);} }
+    @keyframes aboutPageIn { from{opacity:0;transform:translateY(14px);} to{opacity:1;transform:translateY(0);} }
+    @keyframes shimmerMove { 0%{transform:translateX(-100%) skewX(-15deg);} 100%{transform:translateX(500%) skewX(-15deg);} }
+
+    /* ── Premium motion system ── */
+    @keyframes omFadeUp { from{opacity:0;transform:translateY(38px);} to{opacity:1;transform:translateY(0);} }
+    @keyframes omMaskUp { from{transform:translateY(110%);} to{transform:translateY(0);} }
+    @keyframes omFloat { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(30px,-26px) scale(1.08);} }
+    @keyframes omFloat2 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(-26px,20px);} }
+    @keyframes omPulseDot { 0%,100%{opacity:0.6;transform:scale(1);} 50%{opacity:1;transform:scale(1.35);} }
+    .om-r{opacity:0;will-change:opacity,transform;}
+    .om-r.om-in{animation:omFadeUp .9s cubic-bezier(.16,1,.3,1) forwards;}
+    .om-ml{display:block;overflow:hidden;padding-bottom:0.12em;margin-bottom:-0.12em;}
+    .om-ml > .om-ml-i{display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.16,1,.3,1);will-change:transform;}
+    .om-ml.om-in > .om-ml-i{transform:translateY(0);}
+    .om-mag{transition:transform .3s cubic-bezier(.16,1,.3,1);}
+  
+  
+    /* ── Premium upgrade CSS ── */
+    @keyframes omLineGrow { from{transform:scaleX(0);} to{transform:scaleX(1);} }
+    @keyframes omShimmer { 0%{transform:translateX(-100%) skewX(-20deg);} 100%{transform:translateX(400%) skewX(-20deg);} }
+    @keyframes omWordIn { from{opacity:0;transform:translateY(18px);filter:blur(6px);} to{opacity:1;transform:translateY(0);filter:blur(0);} }
+    @keyframes omPageIn { from{opacity:0;transform:translateY(12px);} to{opacity:1;transform:translateY(0);} }
+    @keyframes omPulseRing { 0%{box-shadow:0 0 0 0 rgba(158,133,72,0.35);} 70%{box-shadow:0 0 0 14px rgba(158,133,72,0);} 100%{box-shadow:0 0 0 0 rgba(158,133,72,0);} }
+    @keyframes omBarFill { from{width:0%;} to{width:var(--bar-w,80%);} }
+
+    /* Page entrance */
+    body { opacity: 1; }
+
+    /* Gold shimmer buttons */
+    .om-btn-gold { position:relative; overflow:hidden; }
+    .om-btn-gold::after { content:''; position:absolute; top:0; left:0; width:35%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent); transform:translateX(-100%) skewX(-20deg); pointer-events:none; }
+    .om-btn-gold:hover::after { animation:omShimmer 0.7s ease forwards; }
+
+    /* Pulse ring on CTA */
+    .om-pulse { animation: omPulseRing 2.4s ease-out infinite; }
+
+    /* Section line accent */
+    .om-line { display:block; height:2px; background:linear-gradient(90deg,#9E8548,transparent); border-radius:2px; transform-origin:left; transform:scaleX(0); margin-bottom:16px; }
+    .om-line.om-in { animation:omLineGrow 0.9s cubic-bezier(.16,1,.3,1) forwards; }
+
+    /* Cursor spotlight */
+    #om-cursor-glow { pointer-events:none; position:fixed; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(158,133,72,0.07) 0%,transparent 60%); transform:translate(-50%,-50%); z-index:9999; transition:opacity 0.4s; opacity:0; }
+  
+  </style>
+
+</head>
+<body>
+
+
+
+<!-- NAV -->
+<nav id="navbar" style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.94);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(47,72,109,0.09);height:68px;display:flex;align-items:center;padding:0 40px;box-shadow:0 2px 12px rgba(47,72,109,0.07);">
+  <a href="index.html" style="text-decoration:none;margin-right:32px;flex-shrink:0;display:flex;align-items:center;">
+    <img src="uploads/truvia-logo.png" alt="Truvia Consultants" style="height:50px;width:auto;display:block;">
+  </a>
+  <div style="display:flex;align-items:center;gap:0;flex:1;">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="dd-wrap" style="position:relative;"><a href="about.html" class="nav-link" style="color:#2F486D;font-weight:600;">About Us <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="about.html" class="dd-link">Company Profile</a><a href="about.html#why" class="dd-link">Why Choose Truvia</a></div></div>
+    <div class="dd-wrap" style="position:relative;"><a href="australia-migration.html" class="nav-link">Australia <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel" style="min-width:248px;"><a href="australia-migration.html" class="dd-link">Australia Overview</a><a href="australia-gsm.html" class="dd-link">General Skilled Migration (GSM)</a><a href="australia-employer-sponsored.html" class="dd-link">Employer Sponsored Visas</a><a href="australia-visitor-visa.html" class="dd-link">Visitor Visa (Subclass 600)</a><a href="australia-national-innovation-visa.html" class="dd-link">National Innovation Visa</a><a href="australia-skills-assessment.html" class="dd-link">Skills Assessment Authorities</a><a href="australia-appeals.html" class="dd-link">Appeals &amp; Reviews</a><div style="height:1px;background:#EBE8E8;margin:6px 8px;"></div><a href="australia-salaries.html" class="dd-link">Salaries in Australia</a><a href="australia-cost-of-living.html" class="dd-link">Cost of Living in Australia</a><a href="australia-pr-points-calculator.html" class="dd-link">PR Points Calculator</a><a href="australia-processing-times.html" class="dd-link">Processing Times</a><div class="dd-sub-wrap"><a href="australia-occupations-in-demand.html" class="dd-link dd-sub-parent">Occupations in Demand<svg width="8" height="8" viewBox="0 0 9 9" fill="none" style="transform:rotate(-90deg);flex-shrink:0;"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-sub-panel"><a href="australia-engineer-pr.html" class="dd-link">Engineers</a><a href="australia-it-jobs.html" class="dd-link">IT Professionals</a><a href="australia-nurse-salary.html" class="dd-link">Nurses &amp; Medical</a><a href="australia-trades-pr.html" class="dd-link">Trades &amp; Welders</a><a href="australia-accountant-pr.html" class="dd-link">Accountants</a><a href="australia-chef-hospitality-pr.html" class="dd-link">Chefs &amp; Hospitality</a></div></div></div></div>
+    <div class="dd-wrap" style="position:relative;"><a href="canada-immigration.html" class="nav-link">Canada <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="canada-immigration.html" class="dd-link">Express Entry</a><a href="canada-immigration.html#pnp" class="dd-link">PNP</a><a href="canada-immigration.html#aip" class="dd-link">AIP &amp; RCIP</a></div></div>
+    <div class="dd-wrap" style="position:relative;"><a href="training.html" class="nav-link">Training <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="training.html" class="dd-link">IELTS Preparation</a><a href="training.html#pte" class="dd-link">PTE Academic Training</a><a href="training.html#oet" class="dd-link">OET Preparation</a><a href="training.html#nclex" class="dd-link">NCLEX Training</a></div></div>
+    <div class="dd-wrap" style="position:relative;"><a href="other-services.html" class="nav-link">Other Services <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="other-services.html" class="dd-link">Study Visa</a><a href="other-services.html#visitor" class="dd-link">Visitor Visas</a><a href="other-services.html#investment" class="dd-link">Residency by Investment</a></div></div>
+    <a href="success-stories.html" class="nav-link">Success Stories</a>
+    <div class="dd-wrap" style="position:relative;"><a href="blog.html" class="nav-link">Blog <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="blog.html" class="dd-link">Canada Immigration News</a><a href="blog.html#australia" class="dd-link">Australia Updates</a></div></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;flex-shrink:0;">
+    <a href="index.html#why-mara" class="mara-chip" title="MARA Registered Migration Agents — Australian Government authorised" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(59,92,138,0.92) 0%,rgba(36,60,94,0.96) 100%);backdrop-filter:blur(12px) saturate(1.4);-webkit-backdrop-filter:blur(12px) saturate(1.4);border:1px solid rgba(255,255,255,0.22);border-radius:100px;padding:7px 15px;text-decoration:none;box-shadow:0 4px 14px rgba(36,60,94,0.30),inset 0 1px 0 rgba(255,255,255,0.35),inset 0 -2px 4px rgba(0,0,0,0.10);transition:box-shadow .3s ease,transform .3s ease,background .3s ease;" onmouseover="this.style.background='linear-gradient(135deg,rgba(66,102,150,0.96) 0%,rgba(42,68,104,0.98) 100%)';this.style.boxShadow='0 7px 22px rgba(36,60,94,0.42),inset 0 1px 0 rgba(255,255,255,0.45),inset 0 -2px 5px rgba(0,0,0,0.12)';this.style.transform='translateY(-1.5px)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(59,92,138,0.92) 0%,rgba(36,60,94,0.96) 100%)';this.style.boxShadow='0 4px 14px rgba(36,60,94,0.30),inset 0 1px 0 rgba(255,255,255,0.35),inset 0 -2px 4px rgba(0,0,0,0.10)';this.style.transform='translateY(0)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#E8C87A" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="#E8C87A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#E8C87A;letter-spacing:0.04em;white-space:nowrap;">MARA Registered</span></a>
+    <a href="tel:+96550610991" style="font-family:'Inter',sans-serif;font-size:13px;color:#2F486D;font-weight:600;text-decoration:none;">+965 5061 0991</a>
+    <a href="index.html#contact" class="btn-primary" style="font-size:13px;padding:10px 20px;border-radius:7px;">Free Consultation</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section style="position:relative;overflow:hidden;background:#091828;padding:88px 40px;min-height:340px;display:flex;align-items:center;">
+  <div style="position:absolute;inset:0;background:url('uploads/pexels-federicoabisphotography-15571947-8b41f16e.jpg') center 42%/cover no-repeat;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(9,24,40,0.88) 0%,rgba(9,24,40,0.78) 22%,rgba(5,14,28,0.62) 42%,rgba(5,14,28,0.32) 64%,rgba(5,14,28,0.06) 100%);"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 22% 55%,rgba(47,72,109,0.2) 0%,transparent 62%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 40% 40% at 78% 30%,rgba(158,133,72,0.07) 0%,transparent 55%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:#060e1e;pointer-events:none;"></div>
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2;width:100%;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px;">
+      <a href="index.html" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Home</a>
+      <span style="color:rgba(255,255,255,0.25);">/</span>
+      <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.85);">About Us</span>
+    </div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(192,144,64,0.12);border:1px solid rgba(192,144,64,0.28);border-radius:100px;padding:6px 18px;margin-bottom:22px;">
+      <span style="width:5px;height:5px;border-radius:50%;background:#9E8548;display:block;"></span>
+      <span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.13em;">12+ Years · Kuwait</span>
+    </div>
+    <h1 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(40px,5.5vw,68px);color:#ffffff;line-height:0.96;letter-spacing:-2.5px;max-width:680px;margin-bottom:20px;text-shadow:0 4px 32px rgba(0,0,0,0.25);">Trusted immigration<br><em style="font-style:italic;color:rgba(255,255,255,0.7);font-weight:600;">experts,</em> based in Kuwait.</h1>
+    <p style="font-family:'Inter',sans-serif;font-size:17px;color:rgba(255,255,255,0.72);max-width:540px;line-height:1.85;text-shadow:0 2px 8px rgba(0,0,0,0.18);letter-spacing:0.015em;">For over 12 years, Truvia Consultants has guided thousands of professionals and families from the GCC to build new lives in Australia and beyond.</p>
+  </div>
+</section>
+
+<!-- COMPANY PROFILE -->
+<section style="background:#ffffff;padding:96px 40px;position:relative;overflow:hidden;">
+  <!-- Subtle texture lines -->
+  <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(47,72,109,0.025) 1px,transparent 1px);background-size:100% 80px;pointer-events:none;"></div>
+  <div style="position:absolute;top:-140px;right:-100px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(47,72,109,0.04) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-80px;left:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.05) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="max-width:1200px;margin:0 auto;position:relative;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+      <!-- LEFT: editorial content -->
+      <div>
+        <div class="section-tag" style="margin-bottom:24px;">Company Profile</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(32px,3.8vw,48px);color:#1C2B3A;line-height:1.02;letter-spacing:-1.8px;margin-bottom:28px;">Who we are</h2>
+        <div style="width:52px;height:2px;background:linear-gradient(90deg,#9E8548,transparent);border-radius:2px;margin-bottom:28px;"></div>
+        <p style="font-family:'Inter',sans-serif;font-size:16px;color:#5A6878;line-height:1.85;margin-bottom:18px;letter-spacing:0.01em;">Truvia Consultants is Kuwait's leading immigration consultancy, founded with a single mission: to make the process of building a new life abroad honest, clear, and achievable for every client.</p>
+        <p style="font-family:'Inter',sans-serif;font-size:16px;color:#5A6878;line-height:1.85;margin-bottom:18px;letter-spacing:0.01em;">Our team of MARA-registered immigration consultants and case managers specialises in Australia skilled migration — the most sought-after destination for professionals leaving the Gulf.</p>
+        <p style="font-family:'Inter',sans-serif;font-size:16px;color:#5A6878;line-height:1.85;margin-bottom:40px;letter-spacing:0.01em;">We are fully bilingual in Arabic and English, and operate from our office in Salmiya, Kuwait — serving clients across Kuwait, Saudi Arabia, UAE, and the wider GCC.</p>
+        <!-- Stat row -->
+        <div style="display:flex;gap:0;border:1px solid rgba(47,72,109,0.1);border-radius:16px;overflow:hidden;">
+          <div style="flex:1;padding:24px 28px;text-align:center;border-right:1px solid rgba(47,72,109,0.08);transition:background 0.3s;" onmouseover="this.style.background='rgba(47,72,109,0.03)'" onmouseout="this.style.background='transparent'">
+            <div style="font-family:'Manrope',sans-serif;font-weight:900;font-size:38px;color:#2F486D;letter-spacing:-2px;line-height:1;">12+</div>
+            <div style="font-family:'Inter',sans-serif;font-size:11px;color:#9E8548;font-weight:700;margin-top:6px;letter-spacing:0.07em;text-transform:uppercase;">Years</div>
+          </div>
+          <div style="flex:1;padding:24px 28px;text-align:center;border-right:1px solid rgba(47,72,109,0.08);transition:background 0.3s;" onmouseover="this.style.background='rgba(47,72,109,0.03)'" onmouseout="this.style.background='transparent'">
+            <div style="font-family:'Manrope',sans-serif;font-weight:900;font-size:38px;color:#2F486D;letter-spacing:-2px;line-height:1;">4,800+</div>
+            <div style="font-family:'Inter',sans-serif;font-size:11px;color:#9E8548;font-weight:700;margin-top:6px;letter-spacing:0.07em;text-transform:uppercase;">Visas</div>
+          </div>
+          <div style="flex:1;padding:24px 28px;text-align:center;transition:background 0.3s;" onmouseover="this.style.background='rgba(47,72,109,0.03)'" onmouseout="this.style.background='transparent'">
+            <div style="font-family:'Manrope',sans-serif;font-weight:900;font-size:38px;color:#9E8548;letter-spacing:-2px;line-height:1;">4.9★</div>
+            <div style="font-family:'Inter',sans-serif;font-size:11px;color:#9E8548;font-weight:700;margin-top:6px;letter-spacing:0.07em;text-transform:uppercase;">Rating</div>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT: premium info cards -->
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <!-- MARA featured card -->
+        <div style="background:linear-gradient(135deg,#0B1A2E,#1C3050);border-radius:20px;padding:28px;position:relative;overflow:hidden;border:1px solid rgba(158,133,72,0.18);">
+          <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.12) 0%,transparent 65%);pointer-events:none;"></div>
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(158,133,72,0.6),transparent);"></div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+            <div style="width:48px;height:48px;background:rgba(158,133,72,0.14);border:1px solid rgba(158,133,72,0.28);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#9E8548" stroke-width="1.5" fill="none"/><path d="M8.5 12l2.5 2.5 5-5" stroke="#9E8548" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;color:#ffffff;letter-spacing:-0.2px;">MARA Registered Agent</div>
+              <div style="font-family:'Inter',sans-serif;font-size:11px;color:#9E8548;font-weight:700;margin-top:2px;letter-spacing:0.05em;">Kuwait's Only MARA-Registered Consultancy</div>
+            </div>
+          </div>
+          <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);line-height:1.72;margin:0;letter-spacing:0.01em;">MARA is the Australian Government's official body for licensed immigration agents. Only MARA-registered agents can legally represent you for Australian visa applications.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div style="background:#F7F5F2;border-radius:16px;padding:22px;border:1px solid #E8E4E0;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.borderColor='rgba(158,133,72,0.3)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(47,72,109,0.08)'" onmouseout="this.style.borderColor='#E8E4E0';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+            <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1C2B3A;margin-bottom:7px;letter-spacing:-0.2px;">Our Office</div>
+            <p style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;line-height:1.65;letter-spacing:0.01em;">Salmiya, Block 2, Salem Al Mubarak Street<br>Floor 1, Office 15, Kuwait City</p>
+          </div>
+          <div style="background:#2F486D;border-radius:16px;padding:22px;position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(47,72,109,0.28)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+            <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#ffffff;margin-bottom:7px;letter-spacing:-0.2px;">Phone &amp; WhatsApp</div>
+            <a href="tel:+96550610991" style="font-family:'Inter',sans-serif;font-size:15px;color:#B8994E;text-decoration:none;font-weight:700;letter-spacing:0.01em;">+965 5061 0991</a>
+          </div>
+          <div style="background:linear-gradient(135deg,#9E8548,#C09040);border-radius:16px;padding:22px;position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(158,133,72,0.32)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+            <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#ffffff;margin-bottom:7px;letter-spacing:-0.2px;">Email</div>
+            <a href="mailto:info@truviaconsultants.com" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.9);text-decoration:none;letter-spacing:0.01em;">info@truviaconsultants.com</a>
+          </div>
+          <div style="background:#F7F5F2;border-radius:16px;padding:22px;border:1px solid #E8E4E0;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.borderColor='rgba(158,133,72,0.3)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(47,72,109,0.08)'" onmouseout="this.style.borderColor='#E8E4E0';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+            <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1C2B3A;margin-bottom:7px;letter-spacing:-0.2px;">Languages</div>
+            <p style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;letter-spacing:0.01em;line-height:1.65;">Arabic · English · Tagalog</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE TRUVIA -->
+<section id="why" style="background:linear-gradient(160deg,#F2EEE8 0%,#EDE9E2 50%,#F0ECE6 100%);padding:96px 40px;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-120px;right:-80px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(47,72,109,0.06) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-80px;left:-60px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.07) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="max-width:1200px;margin:0 auto;position:relative;">
+    <div style="text-align:center;margin-bottom:64px;">
+      <div class="section-tag" style="margin-bottom:18px;">Why Choose Truvia</div>
+      <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,52px);color:#1C2B3A;line-height:1.02;letter-spacing:-2px;">We do immigration <em style="font-style:italic;color:#2F486D;">differently.</em></h2>
+    </div>
+    <!-- MARA featured bar - full width prominent -->
+    <div style="background:linear-gradient(135deg,#0A1828,#162A44);border-radius:22px;padding:36px 40px;margin-bottom:20px;position:relative;overflow:hidden;border:1px solid rgba(158,133,72,0.22);display:flex;align-items:center;gap:40px;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 24px 64px rgba(0,0,0,0.28)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(158,133,72,0.7) 30%,rgba(232,200,112,0.9) 50%,rgba(158,133,72,0.7) 70%,transparent);"></div>
+      <div style="position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.12) 0%,transparent 65%);pointer-events:none;"></div>
+      <div style="width:64px;height:64px;background:rgba(158,133,72,0.14);border:1.5px solid rgba(158,133,72,0.32);border-radius:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#9E8548" stroke-width="1.4" fill="none"/><path d="M8.5 12l2.5 2.5 5-5" stroke="#9E8548" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <div style="font-family:'Manrope',sans-serif;font-weight:900;font-size:20px;color:#ffffff;letter-spacing:-0.5px;">MARA Registered — Kuwait's Only Licensed Agency</div>
+          <div style="background:rgba(158,133,72,0.18);border:1px solid rgba(158,133,72,0.32);border-radius:100px;padding:3px 12px;flex-shrink:0;"><span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.1em;">Authority</span></div>
+        </div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.52);line-height:1.72;letter-spacing:0.01em;margin:0;">MARA (Migration Agents Registration Authority) is Australia's official government body for licensed immigration agents. Only MARA-registered agents can legally represent you — making us the only fully authorised consultancy in Kuwait.</p>
+      </div>
+      <a href="index.html#contact" style="flex-shrink:0;background:linear-gradient(135deg,#9E8548,#B8994E);color:#ffffff;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;padding:14px 24px;border-radius:11px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 6px 24px rgba(158,133,72,0.28);" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 36px rgba(158,133,72,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 24px rgba(158,133,72,0.28)'">Verify Our Credentials <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+    </div>
+    <!-- 5 reason cards -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <div class="why-card-p" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.09);transition:transform 0.35s cubic-bezier(.16,1,.3,1),box-shadow 0.35s,border-color 0.35s;">
+        <div style="width:52px;height:52px;background:rgba(47,72,109,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:background 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 17l4-4 3 3 5-6 4 4" stroke="#2F486D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#1C2B3A;margin-bottom:11px;letter-spacing:-0.3px;line-height:1.2;">Proven Track Record</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.78;letter-spacing:0.01em;">Over 4,800 successful visa outcomes built on careful case selection and meticulous preparation. We only take cases we are confident we can win.</p>
+      </div>
+      <div class="why-card-p" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.09);transition:transform 0.35s cubic-bezier(.16,1,.3,1),box-shadow 0.35s,border-color 0.35s;">
+        <div style="width:52px;height:52px;background:rgba(47,72,109,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:background 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#2F486D" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#2F486D" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#1C2B3A;margin-bottom:11px;letter-spacing:-0.3px;line-height:1.2;">Dedicated Case Manager</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.78;letter-spacing:0.01em;">One expert manages your file from assessment to visa grant. No handoffs, no call centres. Direct WhatsApp access throughout your entire journey.</p>
+      </div>
+      <div class="why-card-p" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.09);transition:transform 0.35s cubic-bezier(.16,1,.3,1),box-shadow 0.35s,border-color 0.35s;">
+        <div style="width:52px;height:52px;background:rgba(47,72,109,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:background 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#2F486D" stroke-width="1.5" fill="none"/><path d="M3 9h18M9 21V9" stroke="#2F486D" stroke-width="1.5"/></svg>
+        </div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#1C2B3A;margin-bottom:11px;letter-spacing:-0.3px;line-height:1.2;">100% Transparency</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.78;letter-spacing:0.01em;">Every fee, timeline, and risk disclosed upfront. We explain what we cannot guarantee so you always make fully informed decisions.</p>
+      </div>
+      <div class="why-card-p" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.09);transition:transform 0.35s cubic-bezier(.16,1,.3,1),box-shadow 0.35s,border-color 0.35s;">
+        <div style="width:52px;height:52px;background:rgba(47,72,109,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:background 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#2F486D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#1C2B3A;margin-bottom:11px;letter-spacing:-0.3px;line-height:1.2;">Australia Specialists</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.78;letter-spacing:0.01em;">Kuwait's most specialised Australia immigration consultancy. No other firm in the GCC has our depth of knowledge across all skilled migration pathways.</p>
+      </div>
+      <div class="why-card-p" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.09);transition:transform 0.35s cubic-bezier(.16,1,.3,1),box-shadow 0.35s,border-color 0.35s;">
+        <div style="width:52px;height:52px;background:rgba(47,72,109,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:background 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h7" stroke="#2F486D" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#1C2B3A;margin-bottom:11px;letter-spacing:-0.3px;line-height:1.2;">Fully Bilingual</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.78;letter-spacing:0.01em;">All consultations available in Arabic and English. We also have Tagalog-speaking staff to assist our Filipino clients across the GCC.</p>
+      </div>
+      <div class="why-card-p" style="background:linear-gradient(145deg,#2F486D,#1e3050);border-radius:20px;padding:32px;border:none;transition:transform 0.35s cubic-bezier(.16,1,.3,1),box-shadow 0.35s;">
+        <div style="width:52px;height:52px;background:rgba(255,255,255,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:background 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="#B8994E" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#ffffff;margin-bottom:11px;letter-spacing:-0.3px;line-height:1.2;">Fast Turnaround</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);line-height:1.78;letter-spacing:0.01em;">Streamlined digital process means applications prepared faster, errors caught earlier, and your visa arrives sooner than the industry average.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" style="background:#07111F;padding:110px 48px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 85% 60% at 50% 110%,rgba(47,72,109,0.62) 0%,transparent 60%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 76% 48%,rgba(158,133,72,0.1) 0%,transparent 56%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 40% 40% at 18% 28%,rgba(47,72,109,0.25) 0%,transparent 52%);pointer-events:none;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 5%,rgba(158,133,72,0.3) 28%,rgba(232,200,112,0.55) 50%,rgba(158,133,72,0.3) 72%,transparent 95%);"></div>
+  <div style="max-width:860px;margin:0 auto;text-align:center;position:relative;">
+    <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:20px;">No Obligation · No Hidden Fees</div>
+    <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(40px,5vw,66px);color:#F8FBFF;line-height:0.95;letter-spacing:-2.5px;margin-bottom:22px;">Ready to take<br><em style="color:rgba(248,251,255,0.22);font-style:italic;font-weight:700;">the first step?</em></h2>
+    <div style="width:48px;height:2px;background:linear-gradient(90deg,transparent,#9E8548,transparent);margin:0 auto 32px;"></div>
+    <p style="font-family:'Inter',sans-serif;font-size:17px;color:rgba(255,255,255,0.48);line-height:1.82;margin-bottom:52px;letter-spacing:0.015em;">Book a free consultation and speak directly with one of our MARA-registered consultants. We'll review your profile and give you a clear action plan.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="tel:+96550610991" style="position:relative;overflow:hidden;background:linear-gradient(135deg,#2F486D,#3d5f8f);color:#ffffff;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;padding:18px 38px;border-radius:13px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:transform 0.25s cubic-bezier(.16,1,.3,1),box-shadow 0.25s;box-shadow:0 8px 32px rgba(47,72,109,0.38);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 18px 56px rgba(47,72,109,0.5)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(47,72,109,0.38)'">
+        <svg width="17" height="17" viewBox="0 0 20 20" fill="none"><path d="M4 4C4 3 5 2 6 2h2l2 5-1.5 1.5S9 10 11 12s3.5 2.5 3.5 2.5L16 13l5 2v2c0 1-1 2-2 2C8 19 1 12 4 4z" stroke="white" stroke-width="1.4" fill="none"/></svg>
+        Call +965 5061 0991
+      </a>
+      <a href="https://wa.me/96550610991" target="_blank" style="position:relative;overflow:hidden;background:linear-gradient(135deg,#1da84e,#25D366);color:#ffffff;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;padding:18px 38px;border-radius:13px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:transform 0.25s cubic-bezier(.16,1,.3,1),box-shadow 0.25s;box-shadow:0 8px 32px rgba(37,211,102,0.22);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 18px 56px rgba(37,211,102,0.35)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(37,211,102,0.22)'">
+        <svg width="17" height="17" viewBox="0 0 26 26" fill="white"><path d="M13 2C7 2 2 7 2 13c0 2 .6 3.9 1.6 5.5L2 24l5.7-1.5C9.2 23.4 11 24 13 24c6 0 11-5 11-11S19 2 13 2zm5.8 15.2c-.3.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.7-.1s-1.3-.5-2.1-.9c-3.4-1.7-5.6-5.1-5.8-5.4-.2-.3-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.9-.4h.6c.2 0 .4 0 .6.5l1.1 2.7c.1.2.1.4 0 .6l-.6.9c-.1.1-.2.3-.1.5.5.9 1.2 1.7 2 2.4.7.6 1.6 1.1 2.4 1.3.2.1.3 0 .5-.1l.8-.9c.2-.2.4-.3.6-.2l2.7 1.3c.2.1.4.3.4.5v.8z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#0F1C2E;padding:56px 40px 32px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:40px;">
+      <div style="display:flex;align-items:center;gap:10px;"><img src="uploads/truvia-logo.png" alt="Truvia Consultants" style="height:46px;width:auto;display:block;"></div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;">
+        <a href="index.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Home</a>
+        <a href="australia-migration.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Australia</a>
+        <a href="canada-immigration.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Canada</a>
+        <a href="training.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Training</a>
+        <a href="success-stories.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Success Stories</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.3);">© 2025 Truvia Consultants. All rights reserved.</p>
+      <a href="index.html" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">← Back to Home</a>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/96550610991" target="_blank" style="position:fixed;bottom:28px;right:28px;z-index:1000;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><svg width="26" height="26" viewBox="0 0 26 26" fill="white"><path d="M13 2C7 2 2 7 2 13c0 2 .6 3.9 1.6 5.5L2 24l5.7-1.5C9.2 23.4 11 24 13 24c6 0 11-5 11-11S19 2 13 2zm5.8 15.2c-.3.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.7-.1s-1.3-.5-2.1-.9c-3.4-1.7-5.6-5.1-5.8-5.4-.2-.3-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.9-.4h.6c.2 0 .4 0 .6.5l1.1 2.7c.1.2.1.4 0 .6l-.6.9c-.1.1-.2.3-.1.5.5.9 1.2 1.7 2 2.4.7.6 1.6 1.1 2.4 1.3.2.1.3 0 .5-.1l.8-.9c.2-.2.4-.3.6-.2l2.7 1.3c.2.1.4.3.4.5v.8z"/></svg></a>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.body.style.opacity = '1';
+    window.addEventListener('pageshow', function(){ document.body.style.opacity = '1'; });
+    window.openDD = (wrap) => { const p = wrap.querySelector('.dd-panel'); if (p) p.classList.add('open'); };
+    window.closeDD = (wrap) => { const p = wrap.querySelector('.dd-panel'); if (p) p.classList.remove('open'); };
+
+    // ── Why card hover effects ──
+    document.querySelectorAll('.why-card-p').forEach(function(card) {
+      var icon = card.querySelector('[style*="52px"][style*="border-radius:16px"]');
+      card.addEventListener('mouseenter', function() {
+        card.style.transform = 'translateY(-6px)';
+        card.style.boxShadow = '0 20px 52px rgba(47,72,109,0.12)';
+        card.style.borderColor = 'rgba(158,133,72,0.2)';
+        if (icon) { icon.style.background = 'rgba(47,72,109,0.15)'; icon.style.transform = 'scale(1.1)'; }
+      });
+      card.addEventListener('mouseleave', function() {
+        card.style.transform = 'translateY(0)';
+        card.style.boxShadow = 'none';
+        card.style.borderColor = 'rgba(47,72,109,0.09)';
+        if (icon) { icon.style.background = 'rgba(47,72,109,0.08)'; icon.style.transform = 'scale(1)'; }
+      });
+    });
+
+    // ── Premium motion engine ──
+    setTimeout(function(){
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(reduce) return;
+      function hide(el){
+        var d = el.getAttribute('data-om-delay') || 0;
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(34px)';
+        el.style.transition = 'opacity .85s cubic-bezier(.16,1,.3,1) '+d+'ms, transform .85s cubic-bezier(.16,1,.3,1) '+d+'ms';
+      }
+      function show(el){ el.style.opacity='1'; el.style.transform='translateY(0)'; el.setAttribute('data-om-shown','1'); setTimeout(function(){ el.style.transition=''; if(!/reveal/.test(el.className)){ el.classList.remove('om-r'); el.style.transform=''; el.style.opacity=''; } },950); }
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      function tag(el, delay){
+        if(el.getAttribute('data-om-tagged')) return;
+        el.setAttribute('data-om-tagged','1');
+        if(delay) el.setAttribute('data-om-delay', delay);
+        hide(el);
+        var r = el.getBoundingClientRect();
+        if(r.top < (window.innerHeight||800) && r.bottom > -40){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ show(el); }); }); }
+        else { io.observe(el); }
+      }
+
+      // 1) Headings
+      document.querySelectorAll('section h1, section h2').forEach(function(h){ tag(h, 0); });
+      // 2) Grid cards — staggered
+      document.querySelectorAll('section [style*="grid-template-columns"] > *').forEach(function(el,i){ tag(el, (i%4)*95); });
+      // 3) Subheads + standalone paragraphs
+      document.querySelectorAll('section h3, section > div > p').forEach(function(el){ if(!el.closest('[style*="grid-template-columns"]')) tag(el, 0); });
+
+      // 4) Magnetic buttons
+      document.querySelectorAll('.btn-primary, a[class*="btn"]').forEach(function(btn){
+        var base = btn.style.transition || '';
+        btn.style.transition = (base ? base + ',' : '') + 'transform .3s cubic-bezier(.16,1,.3,1)';
+        btn.addEventListener('mousemove', function(e){ var r=btn.getBoundingClientRect(); btn.style.transform='translate('+((e.clientX-r.left-r.width/2)*0.22)+'px,'+((e.clientY-r.top-r.height/2)*0.34)+'px)'; });
+        btn.addEventListener('mouseleave', function(){ btn.style.transform='translate(0,0)'; });
+      });
+
+      // 5) Hero parallax
+      var heroBg = document.querySelector('section [style*="cover"]');
+      if(heroBg){ heroBg.style.transform='scale(1.06)'; heroBg.style.willChange='transform'; window.addEventListener('scroll', function(){ var y=window.scrollY; if(y<800) heroBg.style.transform='translateY('+(y*0.16)+'px) scale(1.06)'; }, {passive:true}); }
+
+      // 6) Floating ambient orbs
+      var hero = document.querySelector('section');
+      if(hero){
+        if(getComputedStyle(hero).position==='static') hero.style.position='relative';
+        var o1=document.createElement('div'); o1.style.cssText='position:absolute;top:-120px;left:8%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(47,72,109,0.16) 0%,transparent 65%);animation:omFloat 22s ease-in-out infinite;pointer-events:none;z-index:1;';
+        var o2=document.createElement('div'); o2.style.cssText='position:absolute;bottom:-80px;right:14%;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.12) 0%,transparent 65%);animation:omFloat2 18s ease-in-out infinite;pointer-events:none;z-index:1;';
+        hero.appendChild(o1); hero.appendChild(o2);
+      }
+
+
+      // ── Premium upgrades ──
+
+      // A) Cursor spotlight
+      var glow = document.getElementById('om-cursor-glow');
+      if(!glow){ glow = document.createElement('div'); glow.id='om-cursor-glow'; document.body.appendChild(glow); }
+      document.addEventListener('mousemove', function(e){
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+        var el = document.elementFromPoint(e.clientX, e.clientY);
+        var dark = el && el.closest('section,nav,footer');
+        glow.style.opacity = dark ? '1' : '0';
+      });
+
+      // B) Gold shimmer on CTAs
+      document.querySelectorAll('a[style*="background:#9E8548"], a[style*="background:#2F486D"], a[style*="background: #9E8548"], a[style*="background: #2F486D"], a[style*="background:linear-gradient"][style*="9E8548"], a[style*="background:linear-gradient"][style*="2F486D"]').forEach(function(btn){
+        btn.classList.add('om-btn-gold');
+      });
+      // Also catch any a/button with inline background set by hover handlers
+      document.querySelectorAll('section a, section button').forEach(function(btn){
+        var s = btn.getAttribute('style') || '';
+        if(s.includes('#9E8548') || s.includes('#2F486D') || s.includes('background:#C09040')) btn.classList.add('om-btn-gold');
+      });
+
+      // C) Accent lines before every h2
+      document.querySelectorAll('section h2').forEach(function(h2){
+        if(h2.previousElementSibling && h2.previousElementSibling.classList.contains('om-line')) return;
+        var line = document.createElement('span');
+        line.className = 'om-line';
+        line.style.cssText = 'display:block;height:2px;background:linear-gradient(90deg,#9E8548,transparent);border-radius:2px;transform-origin:left;width:60px;margin-bottom:14px;';
+        h2.parentNode.insertBefore(line, h2);
+        var lio = new IntersectionObserver(function(es){
+          es.forEach(function(e){
+            if(e.isIntersecting){
+              e.target.style.animation = 'omLineGrow 0.9s cubic-bezier(.16,1,.3,1) forwards';
+              lio.unobserve(e.target);
+            }
+          });
+        },{threshold:0.5});
+        lio.observe(line);
+      });
+
+      // D) Hero h1 — rendered as-is (reliable, keeps italic styling)
+      var heroH1 = document.querySelector('section:first-of-type h1');
+      if(heroH1){ heroH1.style.opacity='1'; }
+
+      // E) Counter animations
+      function omCount(el){
+        var target = parseFloat(el.getAttribute('data-count'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        var dur = 1800;
+        var start = Date.now();
+        var tick = function(){
+          var p = Math.min((Date.now()-start)/dur,1);
+          var ease = 1-Math.pow(1-p,3);
+          el.textContent = (target>=1000 ? Math.round(ease*target).toLocaleString() : (Number.isInteger(target) ? Math.round(ease*target) : (ease*target).toFixed(1))) + suffix;
+          if(p<1) requestAnimationFrame(tick);
+        };
+        tick();
+      }
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ omCount(e.target); cio.unobserve(e.target); } });
+      },{threshold:0.6});
+      document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+
+      // F) Page transition
+      document.querySelectorAll('a[href$=".dc.html"]').forEach(function(a){
+        a.addEventListener('click', function(e){
+          var href = a.getAttribute('href');
+          if(!href || href.startsWith('#') || href.startsWith('http')) return;
+          e.preventDefault();
+          document.body.style.transition = 'opacity 0.3s ease';
+          document.body.style.opacity = '0';
+          setTimeout(function(){ window.location.href = href; }, 300);
+        });
+      });
+
+      // 7) Hard safety net — guarantee everything visible
+      setTimeout(function(){ document.querySelectorAll('[data-om-tagged]:not([data-om-shown])').forEach(function(el){ show(el); }); }, 2600);
+    }, 120);
+
+  
+});
+</script>
+<script src="motion-engine.js" defer></script>
+<script src="mobile.js" defer></script>
+</body>
+</html>

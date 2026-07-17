@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home — Truvia Consultants</title>
+<meta name="description" content="Kuwait's leading immigration consultancy. MARA-registered specialists in Australian skilled migration and more.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @media(max-width:900px){.mara-chip{display:none !important;}}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #EBE8E8; color: #1C2B3A; overflow-x: hidden; }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);} }
+    @keyframes fadeIn { from{opacity:0;}to{opacity:1;} }
+    @keyframes floatOrb { 0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(40px,-30px) scale(1.06);}66%{transform:translate(-25px,15px) scale(0.94);} }
+    @keyframes floatOrb2 { 0%,100%{transform:translate(0,0);}50%{transform:translate(-35px,25px);} }
+    @keyframes lineGrow { from{width:0;opacity:0;}to{width:56px;opacity:1;} }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:0.7;}50%{transform:scale(1.15);opacity:1;} }
+    @keyframes navSlide { from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);} }
+    @keyframes heroText1 { 0%{opacity:0;transform:translateY(48px);}100%{opacity:1;transform:translateY(0);} }
+    @keyframes heroText2 { 0%{opacity:0;transform:translateY(56px);}100%{opacity:1;transform:translateY(0);} }
+    @keyframes heroText3 { 0%{opacity:0;transform:translateY(32px);}100%{opacity:1;transform:translateY(0);} }
+    @keyframes heroCTA { 0%{opacity:0;transform:translateY(24px);}100%{opacity:1;transform:translateY(0);} }
+    @keyframes heroCard { 0%{opacity:0;transform:translateX(48px);}100%{opacity:1;transform:translateX(0);} }
+    @keyframes heroLine { from{width:0;opacity:0;}to{width:100%;opacity:1;} }
+    @keyframes particleFloat { 0%{transform:translateY(0) scale(1);opacity:0;}10%{opacity:0.7;}85%{opacity:0.3;}100%{transform:translateY(-180px) scale(0.4);opacity:0;} }
+    @keyframes cardFloat { 0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);} }
+
+    /* ── Premium motion additions ── */
+    @keyframes aurora1 { 0%,100%{transform:translate(0,0) rotate(0deg) scale(1);opacity:0.55;} 25%{transform:translate(100px,-70px) rotate(18deg) scale(1.18);opacity:0.75;} 50%{transform:translate(-60px,50px) rotate(-10deg) scale(0.88);opacity:0.45;} 75%{transform:translate(80px,30px) rotate(25deg) scale(1.12);opacity:0.65;} }
+    @keyframes aurora2 { 0%,100%{transform:translate(0,0) scale(1);opacity:0.35;} 33%{transform:translate(-120px,80px) scale(1.25);opacity:0.55;} 66%{transform:translate(90px,-55px) scale(0.82);opacity:0.3;} }
+    @keyframes aurora3 { 0%,100%{transform:translate(0,0) rotate(0deg);opacity:0.4;} 40%{transform:translate(70px,-40px) rotate(-20deg);opacity:0.6;} 80%{transform:translate(-50px,60px) rotate(15deg);opacity:0.28;} }
+    @keyframes ringDraw { from{stroke-dashoffset:565;} to{stroke-dashoffset:11;} }
+    @keyframes ringGlow { 0%,100%{filter:drop-shadow(0 0 8px rgba(158,133,72,0.28));} 50%{filter:drop-shadow(0 0 22px rgba(158,133,72,0.7));} }
+    @keyframes marqueeScroll { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+    @keyframes textBlurIn { 0%{opacity:0;filter:blur(18px);transform:translateY(32px);} 60%{filter:blur(2px);} 100%{opacity:1;filter:blur(0);transform:translateY(0);} }
+    @keyframes chipIn { 0%{opacity:0;transform:translateX(32px) scale(0.92);} 100%{opacity:1;transform:translateX(0) scale(1);} }
+    @keyframes floatY { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    @keyframes floatY2 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-14px);} }
+    @keyframes shimmerSlide { 0%{transform:translateX(-100%) skewX(-20deg);} 100%{transform:translateX(400%) skewX(-20deg);} }
+    @keyframes glowRing { 0%,100%{box-shadow:0 0 0 0 rgba(158,133,72,0.42),0 8px 40px rgba(158,133,72,0.18);} 50%{box-shadow:0 0 0 12px rgba(192,144,64,0),0 12px 56px rgba(158,133,72,0.32);} }
+    @keyframes dotPulse { 0%,100%{transform:scale(1);opacity:1;} 50%{transform:scale(1.6);opacity:0;} }
+    @keyframes countUp { from{opacity:0;} to{opacity:1;} }
+
+    .btn-gold { position:relative;overflow:hidden; }
+    .btn-gold::after { content:'';position:absolute;top:0;left:0;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.28),transparent);transform:translateX(-100%) skewX(-20deg);pointer-events:none; }
+    .btn-gold:hover::after { animation:shimmerSlide 0.75s ease forwards; }
+    .om-btn-gold { position:relative;overflow:hidden; }
+    .om-btn-gold::after { content:'';position:absolute;top:0;left:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);transform:translateX(-100%) skewX(-20deg);pointer-events:none; }
+    .om-btn-gold:hover::after { animation:shimmerSlide 0.75s ease forwards; }
+    @keyframes omLineGrow { from{transform:scaleX(0);} to{transform:scaleX(1);} }
+    @keyframes omPageIn { from{opacity:0;transform:translateY(12px);} to{opacity:1;transform:translateY(0);} }
+    body { animation: omPageIn 0.5s cubic-bezier(.16,1,.3,1) both; }
+
+    .ring-card { animation:floatY2 5s ease-in-out infinite; }
+    .chip-1 { animation:floatY 4s 0.5s ease-in-out infinite; }
+    .chip-2 { animation:floatY 4.8s 1.2s ease-in-out infinite; }
+    .chip-3 { animation:floatY 4.2s 0.8s ease-in-out infinite; }
+
+    .reveal { opacity:0;transform:translateY(36px);transition:opacity 0.75s cubic-bezier(.16,1,.3,1),transform 0.75s cubic-bezier(.16,1,.3,1); }
+    .reveal.visible { opacity:1;transform:translateY(0); }
+    .reveal-left { opacity:0;transform:translateX(-40px);transition:opacity 0.75s cubic-bezier(.16,1,.3,1),transform 0.75s cubic-bezier(.16,1,.3,1); }
+    .reveal-left.visible { opacity:1;transform:translateX(0); }
+    .reveal-right { opacity:0;transform:translateX(40px);transition:opacity 0.75s cubic-bezier(.16,1,.3,1),transform 0.75s cubic-bezier(.16,1,.3,1); }
+    .reveal-right.visible { opacity:1;transform:translateX(0); }
+    .reveal-delay-1 { transition-delay:0.1s; }
+    .reveal-delay-2 { transition-delay:0.2s; }
+    .reveal-delay-3 { transition-delay:0.3s; }
+    .reveal-delay-4 { transition-delay:0.4s; }
+    .reveal-delay-5 { transition-delay:0.5s; }
+    .city-card img { transition:transform 1.2s cubic-bezier(.16,1,.3,1); }
+    .city-card:hover img { transform:scale(1.06) !important; }
+    .city-card:hover .co { opacity:1 !important; }
+    .city-card:hover .cl { transform:translateY(0) !important; opacity:1 !important; }
+    .why-row:hover .why-num { color:#9E8548 !important; }
+    .foot-gold:hover { color:#9E8548 !important; }
+    .foot-dim:hover { color:rgba(255,255,255,0.6) !important; }
+
+    .nav-link { font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:#4A5568;text-decoration:none;padding:7px 11px;border-radius:6px;transition:color 0.2s,background 0.2s;white-space:nowrap;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;line-height:1; }
+    .nav-link:hover { color:#2F486D;background:rgba(47,72,109,0.07); }
+    .dd-panel { position:absolute;top:calc(100% + 12px);left:0;background:#ffffff;border:1px solid rgba(47,72,109,0.1);border-radius:14px;padding:8px;min-width:200px;box-shadow:0 20px 60px rgba(47,72,109,0.15),0 4px 16px rgba(47,72,109,0.08);opacity:0;pointer-events:none;transform:translateY(-8px) scale(0.97);transition:opacity 0.2s cubic-bezier(.16,1,.3,1),transform 0.2s cubic-bezier(.16,1,.3,1);z-index:300; }
+    .dd-wrap::after { content:''; position:absolute; left:0; right:0; top:100%; height:14px; }
+    .dd-panel.open { opacity:1;pointer-events:auto;transform:translateY(0) scale(1); }
+    .dd-wrap:hover .dd-panel { opacity:1;pointer-events:auto;transform:translateY(0) scale(1); }
+    .dd-link { display:flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:#374151;text-decoration:none;padding:9px 12px;border-radius:8px;transition:color 0.15s,background 0.15s;white-space:nowrap; }
+    .dd-link:hover { color:#2F486D;background:rgba(47,72,109,0.06); }
+    .dd-link::before { content:'';width:5px;height:5px;border-radius:50%;background:#9E8548;flex-shrink:0;opacity:0;transition:opacity 0.15s; }
+    .dd-link:hover::before { opacity:1; }
+    .dd-sub-wrap{position:relative;} .dd-sub-parent{display:flex;align-items:center;justify-content:space-between;gap:10px;} .dd-sub-panel{position:absolute;top:-7px;left:calc(100% + 8px);background:#ffffff;border:1px solid #E2DDD9;border-radius:10px;padding:6px;min-width:210px;box-shadow:0 12px 34px rgba(47,72,109,0.16);opacity:0;pointer-events:none;transform:translateX(-6px);transition:opacity .2s cubic-bezier(.16,1,.3,1),transform .2s cubic-bezier(.16,1,.3,1);z-index:400;} .dd-sub-wrap:hover .dd-sub-panel{opacity:1;pointer-events:auto;transform:translateX(0);}
+
+    .btn-primary { background:#2F486D;color:#ffffff;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:14px 28px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s,transform 0.2s,box-shadow 0.2s; }
+    .btn-primary:hover { background:#3a5a87;transform:translateY(-2px);box-shadow:0 8px 24px rgba(47,72,109,0.3); }
+    .btn-gold { background:linear-gradient(135deg,#9E8548,#B8994E);color:#ffffff;font-family:'Inter',sans-serif;font-weight:700;font-size:14px;padding:14px 28px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 28px rgba(158,133,72,0.32);transition:transform 0.2s,box-shadow 0.2s; }
+    .btn-gold:hover { transform:translateY(-3px);box-shadow:0 14px 40px rgba(158,133,72,0.42); }
+    .btn-outline-light { background:rgba(255,255,255,0.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#ffffff;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:13px 28px;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);display:inline-flex;align-items:center;gap:8px;transition:all 0.2s; }
+    .btn-outline-light:hover { background:rgba(255,255,255,0.16);border-color:rgba(255,255,255,0.38);transform:translateY(-2px); }
+    .btn-outline-dark { background:transparent;color:#2F486D;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:13px 28px;border-radius:10px;text-decoration:none;border:1.5px solid #2F486D;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s; }
+    .btn-outline-dark:hover { background:#2F486D;color:#ffffff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(47,72,109,0.2); }
+
+    .section-tag { display:inline-flex;align-items:center;gap:6px;background:rgba(158,133,72,0.09);border:1px solid rgba(158,133,72,0.28);border-radius:100px;padding:5px 14px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;letter-spacing:0.09em;text-transform:uppercase; }
+    .section-tag::before { content:'';width:5px;height:5px;border-radius:50%;background:#9E8548;animation:pulse 2s ease infinite; }
+
+    .visa-card { background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:28px;transition:background 0.3s,border-color 0.3s,transform 0.3s,box-shadow 0.3s;cursor:pointer; }
+    .visa-card:hover { background:rgba(255,255,255,0.13);border-color:rgba(255,255,255,0.25);transform:translateY(-6px);box-shadow:0 24px 56px rgba(0,0,0,0.25); }
+    .service-card { background:#ffffff;border-radius:18px;padding:32px;border:1px solid #C5DAF0;transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s cubic-bezier(.16,1,.3,1),border-color 0.3s; }
+    .service-card:hover { transform:translateY(-6px);box-shadow:0 20px 48px rgba(30,60,120,0.12);border-color:rgba(47,72,109,0.2); }
+    .why-card { background:#ffffff;border-radius:18px;padding:32px;border:1px solid #C5DAF0;transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s cubic-bezier(.16,1,.3,1); }
+    .why-card:hover { transform:translateY(-4px);box-shadow:0 16px 40px rgba(47,72,109,0.1); }
+    .testi-card { background:#ffffff;border-radius:18px;padding:28px;border:1px solid #C5DAF0;transition:transform 0.3s,box-shadow 0.3s; }
+    .testi-card:hover { transform:translateY(-4px);box-shadow:0 16px 40px rgba(47,72,109,0.1); }
+
+    .nav-scrolled { background:rgba(248,252,255,0.96) !important;backdrop-filter:blur(28px) saturate(200%) !important;-webkit-backdrop-filter:blur(28px) saturate(200%) !important;box-shadow:0 1px 0 rgba(47,72,109,0.07),0 4px 24px rgba(47,72,109,0.06) !important; }
+
+    .particle { position:absolute;border-radius:50%;background:rgba(192,144,64,0.5);pointer-events:none;animation:particleFloat linear infinite; }
+
+    .icon-box { width:48px;height:48px;background:rgba(47,72,109,0.07);border-radius:14px;display:flex;align-items:center;justify-content:center;transition:background 0.3s,transform 0.3s;flex-shrink:0; }
+    .why-card:hover .icon-box { background:#2F486D;transform:scale(1.08); }
+
+    .visa-badge { display:inline-block;background:rgba(158,133,72,0.18);color:#9E8548;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px; }
+
+    ::-webkit-scrollbar { width:5px; } ::-webkit-scrollbar-track { background:#E8E5E0; } ::-webkit-scrollbar-thumb { background:#9EB4CC;border-radius:3px; }
+  </style>
+
+</head>
+<body>
+
+
+
+<!-- ══════════════════════ NAV ══════════════════════ -->
+<nav id="navbar" style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(47,72,109,0.09);height:68px;display:flex;align-items:center;padding:0 48px;transition:all 0.4s cubic-bezier(.16,1,.3,1);animation:navSlide 0.5s ease both;">
+  <a href="index.html" style="text-decoration:none;margin-right:36px;flex-shrink:0;display:flex;align-items:center;">
+    <img src="uploads/truvia-logo.png" alt="Truvia Consultants" style="height:50px;width:auto;display:block;">
+  </a>
+  <div style="display:flex;align-items:center;gap:1px;flex:1;">
+    <a href="index.html" class="nav-link" style="color:#2F486D;font-weight:600;">Home</a>
+    <div class="dd-wrap" style="position:relative;">
+      <a href="about.html" class="nav-link">About Us <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      <div class="dd-panel"><a href="about.html" class="dd-link">Company Profile</a><a href="about.html#why" class="dd-link">Why Choose Truvia</a></div>
+    </div>
+    <div class="dd-wrap" style="position:relative;">
+      <a href="australia-migration.html" class="nav-link">Australia <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      <div class="dd-panel" style="min-width:248px;">
+        <a href="australia-migration.html" class="dd-link">Australia Overview</a>
+        <a href="australia-gsm.html" class="dd-link">General Skilled Migration (GSM)</a>
+        <a href="australia-employer-sponsored.html" class="dd-link">Employer Sponsored Visas</a>
+        <a href="australia-visitor-visa.html" class="dd-link">Visitor Visa (Subclass 600)</a>
+        <a href="australia-national-innovation-visa.html" class="dd-link">National Innovation Visa</a>
+        <a href="australia-skills-assessment.html" class="dd-link">Skills Assessment Authorities</a>
+        <a href="australia-appeals.html" class="dd-link">Appeals &amp; Reviews</a>
+        <div style="height:1px;background:#EBE8E8;margin:6px 8px;"></div>
+        <a href="australia-salaries.html" class="dd-link">Salaries in Australia</a>
+        <a href="australia-cost-of-living.html" class="dd-link">Cost of Living in Australia</a>
+        <a href="australia-pr-points-calculator.html" class="dd-link">PR Points Calculator</a>
+        <a href="australia-processing-times.html" class="dd-link">Processing Times</a>
+        <div class="dd-sub-wrap">
+          <a href="australia-occupations-in-demand.html" class="dd-link dd-sub-parent">Occupations in Demand<svg width="8" height="8" viewBox="0 0 9 9" fill="none" style="transform:rotate(-90deg);flex-shrink:0;"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="dd-sub-panel">
+            <a href="australia-engineer-pr.html" class="dd-link">Engineers</a>
+            <a href="australia-it-jobs.html" class="dd-link">IT Professionals</a>
+            <a href="australia-nurse-salary.html" class="dd-link">Nurses &amp; Medical</a>
+            <a href="australia-trades-pr.html" class="dd-link">Trades &amp; Welders</a>
+            <a href="australia-accountant-pr.html" class="dd-link">Accountants</a>
+            <a href="australia-chef-hospitality-pr.html" class="dd-link">Chefs &amp; Hospitality</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dd-wrap" style="position:relative;">
+      <a href="canada-immigration.html" class="nav-link">Canada <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      <div class="dd-panel"><a href="canada-immigration.html" class="dd-link">Express Entry</a><a href="canada-immigration.html#pnp" class="dd-link">Provincial Nominee (PNP)</a><a href="canada-immigration.html#aip" class="dd-link">AIP &amp; RCIP</a></div>
+    </div>
+    <div class="dd-wrap" style="position:relative;">
+      <a href="training.html" class="nav-link">Training <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      <div class="dd-panel"><a href="training.html" class="dd-link">IELTS Preparation</a><a href="training.html#pte" class="dd-link">PTE Academic Training</a><a href="training.html#oet" class="dd-link">OET Preparation</a><a href="training.html#nclex" class="dd-link">NCLEX Training</a></div>
+    </div>
+    <div class="dd-wrap" style="position:relative;">
+      <a href="other-services.html" class="nav-link">Other Services <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      <div class="dd-panel"><a href="other-services.html" class="dd-link">Study Visa</a><a href="other-services.html#visitor" class="dd-link">Visitor Visas</a><a href="other-services.html#investment" class="dd-link">Residency by Investment</a></div>
+    </div>
+    <a href="success-stories.html" class="nav-link">Success Stories</a>
+    <div class="dd-wrap" style="position:relative;">
+      <a href="blog.html" class="nav-link">Blog <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      <div class="dd-panel"><a href="blog.html" class="dd-link">Canada Immigration News</a><a href="blog.html#australia" class="dd-link">Australia Updates</a></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;flex-shrink:0;">
+    <a href="#why-mara" class="mara-chip" title="MARA Registered Migration Agents — Australian Government authorised" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(59,92,138,0.92) 0%,rgba(36,60,94,0.96) 100%);backdrop-filter:blur(12px) saturate(1.4);-webkit-backdrop-filter:blur(12px) saturate(1.4);border:1px solid rgba(255,255,255,0.22);border-radius:100px;padding:7px 15px;text-decoration:none;box-shadow:0 4px 14px rgba(36,60,94,0.30),inset 0 1px 0 rgba(255,255,255,0.35),inset 0 -2px 4px rgba(0,0,0,0.10);transition:box-shadow .3s ease,transform .3s ease,background .3s ease;" onmouseover="this.style.background='linear-gradient(135deg,rgba(66,102,150,0.96) 0%,rgba(42,68,104,0.98) 100%)';this.style.boxShadow='0 7px 22px rgba(36,60,94,0.42),inset 0 1px 0 rgba(255,255,255,0.45),inset 0 -2px 5px rgba(0,0,0,0.12)';this.style.transform='translateY(-1.5px)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(59,92,138,0.92) 0%,rgba(36,60,94,0.96) 100%)';this.style.boxShadow='0 4px 14px rgba(36,60,94,0.30),inset 0 1px 0 rgba(255,255,255,0.35),inset 0 -2px 4px rgba(0,0,0,0.10)';this.style.transform='translateY(0)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#E8C87A" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="#E8C87A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#E8C87A;letter-spacing:0.04em;white-space:nowrap;">MARA Registered</span></a>
+    <a href="tel:+96550610991" style="font-family:'Inter',sans-serif;font-size:13px;color:#2F486D;font-weight:600;text-decoration:none;opacity:0.75;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.75'">+965 5061 0991</a>
+    <a href="#contact" class="btn-gold" style="font-size:13px;padding:10px 22px;border-radius:8px;">Free Consultation</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section id="hero" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#071422;">
+
+  <!-- Hero photo — Sydney Harbour aerial, right-weighted -->
+  <div style="position:absolute;inset:0;background:url('uploads/pexels-parth-patel-2161339175-37930279.jpg') 62% 45%/cover no-repeat;filter:brightness(0.38) saturate(0.72);"></div>
+  <!-- Cinematic left→right dark blend — text stays on dark navy, image reveals right -->
+  <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(5,14,26,1) 0%,rgba(5,14,26,0.97) 18%,rgba(5,14,26,0.88) 32%,rgba(5,14,26,0.6) 50%,rgba(5,14,26,0.22) 68%,rgba(5,14,26,0.04) 82%,transparent 100%);"></div>
+  <!-- Bottom vignette -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:260px;background:linear-gradient(0deg,rgba(5,14,26,0.92) 0%,rgba(5,14,26,0.45) 55%,transparent 100%);pointer-events:none;"></div>
+  <!-- Warm gold tint on image area -->
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 45% 60% at 75% 50%,rgba(158,133,72,0.08) 0%,transparent 65%);"></div>
+
+  <!-- Bottom vignette -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:220px;background:linear-gradient(0deg,rgba(8,22,44,0.85) 0%,rgba(8,22,44,0.4) 50%,transparent 100%);pointer-events:none;"></div>
+
+  <!-- Top cinematic loading line -->
+  <div style="position:absolute;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,transparent,#9E8548 30%,#E8C870 70%,transparent);animation:heroLine 1.4s 0.1s ease-out forwards;z-index:5;pointer-events:none;"></div>
+
+  <!-- Aurora mesh layers -->
+  <div style="position:absolute;top:-200px;left:-100px;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(20,48,110,0.32) 0%,rgba(47,72,109,0.16) 40%,transparent 70%);animation:aurora1 28s ease-in-out infinite;pointer-events:none;mix-blend-mode:screen;"></div>
+  <div style="position:absolute;top:10%;right:-80px;width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.20) 0%,rgba(140,115,55,0.09) 45%,transparent 70%);animation:aurora2 22s ease-in-out infinite;pointer-events:none;mix-blend-mode:screen;"></div>
+  <div style="position:absolute;bottom:-120px;left:30%;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(60,100,180,0.18) 0%,transparent 65%);animation:aurora3 32s ease-in-out infinite;pointer-events:none;mix-blend-mode:screen;"></div>
+  <div style="position:absolute;top:40%;left:10%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(192,144,64,0.09) 0%,transparent 65%);animation:aurora1 20s 6s ease-in-out infinite;pointer-events:none;mix-blend-mode:screen;"></div>
+
+  <!-- Mouse-follow ambient glow (positioned by JS) -->
+  <div id="hero-glow" style="position:absolute;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.07) 0%,transparent 65%);pointer-events:none;transform:translate(-50%,-50%);left:25%;top:50%;transition:left 1.4s cubic-bezier(.25,1,.5,1),top 1.4s cubic-bezier(.25,1,.5,1);z-index:1;"></div>
+
+  <!-- Subtle dot grid -->
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.035) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;"></div>
+
+  <!-- HERO CONTENT -->
+  <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:0 48px;width:100%;display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:center;">
+
+    <!-- LEFT COLUMN -->
+    <div>
+
+      <!-- Label pill -->
+      <div style="opacity:0;animation:heroText1 0.7s 0.15s cubic-bezier(.16,1,.3,1) forwards;">
+        <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(158,133,72,0.09);border:1px solid rgba(158,133,72,0.25);border-radius:100px;padding:7px 18px;margin-bottom:36px;backdrop-filter:blur(8px);">
+          <span style="width:6px;height:6px;border-radius:50%;background:#9E8548;animation:pulse 2s ease infinite;flex-shrink:0;display:block;"></span>
+          <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.12em;">Kuwait's Leading Immigration Consultancy</span>
+        </div>
+      </div>
+
+      <!-- Headline — Manrope bold -->
+      <div style="opacity:0;animation:heroText2 1.1s 0.28s cubic-bezier(.16,1,.3,1) forwards;">
+        <h1 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(52px,6.5vw,88px);line-height:0.95;letter-spacing:-3px;color:#ffffff;margin-bottom:8px;text-shadow:0 4px 40px rgba(0,0,0,0.35);animation:textBlurIn 1s 0.28s both;">Made for</h1>
+        <h1 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(52px,6.5vw,88px);line-height:0.95;letter-spacing:-3px;color:#9E8548;text-shadow:0 4px 48px rgba(158,133,72,0.38),0 0 80px rgba(158,133,72,0.13);animation:textBlurIn 1.1s 0.44s both;">migrants.</h1>
+      </div>
+
+      <!-- Accent line -->
+      <div style="opacity:0;animation:heroCTA 0.6s 0.52s ease forwards;margin-top:22px;">
+        <span style="display:block;width:0;height:2px;background:linear-gradient(90deg,#9E8548,rgba(192,144,64,0));border-radius:2px;animation:lineGrow 0.8s 0.72s ease forwards;"></span>
+      </div>
+
+      <!-- Body text -->
+      <div style="opacity:0;animation:heroText3 0.9s 0.56s cubic-bezier(.16,1,.3,1) forwards;margin-top:30px;">
+        <p style="font-family:'Inter',sans-serif;font-size:18px;color:rgba(255,255,255,0.7);line-height:1.82;max-width:510px;font-weight:400;">Expert immigration guidance for professionals and families from Kuwait and the GCC. Australia's foremost skilled migration specialists — built on integrity, precision, and long-term results.</p>
+      </div>
+
+      <!-- CTAs -->
+      <div style="opacity:0;animation:heroCTA 0.8s 0.72s cubic-bezier(.16,1,.3,1) forwards;margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="#contact" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_name:'check_my_eligibility_hero'});" class="btn-gold" style="font-size:15px;padding:17px 34px;border-radius:12px;">
+          Check My Eligibility
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M8 3L13 8L8 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="australia-migration.html" class="btn-outline-light" style="font-size:15px;padding:16px 30px;border-radius:12px;">Explore Australia</a>
+      </div>
+
+      <!-- Glass stats strip -->
+      <div style="opacity:0;animation:heroCTA 0.8s 0.92s cubic-bezier(.16,1,.3,1) forwards;margin-top:52px;">
+        <div style="display:inline-flex;background:rgba(255,255,255,0.05);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,0.1);border-radius:18px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.07);">
+          <div style="padding:20px 28px;text-align:center;border-right:1px solid rgba(255,255,255,0.07);">
+            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:28px;color:#ffffff;letter-spacing:-1px;line-height:1;">35+</div>
+            <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.4);font-weight:700;margin-top:5px;letter-spacing:0.07em;text-transform:uppercase;">Countries Served</div>
+          </div>
+          <div style="padding:20px 28px;text-align:center;border-right:1px solid rgba(255,255,255,0.07);">
+            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:28px;color:#ffffff;letter-spacing:-1px;line-height:1;">12+</div>
+            <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.4);font-weight:700;margin-top:5px;letter-spacing:0.07em;text-transform:uppercase;">Years of Practice</div>
+          </div>
+          <div style="padding:20px 28px;text-align:center;border-right:1px solid rgba(255,255,255,0.07);">
+            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:28px;color:#ffffff;letter-spacing:-1px;line-height:1;">2,000+</div>
+            <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.4);font-weight:700;margin-top:5px;letter-spacing:0.07em;text-transform:uppercase;">GCC Clients</div>
+          </div>
+          <div style="padding:20px 28px;text-align:center;">
+            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:28px;color:#9E8548;letter-spacing:-1px;line-height:1;">4.9★</div>
+            <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.4);font-weight:700;margin-top:5px;letter-spacing:0.07em;text-transform:uppercase;">Client Rating</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: Premium animated visuals -->
+    <div style="opacity:0;animation:heroCard 1s 0.62s cubic-bezier(.16,1,.3,1) forwards;display:flex;flex-direction:column;gap:14px;">
+
+      <!-- Visa Score Intelligence Card -->
+      <div style="animation:floatY 5s 0.5s ease-in-out infinite;background:rgba(255,255,255,0.09);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(255,255,255,0.16);border-radius:18px;padding:20px 22px;box-shadow:0 16px 48px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.1);">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px;">
+          <div>
+            <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.1em;">Points Estimator</div>
+            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;color:#ffffff;letter-spacing:-0.5px;line-height:1.2;margin-top:3px;">Australia 189</div>
+          </div>
+          <div style="background:rgba(34,160,80,0.14);border:1px solid rgba(34,160,80,0.28);border-radius:8px;padding:5px 11px;display:flex;align-items:center;gap:5px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#22a050;animation:dotPulse 2s ease-in-out infinite;"></div>
+            <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#22a050;">Eligible</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:13px;">
+          <div>
+            <div style="display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.35);margin-bottom:4px;"><span>Age Score</span><span style="color:#B8994E;font-weight:700;">30 pts</span></div>
+            <div style="height:3px;background:rgba(255,255,255,0.08);border-radius:2px;"><div style="width:58%;height:100%;background:linear-gradient(90deg,#9E8548,#E8C870);border-radius:2px;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.35);margin-bottom:4px;"><span>English</span><span style="color:#B8994E;font-weight:700;">20 pts</span></div>
+            <div style="height:3px;background:rgba(255,255,255,0.08);border-radius:2px;"><div style="width:40%;height:100%;background:linear-gradient(90deg,#9E8548,#E8C870);border-radius:2px;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.35);margin-bottom:4px;"><span>Experience</span><span style="color:#B8994E;font-weight:700;">15 pts</span></div>
+            <div style="height:3px;background:rgba(255,255,255,0.08);border-radius:2px;"><div style="width:30%;height:100%;background:linear-gradient(90deg,#9E8548,#E8C870);border-radius:2px;"></div></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:11px;border-top:1px solid rgba(255,255,255,0.07);">
+          <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.3);">Estimated score</div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:18px;color:#9E8548;letter-spacing:-0.5px;">85 pts</div>
+        </div>
+      </div>
+
+      <!-- Migration Routes Card -->
+      <div style="animation:floatY2 4.8s 1.2s ease-in-out infinite;background:rgba(255,255,255,0.09);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(255,255,255,0.16);border-radius:18px;padding:17px 20px;box-shadow:0 16px 48px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.1);">
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:11px;">Active Migration Routes</div>
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border-radius:10px;padding:9px 11px;">
+            <div style="width:26px;height:26px;border-radius:7px;background:rgba(47,72,109,0.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;">🇦🇺</div>
+            <div style="flex:1;"><div style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#ffffff;">Kuwait → Australia</div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.35);">Skilled Migration · 189 / 190 / 491</div></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#22a050;animation:dotPulse 2s ease-in-out infinite;flex-shrink:0;"></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border-radius:10px;padding:9px 11px;">
+            <div style="width:26px;height:26px;border-radius:7px;background:rgba(47,72,109,0.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;">🇦🇺</div>
+            <div style="flex:1;"><div style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#ffffff;">GCC → Australia</div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.35);">Employer Sponsored · 482 / 186</div></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#22a050;animation:dotPulse 2.4s 0.4s ease-in-out infinite;flex-shrink:0;"></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(158,133,72,0.08);border:1px solid rgba(158,133,72,0.18);border-radius:10px;padding:9px 11px;">
+            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;color:#9E8548;flex-shrink:0;">35+</div>
+            <div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,0.5);">Countries in our global network</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compact Pathways card -->
+      <div style="animation:floatY 5.2s 0.9s ease-in-out infinite;background:rgba(158,133,72,0.08);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(158,133,72,0.22);border-radius:18px;padding:20px 22px;box-shadow:0 16px 48px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.1);">
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(232,200,112,0.85);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:13px;">Australia PR Pathways</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="australia-gsm.html#189" style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.14)';this.style.borderColor='rgba(255,255,255,0.22)';this.style.transform='translateX(4px)'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateX(0)'">
+            <span style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#ffffff;">Subclass 189 — Skilled Independent</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="australia-gsm.html#190" style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.14)';this.style.borderColor='rgba(255,255,255,0.22)';this.style.transform='translateX(4px)'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateX(0)'">
+            <span style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#ffffff;">Subclass 190 — State Nominated</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="australia-gsm.html#491" style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.14)';this.style.borderColor='rgba(255,255,255,0.22)';this.style.transform='translateX(4px)'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateX(0)'">
+            <span style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#ffffff;">Subclass 491 — Regional Skilled</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="australia-employer-sponsored.html#482" style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.14)';this.style.borderColor='rgba(255,255,255,0.22)';this.style.transform='translateX(4px)'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateX(0)'">
+            <span style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#ffffff;">Subclass 482 — Employer Sponsor</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;opacity:0;animation:fadeIn 0.8s 1.8s ease forwards;z-index:2;pointer-events:none;">
+    <div style="width:1px;height:44px;background:linear-gradient(180deg,transparent,rgba(158,133,72,0.7));"></div>
+    <span style="font-family:'Inter',sans-serif;font-size:9px;color:rgba(192,144,64,0.65);font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">Scroll</span>
+  </div>
+</section>
+
+<!-- ══════════ SERVICES QUICK BAR ══════════ -->
+<section style="background:linear-gradient(180deg,#0C1D36 0%,#0E2644 100%);padding:0 48px;border-top:1px solid rgba(255,255,255,0.05);">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);">
+    <a href="australia-migration.html" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 16px;text-decoration:none;border-right:1px solid rgba(255,255,255,0.06);transition:background 0.3s;" onmouseover="this.style.background='rgba(158,133,72,0.07)'" onmouseout="this.style.background='transparent'">
+      <div style="width:42px;height:42px;background:rgba(158,133,72,0.11);border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#9E8548" stroke-width="1.5"/><path d="M7 10L9 12L13 8" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);text-align:center;line-height:1.3;">Australia Migration</span>
+    </a>
+    <a href="canada-immigration.html" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 16px;text-decoration:none;border-right:1px solid rgba(255,255,255,0.06);transition:background 0.3s;" onmouseover="this.style.background='rgba(158,133,72,0.07)'" onmouseout="this.style.background='transparent'">
+      <div style="width:42px;height:42px;background:rgba(158,133,72,0.11);border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 16V8l7-5 7 5v8H3z" stroke="#9E8548" stroke-width="1.5" fill="none"/></svg></div>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);text-align:center;line-height:1.3;">Canada Immigration</span>
+    </a>
+    <a href="training.html" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 16px;text-decoration:none;border-right:1px solid rgba(255,255,255,0.06);transition:background 0.3s;" onmouseover="this.style.background='rgba(158,133,72,0.07)'" onmouseout="this.style.background='transparent'">
+      <div style="width:42px;height:42px;background:rgba(158,133,72,0.11);border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 7l8-4 8 4-8 4-8-4zM5 9v4c0 1.7 2.2 3 5 3s5-1.3 5-3V9" stroke="#9E8548" stroke-width="1.5" fill="none"/></svg></div>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);text-align:center;line-height:1.3;">IELTS / PTE Training</span>
+    </a>
+    <a href="other-services.html" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 16px;text-decoration:none;border-right:1px solid rgba(255,255,255,0.06);transition:background 0.3s;" onmouseover="this.style.background='rgba(158,133,72,0.07)'" onmouseout="this.style.background='transparent'">
+      <div style="width:42px;height:42px;background:rgba(158,133,72,0.11);border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="#9E8548" stroke-width="1.5" fill="none"/><path d="M3 9h14" stroke="#9E8548" stroke-width="1.5"/></svg></div>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);text-align:center;line-height:1.3;">Study &amp; Visitor Visa</span>
+    </a>
+    <a href="other-services.html#investment" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 16px;text-decoration:none;border-right:1px solid rgba(255,255,255,0.06);transition:background 0.3s;" onmouseover="this.style.background='rgba(158,133,72,0.07)'" onmouseout="this.style.background='transparent'">
+      <div style="width:42px;height:42px;background:rgba(158,133,72,0.11);border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 14l4-4 3 3 5-6" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);text-align:center;line-height:1.3;">Residency by Investment</span>
+    </a>
+    <a href="australia-skills-assessment.html" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 16px;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='rgba(158,133,72,0.07)'" onmouseout="this.style.background='transparent'">
+      <div style="width:42px;height:42px;background:rgba(158,133,72,0.11);border-radius:12px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#9E8548" stroke-width="1.5"/><path d="M10 7v3l2 2" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:rgba(255,255,255,0.65);text-align:center;line-height:1.3;">Skills Assessment</span>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════ PREMIUM TRUST STRIP ══════════ -->
+<section style="background:linear-gradient(160deg,#060D1A 0%,#091424 55%,#060D1A 100%);padding:120px 48px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 14% 85%,rgba(47,72,109,0.35) 0%,transparent 60%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 55% 45% at 86% 18%,rgba(158,133,72,0.1) 0%,transparent 55%);pointer-events:none;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 5%,rgba(158,133,72,0.22) 30%,rgba(232,200,112,0.38) 50%,rgba(158,133,72,0.22) 70%,transparent 95%);"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,rgba(255,255,255,0.04) 50%,transparent 90%);"></div>
+  <div style="max-width:1200px;margin:0 auto;position:relative;">
+    <div class="reveal" style="text-align:center;margin-bottom:80px;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(158,133,72,0.08);border:1px solid rgba(158,133,72,0.2);border-radius:100px;padding:6px 18px;margin-bottom:24px;">
+        <span style="width:5px;height:5px;border-radius:50%;background:#9E8548;animation:pulse 2s ease infinite;display:block;flex-shrink:0;"></span>
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.12em;">Trusted by Thousands Across the GCC</span>
+      </div>
+      <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:#F8FBFF;letter-spacing:-2.5px;line-height:1.0;margin-bottom:0;">Precision. Integrity.<br><em style="color:rgba(248,251,255,0.2);font-style:italic;font-weight:700;">Results.</em></h2>
+    </div>
+    <div id="ts-grid" style="display:grid;grid-template-columns:repeat(4,1fr);border-radius:24px;overflow:hidden;background:rgba(255,255,255,0.022);border:1px solid rgba(255,255,255,0.07);box-shadow:0 48px 96px rgba(0,0,0,0.55),inset 0 1px 0 rgba(255,255,255,0.06);">
+      <div class="reveal reveal-delay-1 ts-card" style="position:relative;padding:52px 36px;text-align:center;overflow:hidden;border-right:1px solid rgba(255,255,255,0.05);cursor:default;transition:background 0.5s;">
+        <div class="ts-orb" style="position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(47,72,109,0.6) 0%,transparent 65%);opacity:0;transition:opacity 0.6s;pointer-events:none;"></div>
+        <div style="width:58px;height:58px;background:rgba(47,72,109,0.15);border:1px solid rgba(47,72,109,0.28);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;position:relative;z-index:1;transition:background 0.3s,border-color 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#5A7FAA" stroke-width="1.4"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4" stroke="#5A7FAA" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div data-count="35" data-suffix="+" style="font-family:'Manrope',sans-serif;font-weight:900;font-size:58px;color:#F8FBFF;letter-spacing:-3px;line-height:1;position:relative;z-index:1;transition:color 0.3s,text-shadow 0.3s;">35+</div>
+        <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.15em;margin-top:12px;position:relative;z-index:1;">Countries Served</div>
+      </div>
+      <div class="reveal reveal-delay-2 ts-card" style="position:relative;padding:52px 36px;text-align:center;overflow:hidden;border-right:1px solid rgba(255,255,255,0.05);cursor:default;transition:background 0.5s;">
+        <div class="ts-orb" style="position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(47,72,109,0.6) 0%,transparent 65%);opacity:0;transition:opacity 0.6s;pointer-events:none;"></div>
+        <div style="width:58px;height:58px;background:rgba(47,72,109,0.15);border:1px solid rgba(47,72,109,0.28);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;position:relative;z-index:1;transition:background 0.3s,border-color 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 7V17L12 22L4 17V7L12 2Z" stroke="#5A7FAA" stroke-width="1.4" fill="none"/><path d="M9 12l2 2 4-4" stroke="#5A7FAA" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div data-count="12" data-suffix="+" style="font-family:'Manrope',sans-serif;font-weight:900;font-size:58px;color:#F8FBFF;letter-spacing:-3px;line-height:1;position:relative;z-index:1;transition:color 0.3s,text-shadow 0.3s;">12+</div>
+        <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.15em;margin-top:12px;position:relative;z-index:1;">Years of Excellence</div>
+      </div>
+      <div class="reveal reveal-delay-3 ts-card ts-gold" style="position:relative;padding:52px 36px;text-align:center;overflow:hidden;border-right:1px solid rgba(158,133,72,0.12);cursor:default;transition:background 0.5s;background:rgba(158,133,72,0.032);">
+        <div class="ts-orb" style="position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.5) 0%,transparent 65%);opacity:0;transition:opacity 0.6s;pointer-events:none;"></div>
+        <div style="width:58px;height:58px;background:rgba(158,133,72,0.12);border:1px solid rgba(158,133,72,0.25);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;position:relative;z-index:1;transition:background 0.3s,border-color 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#9E8548" stroke-width="1.4" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#9E8548" stroke-width="1.4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#9E8548" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <div data-count="2000" data-suffix="+" style="font-family:'Manrope',sans-serif;font-weight:900;font-size:58px;color:#9E8548;letter-spacing:-3px;line-height:1;position:relative;z-index:1;transition:color 0.3s,text-shadow 0.3s;">2,000+</div>
+        <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.15em;margin-top:12px;position:relative;z-index:1;">GCC Clients</div>
+      </div>
+      <div class="reveal reveal-delay-4 ts-card ts-gold" style="position:relative;padding:52px 36px;text-align:center;overflow:hidden;cursor:default;transition:background 0.5s;background:rgba(158,133,72,0.032);">
+        <div class="ts-orb" style="position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.5) 0%,transparent 65%);opacity:0;transition:opacity 0.6s;pointer-events:none;"></div>
+        <div style="width:58px;height:58px;background:rgba(158,133,72,0.12);border:1px solid rgba(158,133,72,0.25);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;position:relative;z-index:1;transition:background 0.3s,border-color 0.3s,transform 0.3s;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6.3L22 9.3l-5 4.9 1.2 6.8L12 17.8l-6.2 3.2 1.2-6.8L2 9.3l7-.7L12 2z" stroke="#9E8548" stroke-width="1.4" fill="none"/></svg>
+        </div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:900;font-size:58px;color:#9E8548;letter-spacing:-3px;line-height:1;position:relative;z-index:1;transition:text-shadow 0.3s;">4.9<span style="font-size:30px;vertical-align:middle;margin-left:2px;">★</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.15em;margin-top:12px;position:relative;z-index:1;">Client Rating</div>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+      <div style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.022);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:20px 24px;transition:border-color 0.3s,background 0.3s;" onmouseover="this.style.borderColor='rgba(158,133,72,0.32)';this.style.background='rgba(158,133,72,0.05)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.022)'">
+        <div style="width:44px;height:44px;background:rgba(158,133,72,0.12);border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(158,133,72,0.22);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#9E8548" stroke-width="1.5" fill="none"/><path d="M8.5 12l2.5 2.5 5-5" stroke="#9E8548" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#F8FBFF;line-height:1.2;margin-bottom:3px;">MARA Registered</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,0.35);line-height:1.4;">Australian Govt. authorised — Kuwait's only</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.022);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:20px 24px;transition:border-color 0.3s,background 0.3s;" onmouseover="this.style.borderColor='rgba(158,133,72,0.32)';this.style.background='rgba(158,133,72,0.05)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.022)'">
+        <div style="width:44px;height:44px;background:rgba(47,72,109,0.18);border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(47,72,109,0.28);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12" stroke="#5A8FC0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#F8FBFF;line-height:1.2;margin-bottom:3px;">End-to-End Service</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,0.35);line-height:1.4;">From skills assessment to visa grant</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.022);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:20px 24px;transition:border-color 0.3s,background 0.3s;" onmouseover="this.style.borderColor='rgba(34,160,80,0.3)';this.style.background='rgba(34,160,80,0.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.022)'">
+        <div style="width:44px;height:44px;background:rgba(34,160,80,0.12);border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(34,160,80,0.22);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#22a050" stroke-width="1.5" stroke-linecap="round"/><polyline points="22,4 12,14.01 9,11.01" stroke="#22a050" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#F8FBFF;line-height:1.2;margin-bottom:3px;">Multilingual Team</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,0.35);line-height:1.4;">Arabic, English, Malayalam, Tamil &amp; Hindi</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ AUSTRALIA ══════════ -->
+<section style="background:linear-gradient(160deg,#263F62,#2F486D 50%,#223858);padding:104px 48px;position:relative;overflow:hidden;">
+  <div style="position:absolute;right:-160px;top:-160px;width:560px;height:560px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;"></div>
+  <div style="position:absolute;left:-100px;bottom:-100px;width:360px;height:360px;border-radius:50%;background:rgba(192,144,64,0.06);pointer-events:none;animation:floatOrb2 20s ease-in-out infinite;"></div>
+  <div style="max-width:1200px;margin:0 auto;position:relative;">
+    <div class="reveal" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:64px;flex-wrap:wrap;gap:24px;">
+      <div>
+        <div class="section-tag" style="background:rgba(158,133,72,0.16);border-color:rgba(158,133,72,0.32);color:#B8994E;margin-bottom:20px;">Our Core Expertise</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(36px,4.5vw,54px);color:#ffffff;line-height:1.02;letter-spacing:-2px;">Australia PR —<br>We know every pathway.</h2>
+      </div>
+      <a href="australia-migration.html" style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:rgba(255,255,255,0.55);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color 0.2s;" onmouseover="this.style.color='#B8994E'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">View all pathways <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <a href="australia-gsm.html#189" class="visa-card" style="text-decoration:none;">
+        <div class="visa-badge">Subclass 189</div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#ffffff;margin-bottom:10px;line-height:1.2;">Skilled Independent Visa</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:22px;">Points-tested permanent visa. No employer or state sponsorship required — live anywhere in Australia from day one.</p>
+        <div style="display:flex;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Processing</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">12–18 months</div></div>
+          <div style="text-align:right;"><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Min. Points</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">65 points</div></div>
+        </div>
+      </a>
+      <a href="australia-gsm.html#190" class="visa-card" style="text-decoration:none;">
+        <div class="visa-badge">Subclass 190</div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#ffffff;margin-bottom:10px;line-height:1.2;">State Nominated Visa</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:22px;">Permanent visa with state/territory nomination. Adds +5 bonus points — ideal if you fall just short of 189 threshold.</p>
+        <div style="display:flex;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Processing</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">12–18 months</div></div>
+          <div style="text-align:right;"><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Bonus Points</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">+5 pts</div></div>
+        </div>
+      </a>
+      <a href="australia-gsm.html#491" class="visa-card" style="text-decoration:none;">
+        <div class="visa-badge">Subclass 491</div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#ffffff;margin-bottom:10px;line-height:1.2;">Regional Skilled Visa</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:22px;">5-year provisional visa with clear PR pathway via Subclass 191 after 3 years in regional Australia. +15 bonus points.</p>
+        <div style="display:flex;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Processing</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">4–9 months</div></div>
+          <div style="text-align:right;"><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Bonus Points</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">+15 pts</div></div>
+        </div>
+      </a>
+      <a href="australia-employer-sponsored.html#482" class="visa-card" style="text-decoration:none;">
+        <div class="visa-badge">Subclass 482</div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#ffffff;margin-bottom:10px;line-height:1.2;">Employer Sponsored Work Visa</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:22px;">Temporary work visa sponsored by an Australian employer, with strong pathways to permanent residency via 186 or 191 streams.</p>
+        <div style="display:flex;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Processing</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">2–6 months</div></div>
+          <div style="text-align:right;"><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Duration</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">Up to 4 years</div></div>
+        </div>
+      </a>
+      <a href="australia-skills-assessment.html" class="visa-card" style="text-decoration:none;">
+        <div class="visa-badge">Assessment</div>
+        <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#ffffff;margin-bottom:10px;line-height:1.2;">Skills Assessment</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:22px;">We guide you through every assessment body — VETASSESS, TRA, ACS, Engineers Australia, AHPRA, CPA and more.</p>
+        <div style="display:flex;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Timeline</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">2–4 months</div></div>
+          <div style="text-align:right;"><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.32);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.07em;">Bodies</div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#B8994E;">All covered</div></div>
+        </div>
+      </a>
+      <div class="reveal reveal-delay-3" style="background:rgba(158,133,72,0.09);border:1px solid rgba(192,144,64,0.22);border-radius:18px;padding:28px;display:flex;flex-direction:column;justify-content:center;transition:transform 0.35s cubic-bezier(.16,1,.3,1),box-shadow 0.35s,border-color 0.35s,background 0.35s;" onmouseover="this.style.transform='translateY(-7px)';this.style.boxShadow='0 28px 60px rgba(158,133,72,0.22)';this.style.borderColor='rgba(192,144,64,0.5)';this.style.background='rgba(158,133,72,0.16)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(192,144,64,0.22)';this.style.background='rgba(158,133,72,0.09)'">
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:21px;color:#ffffff;margin-bottom:12px;line-height:1.25;">Not sure which pathway fits you?</div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:24px;">Get a free eligibility assessment. We'll match you to the right visa within 24 hours.</p>
+        <a href="#contact" class="btn-gold" style="font-size:14px;padding:13px 22px;border-radius:10px;align-self:flex-start;">Free Assessment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CITY PHOTO STRIP ══════════ -->
+<section style="background:#050D1A;padding:0;overflow:hidden;position:relative;">
+
+  <!-- Full-bleed photo grid — headline lives INSIDE Card 1 -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#050D1A;height:540px;">
+
+    <!-- Card 1: St Kilda — carries the editorial headline -->
+    <div class="city-card" style="position:relative;overflow:hidden;cursor:pointer;">
+      <img src="uploads/pexels-parth-patel-2161339175-37930273-1a9f2cca.jpg" alt="Sydney — Circular Quay" style="width:100%;height:100%;object-fit:cover;object-position:center 42%;transition:transform 1.2s cubic-bezier(.16,1,.3,1);filter:brightness(1.05) contrast(0.94) saturate(1.06) sepia(0.05);">
+      <!-- Unified scrim: heavy at top and bottom, mid stays visible -->
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,28,0.42) 0%,rgba(8,15,28,0) 30%,rgba(8,15,28,0.05) 52%,rgba(6,12,24,0.58) 80%,rgba(5,11,22,0.84) 100%);"></div>
+      <!-- Blue tint unifier -->
+      <div style="position:absolute;inset:0;mix-blend-mode:soft-light;background:linear-gradient(168deg,rgba(255,206,142,0.34) 0%,rgba(255,242,224,0) 42%,rgba(30,94,122,0.36) 100%);pointer-events:none;"></div>
+      <!-- Hover wash -->
+      <div class="co" style="position:absolute;inset:0;background:rgba(5,13,26,0.22);transition:opacity 0.5s;opacity:0;"></div>
+      <!-- Editorial headline — top of card -->
+      <div style="position:absolute;top:0;left:0;right:0;padding:36px 32px 0;">
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(158,133,72,0.8);text-transform:uppercase;letter-spacing:0.2em;margin-bottom:12px;">Your Destination Awaits</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(30px,3.2vw,50px);color:#F8FBFF;line-height:1.0;letter-spacing:-1.8px;margin:0 0 16px;">Life is better<br><em style="font-style:italic;color:rgba(248,251,255,0.32);">down under.</em></h2>
+        <a href="australia-migration.html" style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#9E8548;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s;" onmouseover="this.style.color='#E8C870'" onmouseout="this.style.color='#9E8548'">All pathways <svg width="11" height="11" viewBox="0 0 13 13" fill="none"><path d="M2 6.5H11M6.5 2L11 6.5L6.5 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      </div>
+      <!-- City label — bottom of card -->
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:0 32px 28px;">
+        <div style="width:28px;height:1.5px;background:linear-gradient(90deg,#9E8548,transparent);margin-bottom:10px;"></div>
+        <div style="font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:5px;">Sydney, NSW</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#F8FBFF;letter-spacing:-0.3px;text-shadow:0 2px 16px rgba(0,0,0,0.7);">Circular Quay</div>
+        <div class="cl" style="font-family:'Inter',sans-serif;font-size:11.5px;color:rgba(232,200,112,0.85);margin-top:6px;transform:translateY(8px);opacity:0;transition:transform 0.35s cubic-bezier(.16,1,.3,1),opacity 0.3s;">Harbour capital — Subclass 190 ›</div>
+      </div>
+    </div>
+
+    <!-- Card 2: Collins Street -->
+    <div class="city-card" style="position:relative;overflow:hidden;cursor:pointer;">
+      <img src="uploads/pexels-parth-patel-2161339175-37930274-c9d6655d.jpg" alt="Sydney Harbour Bridge" style="width:100%;height:100%;object-fit:cover;object-position:center 48%;transition:transform 1.2s cubic-bezier(.16,1,.3,1);filter:brightness(1.05) contrast(0.94) saturate(1.06) sepia(0.05);">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,28,0.42) 0%,rgba(8,15,28,0) 30%,rgba(8,15,28,0.05) 52%,rgba(6,12,24,0.58) 80%,rgba(5,11,22,0.84) 100%);"></div>
+      <div style="position:absolute;inset:0;mix-blend-mode:soft-light;background:linear-gradient(168deg,rgba(255,206,142,0.34) 0%,rgba(255,242,224,0) 42%,rgba(30,94,122,0.36) 100%);pointer-events:none;"></div>
+      <div class="co" style="position:absolute;inset:0;background:rgba(5,13,26,0.22);transition:opacity 0.5s;opacity:0;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:0 22px 28px;">
+        <div style="width:22px;height:1.5px;background:linear-gradient(90deg,#9E8548,transparent);margin-bottom:10px;"></div>
+        <div style="font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:5px;">Sydney, NSW</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#F8FBFF;letter-spacing:-0.3px;text-shadow:0 2px 16px rgba(0,0,0,0.7);">Harbour Bridge</div>
+        <div class="cl" style="font-family:'Inter',sans-serif;font-size:11.5px;color:rgba(232,200,112,0.85);margin-top:6px;transform:translateY(8px);opacity:0;transition:transform 0.35s cubic-bezier(.16,1,.3,1),opacity 0.3s;">Skilled migration — Subclass 189 ›</div>
+      </div>
+    </div>
+
+    <!-- Card 3: Sydney Harbour Bridge -->
+    <div class="city-card" style="position:relative;overflow:hidden;cursor:pointer;">
+      <img src="uploads/Sydney, Australia-8.jpg" alt="Royal Botanic Garden, Sydney" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;transition:transform 1.2s cubic-bezier(.16,1,.3,1);filter:brightness(1.05) contrast(0.94) saturate(1.06) sepia(0.05);">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,28,0.42) 0%,rgba(8,15,28,0) 30%,rgba(8,15,28,0.05) 52%,rgba(6,12,24,0.58) 80%,rgba(5,11,22,0.84) 100%);"></div>
+      <div style="position:absolute;inset:0;mix-blend-mode:soft-light;background:linear-gradient(168deg,rgba(255,206,142,0.34) 0%,rgba(255,242,224,0) 42%,rgba(30,94,122,0.36) 100%);pointer-events:none;"></div>
+      <div class="co" style="position:absolute;inset:0;background:rgba(5,13,26,0.22);transition:opacity 0.5s;opacity:0;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:0 22px 28px;">
+        <div style="width:22px;height:1.5px;background:linear-gradient(90deg,#9E8548,transparent);margin-bottom:10px;"></div>
+        <div style="font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:5px;">Sydney, NSW</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#F8FBFF;letter-spacing:-0.3px;text-shadow:0 2px 16px rgba(0,0,0,0.7);">Royal Botanic</div>
+        <div class="cl" style="font-family:'Inter',sans-serif;font-size:11.5px;color:rgba(232,200,112,0.85);margin-top:6px;transform:translateY(8px);opacity:0;transition:transform 0.35s cubic-bezier(.16,1,.3,1),opacity 0.3s;">Garden harbour — ENS 186 ›</div>
+      </div>
+    </div>
+
+    <!-- Card 4: Opera House Aerial -->
+    <div class="city-card" style="position:relative;overflow:hidden;cursor:pointer;">
+      <img src="uploads/pexels-parth-patel-2161339175-37930279-3c01a2f4.jpg" alt="Opera House, Sydney" style="width:100%;height:100%;object-fit:cover;object-position:center 42%;transition:transform 1.2s cubic-bezier(.16,1,.3,1);filter:brightness(1.05) contrast(0.94) saturate(1.06) sepia(0.05);">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,28,0.42) 0%,rgba(8,15,28,0) 30%,rgba(8,15,28,0.05) 52%,rgba(6,12,24,0.58) 80%,rgba(5,11,22,0.84) 100%);"></div>
+      <div style="position:absolute;inset:0;mix-blend-mode:soft-light;background:linear-gradient(168deg,rgba(255,206,142,0.34) 0%,rgba(255,242,224,0) 42%,rgba(30,94,122,0.36) 100%);pointer-events:none;"></div>
+      <div class="co" style="position:absolute;inset:0;background:rgba(5,13,26,0.22);transition:opacity 0.5s;opacity:0;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:0 22px 28px;">
+        <div style="width:22px;height:1.5px;background:linear-gradient(90deg,#9E8548,transparent);margin-bottom:10px;"></div>
+        <div style="font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:5px;">Sydney, NSW</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:17px;color:#F8FBFF;letter-spacing:-0.3px;text-shadow:0 2px 16px rgba(0,0,0,0.7);">Opera House</div>
+        <div class="cl" style="font-family:'Inter',sans-serif;font-size:11.5px;color:rgba(232,200,112,0.85);margin-top:6px;transform:translateY(8px);opacity:0;transition:transform 0.35s cubic-bezier(.16,1,.3,1),opacity 0.3s;">Iconic NSW — GSM stream ›</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Slim bottom bar -->
+  <div style="padding:16px 32px;display:flex;align-items:center;justify-content:space-between;background:#050D1A;border-top:1px solid rgba(255,255,255,0.1);">
+    <div style="display:flex;align-items:center;gap:9px;">
+      <div style="width:6px;height:6px;border-radius:50%;background:#9E8548;"></div>
+      <span style="font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;color:rgba(255,255,255,0.65);letter-spacing:0.03em;">Sydney, New South Wales · 35+ visa pathways</span>
+    </div>
+    <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.55);">Where your new life begins — <span style="color:#9E8548;font-weight:700;">Australia awaits.</span></span>
+  </div>
+
+</section>
+
+<!-- ══════════ SYDNEY ATMOSPHERE DIVIDER ══════════ -->
+<div style="position:relative;height:460px;overflow:hidden;background:#050D1A;">
+  <img src="uploads/pexels-line-knipst-574109081-20642052.jpg" alt="Sydney Harbour" style="width:100%;height:100%;object-fit:cover;object-position:center 46%;">
+  <!-- Top scrim -->
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,13,26,0.72) 0%,rgba(6,13,26,0.32) 22%,rgba(6,13,26,0) 52%);pointer-events:none;"></div>
+  <!-- Headline — sits in the dark upper-centre band, clear of the architecture and the white dissolve -->
+  <div style="position:absolute;left:0;right:0;top:34%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;padding:0 24px;">
+    <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:rgba(232,200,112,0.78);text-transform:uppercase;letter-spacing:0.24em;">Sydney · Australia · Your Future</div>
+    <div style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(30px,3.6vw,50px);color:#F8FBFF;letter-spacing:-1.6px;text-align:center;line-height:1.08;text-shadow:0 2px 28px rgba(5,13,26,0.55);">Australia isn't just a destination.<br><span style="color:rgba(248,251,255,0.42);font-style:italic;">It's a decision.</span></div>
+  </div>
+</div>
+
+<!-- ══════════ WHY TRUVIA + MARA ══════════ -->
+<section style="background:#ffffff;padding:104px 48px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start;">
+
+      <!-- LEFT: Editorial statement + MARA credential -->
+      <div class="reveal-left" style="position:sticky;top:96px;">
+        <div class="section-tag" style="margin-bottom:24px;">Why Choose Truvia</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(36px,4vw,52px);color:#1C2B3A;line-height:1.02;letter-spacing:-2px;margin-bottom:24px;">Built on integrity.<br>Delivered with<br>precision.</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:16px;color:#6B7A8D;line-height:1.78;margin-bottom:36px;">Most agencies file paperwork. We build futures — with the credentials, the experience, and the personal commitment to prove it.</p>
+
+        <!-- MARA credential — refined inline treatment -->
+        <div id="why-mara" style="scroll-margin-top:96px;border:1.5px solid rgba(158,133,72,0.32);border-radius:16px;padding:24px;background:rgba(192,144,64,0.04);">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:14px;">
+            <div style="width:44px;height:44px;background:rgba(158,133,72,0.09);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(158,133,72,0.18);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#9E8548" stroke-width="1.5" fill="none"/><path d="M8.5 12l2.5 2.5 5-5" stroke="#9E8548" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;color:#1C2B3A;line-height:1.2;">MARA Registered Agent</div>
+              <div style="font-family:'Inter',sans-serif;font-size:12px;color:#9E8548;font-weight:600;margin-top:2px;">Kuwait's Only MARA-Registered Consultancy</div>
+            </div>
+          </div>
+          <p style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;line-height:1.7;margin:0;">MARA (Migration Agents Registration Authority) is the Australian Government's official body for licensed immigration agents. Only MARA-registered agents can legally represent you for Australian visa applications.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT: 4 numbered reasons as editorial list -->
+      <div class="reveal-right" style="display:flex;flex-direction:column;gap:0;">
+        <div class="why-row" style="padding:32px 0;border-bottom:1px solid #E8E4E0;">
+          <div style="display:flex;align-items:flex-start;gap:24px;">
+            <div class="why-num" style="font-family:'Manrope',sans-serif;font-weight:900;font-size:48px;color:rgba(30,60,120,0.12);line-height:1;letter-spacing:-2px;flex-shrink:0;transition:color 0.3s;">01</div>
+            <div>
+              <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#1C2B3A;margin-bottom:10px;letter-spacing:-0.3px;">Proven Track Record</h3>
+              <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.72;">Over 4,800 successful visa outcomes built on careful case selection, meticulous preparation, and strategic guidance. Our approval rate speaks for itself.</p>
+            </div>
+          </div>
+        </div>
+        <div class="why-row" style="padding:32px 0;border-bottom:1px solid #E8E4E0;">
+          <div style="display:flex;align-items:flex-start;gap:24px;">
+            <div class="why-num" style="font-family:'Manrope',sans-serif;font-weight:900;font-size:48px;color:rgba(30,60,120,0.12);line-height:1;letter-spacing:-2px;flex-shrink:0;transition:color 0.3s;">02</div>
+            <div>
+              <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#1C2B3A;margin-bottom:10px;letter-spacing:-0.3px;">Dedicated Case Manager</h3>
+              <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.72;">One expert manages your file from assessment to visa grant — no handoffs. Direct WhatsApp access throughout your entire journey.</p>
+            </div>
+          </div>
+        </div>
+        <div class="why-row" style="padding:32px 0;border-bottom:1px solid #E8E4E0;">
+          <div style="display:flex;align-items:flex-start;gap:24px;">
+            <div class="why-num" style="font-family:'Manrope',sans-serif;font-weight:900;font-size:48px;color:rgba(30,60,120,0.12);line-height:1;letter-spacing:-2px;flex-shrink:0;transition:color 0.3s;">03</div>
+            <div>
+              <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#1C2B3A;margin-bottom:10px;letter-spacing:-0.3px;">100% Transparent</h3>
+              <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.72;">Every fee, timeline, and risk disclosed upfront. We explain what we cannot guarantee so you always make fully informed decisions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="why-row" style="padding:32px 0;">
+          <div style="display:flex;align-items:flex-start;gap:24px;">
+            <div class="why-num" style="font-family:'Manrope',sans-serif;font-weight:900;font-size:48px;color:rgba(30,60,120,0.12);line-height:1;letter-spacing:-2px;flex-shrink:0;transition:color 0.3s;">04</div>
+            <div>
+              <h3 style="font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;color:#1C2B3A;margin-bottom:10px;letter-spacing:-0.3px;">Bilingual &amp; Fast</h3>
+              <p style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.72;">Fully bilingual Arabic and English. Our streamlined digital process prepares applications faster and with fewer errors than any competitor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section id="testi-section" style="background:#EDF3FA;padding:104px 0;position:relative;overflow:hidden;">
+
+  <div style="max-width:1200px;margin:0 auto;padding:0 48px;">
+
+    <!-- Header -->
+    <div class="reveal" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;flex-wrap:wrap;gap:24px;">
+      <div>
+        <div class="section-tag" style="margin-bottom:20px;">Success Stories</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(36px,4vw,50px);color:#1C2B3A;line-height:1.04;letter-spacing:-1.8px;">Real people.<br>Real results.</h2>
+      </div>
+      <!-- Rating -->
+      <div style="text-align:right;">
+        <div style="display:flex;gap:4px;justify-content:flex-end;margin-bottom:6px;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#9E8548"><path d="M8 1L9.8 6H15L10.5 9L12.2 14.5L8 11.5L3.8 14.5L5.5 9L1 6H6.2L8 1Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#9E8548"><path d="M8 1L9.8 6H15L10.5 9L12.2 14.5L8 11.5L3.8 14.5L5.5 9L1 6H6.2L8 1Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#9E8548"><path d="M8 1L9.8 6H15L10.5 9L12.2 14.5L8 11.5L3.8 14.5L5.5 9L1 6H6.2L8 1Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#9E8548"><path d="M8 1L9.8 6H15L10.5 9L12.2 14.5L8 11.5L3.8 14.5L5.5 9L1 6H6.2L8 1Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="#9E8548"><path d="M8 1L9.8 6H15L10.5 9L12.2 14.5L8 11.5L3.8 14.5L5.5 9L1 6H6.2L8 1Z"/></svg>
+        </div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:900;font-size:32px;color:#1C2B3A;letter-spacing:-1.5px;line-height:1;">4.9 <span style="font-size:16px;color:#9CA3AF;font-weight:500;">/ 5.0</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#9CA3AF;font-weight:600;margin-top:4px;">From verified client outcomes</div>
+      </div>
+    </div>
+
+    <!-- 3-column story grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+      <!-- Card 1 -->
+      <div class="reveal reveal-delay-1" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.07);box-shadow:0 2px 20px rgba(47,72,109,0.05);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s,border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 48px rgba(30,60,120,0.12)';this.style.borderColor='rgba(158,133,72,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(47,72,109,0.05)';this.style.borderColor='rgba(47,72,109,0.07)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9E8548,rgba(158,133,72,0.13));"></div>
+        <div style="display:flex;gap:3px;"><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg></div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.75;flex:1;">"Truvia made the entire Australia 190 process feel manageable. My case manager was always available on WhatsApp. Professional, honest, and results-driven."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #D8E8F4;">
+          <div style="display:flex;align-items:center;gap:10px;"><div style="width:40px;height:40px;border-radius:50%;background:#2F486D;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:13px;color:#fff;flex-shrink:0;">RK</div><div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#1C2B3A;">Rahul Kumar</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:#9CA3AF;margin-top:1px;">IT Engineer · Melbourne</div></div></div>
+          <div style="background:rgba(47,72,109,0.07);border-radius:6px;padding:4px 10px;"><span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#2F486D;text-transform:uppercase;letter-spacing:0.07em;">190 · AU</span></div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="reveal reveal-delay-2" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.07);box-shadow:0 2px 20px rgba(47,72,109,0.05);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s,border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 48px rgba(30,60,120,0.12)';this.style.borderColor='rgba(158,133,72,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(47,72,109,0.05)';this.style.borderColor='rgba(47,72,109,0.07)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9E8548,rgba(158,133,72,0.13));"></div>
+        <div style="display:flex;gap:3px;"><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg></div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.75;flex:1;">"After being misled by two other agencies, Truvia was completely transparent. We moved to Canada with our three kids under the PNP program. Dreams really do come true."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #D8E8F4;">
+          <div style="display:flex;align-items:center;gap:10px;"><div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#9E8548,#B8994E);display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:13px;color:#fff;flex-shrink:0;">FA</div><div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#1C2B3A;">Fatima Al-Rashidi</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:#9CA3AF;margin-top:1px;">Nurse · Toronto</div></div></div>
+          <div style="background:rgba(158,133,72,0.09);border-radius:6px;padding:4px 10px;"><span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.07em;">PNP · CA</span></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="reveal reveal-delay-3" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.07);box-shadow:0 2px 20px rgba(47,72,109,0.05);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s,border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 48px rgba(30,60,120,0.12)';this.style.borderColor='rgba(158,133,72,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(47,72,109,0.05)';this.style.borderColor='rgba(47,72,109,0.07)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9E8548,rgba(158,133,72,0.13));"></div>
+        <div style="display:flex;gap:3px;"><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg></div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.75;flex:1;">"As a civil engineer in Kuwait, Truvia knew exactly which skills assessment body to use. My Subclass 189 approved in 10 months. Absolutely exceptional."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #D8E8F4;">
+          <div style="display:flex;align-items:center;gap:10px;"><div style="width:40px;height:40px;border-radius:50%;background:#2F486D;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:13px;color:#fff;flex-shrink:0;">MP</div><div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#1C2B3A;">Mohammed Patel</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:#9CA3AF;margin-top:1px;">Civil Engineer · Sydney</div></div></div>
+          <div style="background:rgba(47,72,109,0.07);border-radius:6px;padding:4px 10px;"><span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#2F486D;text-transform:uppercase;letter-spacing:0.07em;">189 · AU</span></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="reveal reveal-delay-1" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.07);box-shadow:0 2px 20px rgba(47,72,109,0.05);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s,border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 48px rgba(30,60,120,0.12)';this.style.borderColor='rgba(158,133,72,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(47,72,109,0.05)';this.style.borderColor='rgba(47,72,109,0.07)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9E8548,rgba(158,133,72,0.13));"></div>
+        <div style="display:flex;gap:3px;"><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg></div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.75;flex:1;">"I'm a Filipino nurse who had worked in Kuwait for 10 years and almost given up on migration. Truvia made it happen in 7 months through the Australia 190 pathway. Eternally grateful."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #D8E8F4;">
+          <div style="display:flex;align-items:center;gap:10px;"><div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#9E8548,#B8994E);display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:13px;color:#fff;flex-shrink:0;">MC</div><div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#1C2B3A;">Maria Cruz</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:#9CA3AF;margin-top:1px;">Nurse · Brisbane</div></div></div>
+          <div style="background:rgba(47,72,109,0.07);border-radius:6px;padding:4px 10px;"><span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#2F486D;text-transform:uppercase;letter-spacing:0.07em;">190 · AU</span></div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="reveal reveal-delay-2" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.07);box-shadow:0 2px 20px rgba(47,72,109,0.05);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s,border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 48px rgba(30,60,120,0.12)';this.style.borderColor='rgba(158,133,72,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(47,72,109,0.05)';this.style.borderColor='rgba(47,72,109,0.07)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9E8548,rgba(158,133,72,0.13));"></div>
+        <div style="display:flex;gap:3px;"><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg></div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.75;flex:1;">"Truvia helped me achieve IELTS 8.0 and then lodged my Subclass 189. Training and migration under one roof was invaluable. Now living in Perth!"</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #D8E8F4;">
+          <div style="display:flex;align-items:center;gap:10px;"><div style="width:40px;height:40px;border-radius:50%;background:#2F486D;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:13px;color:#fff;flex-shrink:0;">AH</div><div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#1C2B3A;">Ahmed Hassan</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:#9CA3AF;margin-top:1px;">Accountant · Perth</div></div></div>
+          <div style="background:rgba(47,72,109,0.07);border-radius:6px;padding:4px 10px;"><span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#2F486D;text-transform:uppercase;letter-spacing:0.07em;">189 · AU</span></div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="reveal reveal-delay-3" style="background:#ffffff;border-radius:20px;padding:32px;border:1px solid rgba(47,72,109,0.07);box-shadow:0 2px 20px rgba(47,72,109,0.05);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s,border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 48px rgba(30,60,120,0.12)';this.style.borderColor='rgba(158,133,72,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 20px rgba(47,72,109,0.05)';this.style.borderColor='rgba(47,72,109,0.07)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9E8548,rgba(158,133,72,0.13));"></div>
+        <div style="display:flex;gap:3px;"><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="#9E8548"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg></div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.75;flex:1;">"I applied for Express Entry through Truvia after failing twice on my own. They maximised my CRS score with a provincial nomination. ITA received within 3 months. Life-changing."</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #D8E8F4;">
+          <div style="display:flex;align-items:center;gap:10px;"><div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#9E8548,#B8994E);display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:13px;color:#fff;flex-shrink:0;">SK</div><div><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#1C2B3A;">Sana Khan</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:#9CA3AF;margin-top:1px;">Developer · Calgary</div></div></div>
+          <div style="background:rgba(158,133,72,0.09);border-radius:6px;padding:4px 10px;"><span style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.07em;">EE+PNP · CA</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal" style="text-align:center;margin-top:48px;">
+      <a href="success-stories.html" style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#2F486D;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(47,72,109,0.2);border-radius:100px;padding:13px 28px;transition:all 0.2s;background:#ffffff;" onmouseover="this.style.background='#2F486D';this.style.color='#ffffff';this.style.borderColor='#2F486D'" onmouseout="this.style.background='#ffffff';this.style.color='#2F486D';this.style.borderColor='rgba(47,72,109,0.2)'">
+        View all success stories
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section id="contact" style="background:#07111F;padding:120px 48px;position:relative;overflow:hidden;">
+
+  <!-- Layered atmospheric lighting — elevated -->
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 65% at 50% 110%,rgba(47,72,109,0.65) 0%,transparent 60%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 74% 48%,rgba(158,133,72,0.12) 0%,transparent 58%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 45% 45% at 18% 28%,rgba(47,72,109,0.28) 0%,transparent 52%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 30% 30% at 50% 50%,rgba(158,133,72,0.04) 0%,transparent 60%);pointer-events:none;"></div>
+  <!-- Cinematic top gold line -->
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 5%,rgba(158,133,72,0.32) 28%,rgba(232,200,112,0.6) 50%,rgba(158,133,72,0.32) 72%,transparent 95%);"></div>
+  <!-- Floating ambient particles (CSS) -->
+  <div style="position:absolute;top:20%;left:8%;width:3px;height:3px;border-radius:50%;background:rgba(158,133,72,0.4);animation:pulse 3s 0.5s ease-in-out infinite;pointer-events:none;"></div>
+  <div style="position:absolute;top:60%;left:92%;width:2px;height:2px;border-radius:50%;background:rgba(158,133,72,0.3);animation:pulse 4s 1.2s ease-in-out infinite;pointer-events:none;"></div>
+  <div style="position:absolute;top:40%;left:4%;width:2px;height:2px;border-radius:50%;background:rgba(47,72,109,0.5);animation:pulse 3.5s 0.8s ease-in-out infinite;pointer-events:none;"></div>
+
+  <div style="max-width:1200px;margin:0 auto;position:relative;">
+
+    <!-- Editorial headline — full width, centered -->
+    <div class="reveal" style="text-align:center;margin-bottom:72px;">
+      <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:20px;">No Obligation · No Hidden Fees</div>
+      <h2 style="font-family:'Manrope',sans-serif;font-weight:900;font-size:clamp(44px,5.5vw,72px);color:#F8FBFF;line-height:0.95;letter-spacing:-3px;margin-bottom:0;">Your new life starts<br><span style="color:rgba(248,251,255,0.28);font-style:italic;">with one conversation.</span></h2>
+      <div style="width:48px;height:2px;background:linear-gradient(90deg,transparent,#9E8548,transparent);margin:28px auto 0;"></div>
+    </div>
+
+    <!-- Two column: left contact + right form -->
+    <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:start;">
+
+      <!-- LEFT -->
+      <div class="reveal-left">
+        <p style="font-family:'Inter',sans-serif;font-size:17px;color:rgba(255,255,255,0.52);line-height:1.8;margin-bottom:44px;">Our MARA-registered consultants will review your profile, identify your strongest visa pathway, and give you a clear action plan — all in a single call.</p>
+
+        <!-- Contact items -->
+        <div style="display:flex;flex-direction:column;gap:0;">
+          <div style="display:flex;align-items:center;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="width:48px;height:48px;background:linear-gradient(135deg,rgba(158,133,72,0.15),rgba(158,133,72,0.06));border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(158,133,72,0.22);">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4C4 3 5 2 6 2h2l2 5-1.5 1.5S9 10 11 12s3.5 2.5 3.5 2.5L16 13l5 2v2c0 1-1 2-2 2C8 19 1 12 4 4z" stroke="#9E8548" stroke-width="1.4" fill="none"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:4px;">Phone / WhatsApp</div>
+              <a href="tel:+96550610991" style="font-family:'Manrope',sans-serif;font-size:18px;color:#F8FBFF;font-weight:700;text-decoration:none;letter-spacing:-0.3px;">+965 5061 0991</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="width:48px;height:48px;background:linear-gradient(135deg,rgba(158,133,72,0.15),rgba(158,133,72,0.06));border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(158,133,72,0.22);">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 5l8 5 8-5M2 5h16v10H2V5z" stroke="#9E8548" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:4px;">Email</div>
+              <a href="mailto:info@truviaconsultants.com" style="font-family:'Manrope',sans-serif;font-size:16px;color:#F8FBFF;font-weight:700;text-decoration:none;letter-spacing:-0.2px;">info@truviaconsultants.com</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:18px;padding:20px 0;">
+            <div style="width:48px;height:48px;background:linear-gradient(135deg,rgba(158,133,72,0.15),rgba(158,133,72,0.06));border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(158,133,72,0.22);margin-top:2px;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="3" stroke="#9E8548" stroke-width="1.4"/><path d="M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#9E8548" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:4px;">Office</div>
+              <span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.65);line-height:1.65;display:block;">Salmiya, Block 2<br>Salem Al Mubarak St, Floor 1, Office 15</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust note -->
+        <div style="margin-top:32px;display:flex;align-items:center;gap:12px;padding:18px 20px;background:rgba(158,133,72,0.07);border:1px solid rgba(158,133,72,0.18);border-radius:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#9E8548" stroke-width="1.5" fill="none"/><path d="M8.5 12l2.5 2.5 5-5" stroke="#9E8548" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.55);line-height:1.5;">MARA-registered. Our team is trained and supervised by a registered MARA migration agent.</span>
+        </div>
+      </div>
+
+      <!-- RIGHT — Premium glass form card -->
+      <div class="reveal-right">
+        <div style="position:relative;background:linear-gradient(145deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.055) 100%);backdrop-filter:blur(48px) saturate(200%);-webkit-backdrop-filter:blur(48px) saturate(200%);border:1px solid rgba(255,255,255,0.14);border-radius:28px;padding:44px;box-shadow:0 40px 80px rgba(0,0,0,0.45),0 0 0 0.5px rgba(255,255,255,0.06) inset,0 1px 0 rgba(255,255,255,0.18) inset;">
+          <!-- Gold top accent -->
+          <div style="position:absolute;top:0;left:44px;right:44px;height:1.5px;background:linear-gradient(90deg,transparent,rgba(232,200,112,0.7) 30%,rgba(232,200,112,0.9) 50%,rgba(232,200,112,0.7) 70%,transparent);border-radius:0 0 2px 2px;"></div>
+          <!-- Inner ambient glow -->
+          <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.12) 0%,transparent 70%);pointer-events:none;"></div>
+
+          <div style="margin-bottom:28px;">
+            <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(232,200,112,0.7);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px;">Free Assessment</div>
+            <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:24px;color:#F8FBFF;letter-spacing:-0.5px;margin:0;">Tell us about yourself.</h3>
+          </div>
+
+          <!-- Form fields -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+            <div>
+              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Full Name</label>
+              <input type="text" placeholder="Your name" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
+            </div>
+            <div>
+              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">WhatsApp</label>
+              <input type="tel" placeholder="+965 XXXX XXXX" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+            <div>
+              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Occupation</label>
+              <select style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
+                <option value="">Select occupation</option>
+                <option>Engineering</option>
+                <option>Healthcare / Nursing</option>
+                <option>Information Technology</option>
+                <option>Accounting / Finance</option>
+                <option>Education</option>
+                <option>Skilled Trades</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Destination</label>
+              <select style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
+                <option value="">Preferred country</option>
+                <option>Australia</option>
+                <option>Canada</option>
+                <option>United Kingdom</option>
+                <option>Europe</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom:20px;">
+            <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Anything specific you'd like to discuss? <span style="color:rgba(255,255,255,0.18);font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
+            <textarea rows="3" placeholder="e.g. I'm a nurse with 5 years experience, interested in Subclass 190…" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:13px;color:#F8FBFF;outline:none;resize:none;transition:border-color 0.25s,background 0.25s;line-height:1.6;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'"></textarea>
+          </div>
+
+          <button id="ctaSubmitBtn" class="btn-gold" style="width:100%;justify-content:center;font-size:15px;padding:17px;border-radius:13px;cursor:pointer;letter-spacing:0.01em;position:relative;overflow:hidden;"
+            onclick="var b=document.getElementById('ctaSubmitBtn');b.innerHTML='<svg width=16 height=16 viewBox=\'0 0 16 16\' fill=none style=\'margin-right:8px\'><path d=\'M2 8h12M8 3l5 5-5 5\' stroke=\'currentColor\' stroke-width=1.5 stroke-linecap=\'round\'/></svg> Request received — we\'ll be in touch within 24 hrs';b.style.background='linear-gradient(135deg,#1a7a3a,#22a050)';b.style.pointerEvents='none';">
+            Request Free Consultation &nbsp;→
+          </button>
+          <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:rgba(158,133,72,0.5);"></div>
+            <p style="font-family:'Inter',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.22);margin:0;">No spam. Confidential. Response within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer style="background:#070F1C;padding:80px 48px 40px;border-top:1px solid rgba(255,255,255,0.05);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1.8fr 1fr 1.2fr 1fr 1fr;gap:48px;margin-bottom:64px;">
+      <div>
+        <div style="display:flex;align-items:center;margin-bottom:22px;">
+          <img src="uploads/truvia-logo.png" alt="Truvia Consultants" style="height:64px;width:auto;display:block;">
+        </div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.4);line-height:1.75;max-width:240px;margin-bottom:24px;">Kuwait's leading immigration consultancy. Australia's foremost skilled migration specialists from the GCC.</p>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="tel:+96550610991" style="font-family:'Inter',sans-serif;font-size:13px;color:#9E8548;text-decoration:none;font-weight:600;">+965 5061 0991</a>
+          <a href="mailto:info@truviaconsultants.com" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;" class="foot-gold">info@truviaconsultants.com</a>
+          <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.3);line-height:1.6;">Salmiya, Block 2, Salem Al Mubarak Street, Floor 1, Office 15</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:18px;">Company</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="about.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Company Profile</a>
+          <a href="about.html#why" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Why Choose Truvia</a>
+          <a href="success-stories.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Success Stories</a>
+          <a href="blog.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Blog &amp; Resources</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:18px;">Australia</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="australia-migration.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Skilled Migration</a>
+          <a href="australia-gsm.html#189" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Subclass 189</a>
+          <a href="australia-gsm.html#190" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Subclass 190</a>
+          <a href="australia-gsm.html#491" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Subclass 491</a>
+          <a href="australia-employer-sponsored.html#482" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Employer 482</a>
+          <a href="australia-skills-assessment.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Skills Assessment</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:18px;">Canada</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="canada-immigration.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Express Entry</a>
+          <a href="canada-immigration.html#pnp" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">PNP</a>
+          <a href="canada-immigration.html#aip" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">AIP &amp; RCIP</a>
+        </div>
+        <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:18px;margin-top:28px;">Training</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="training.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">IELTS</a>
+          <a href="training.html#pte" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">PTE Academic</a>
+          <a href="training.html#oet" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">OET</a>
+          <a href="training.html#nclex" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">NCLEX</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:18px;">Other Services</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="other-services.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Study Visa</a>
+          <a href="other-services.html#visitor" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Visitor Visas</a>
+          <a href="other-services.html#investment" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" class="foot-gold">Residency by Investment</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.22);">© 2025 Truvia Consultants. All rights reserved. Licensed immigration consultancy, Kuwait.</p>
+      <div style="display:flex;gap:24px;">
+        <a href="#" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.22);text-decoration:none;transition:color 0.2s;" class="foot-dim">Privacy Policy</a>
+        <a href="#" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.22);text-decoration:none;transition:color 0.2s;" class="foot-dim">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/96550610991" target="_blank" id="wa-btn" style="position:fixed;bottom:28px;right:28px;z-index:1000;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,0.45);text-decoration:none;transition:transform 0.2s cubic-bezier(.16,1,.3,1),box-shadow 0.2s;opacity:0;animation:fadeIn 0.5s 1.5s ease forwards;" onmouseover="this.style.transform='scale(1.12)';this.style.boxShadow='0 10px 32px rgba(37,211,102,0.55)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 6px 24px rgba(37,211,102,0.45)'">
+  <svg width="26" height="26" viewBox="0 0 26 26" fill="white"><path d="M13 2C7 2 2 7 2 13c0 2 .6 3.9 1.6 5.5L2 24l5.7-1.5C9.2 23.4 11 24 13 24c6 0 11-5 11-11S19 2 13 2zm5.8 15.2c-.3.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.7-.1s-1.3-.5-2.1-.9c-3.4-1.7-5.6-5.1-5.8-5.4-.2-.3-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.9-.4h.6c.2 0 .4 0 .6.5l1.1 2.7c.1.2.1.4 0 .6l-.6.9c-.1.1-.2.3-.1.5.5.9 1.2 1.7 2 2.4.7.6 1.6 1.1 2.4 1.3.2.1.3 0 .5-.1l.8-.9c.2-.2.4-.3.6-.2l2.7 1.3c.2.1.4.3.4.5v.8z"/></svg>
+</a>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Dropdown handlers
+    window.openDD = (wrap) => { const p = wrap.querySelector('.dd-panel'); if (p) p.classList.add('open'); };
+    window.closeDD = (wrap) => { const p = wrap.querySelector('.dd-panel'); if (p) p.classList.remove('open'); };
+
+    // Mouse-follow ambient glow in hero
+    const hero = document.getElementById('hero');
+    const glow = document.getElementById('hero-glow');
+    if (hero && glow) {
+      this._heroMouseMove = (e) => {
+        const rect = hero.getBoundingClientRect();
+        glow.style.left = (e.clientX - rect.left) + 'px';
+        glow.style.top = (e.clientY - rect.top) + 'px';
+      };
+      hero.addEventListener('mousemove', this._heroMouseMove, { passive: true });
+    }
+
+    // Floating particles in hero
+    if (hero) {
+      for (let i = 0; i < 14; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 3 + 1.5;
+        p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random() * 55}%;bottom:${Math.random() * 50 + 5}%;animation-duration:${(Math.random() * 10 + 7).toFixed(1)}s;animation-delay:${(Math.random() * 10).toFixed(1)}s;opacity:0;`;
+        hero.appendChild(p);
+      }
+    }
+
+    // Sticky nav
+    const nav = document.getElementById('navbar');
+    this._onScroll = () => {
+      if (!nav) return;
+      if (window.scrollY > 60) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+
+    // ── Stat card hover glow ──
+    document.querySelectorAll('.ts-card').forEach(function(card) {
+      var orb = card.querySelector('.ts-orb');
+      var icon = card.querySelector('[style*="58px"][style*="border-radius:18px"]');
+      card.addEventListener('mouseenter', function() {
+        if (orb) orb.style.opacity = '1';
+        if (icon) { icon.style.background = card.classList.contains('ts-gold') ? 'rgba(158,133,72,0.22)' : 'rgba(47,72,109,0.28)'; icon.style.transform = 'scale(1.1)'; }
+        var num = card.querySelector('[data-count]') || card.querySelector('[style*="58px"][style*="font-weight:900"]');
+        if (num) num.style.textShadow = '0 0 48px rgba(158,133,72,0.45)';
+      });
+      card.addEventListener('mouseleave', function() {
+        if (orb) orb.style.opacity = '0';
+        if (icon) { icon.style.background = card.classList.contains('ts-gold') ? 'rgba(158,133,72,0.12)' : 'rgba(47,72,109,0.15)'; icon.style.transform = 'scale(1)'; }
+        var num = card.querySelector('[data-count]') || card.querySelector('[style*="58px"][style*="font-weight:900"]');
+        if (num) num.style.textShadow = '';
+      });
+    });
+
+    // ── City photo cursor-based parallax ──
+    var cityStrip = document.querySelector('section[style*="background:#050D1A;padding:0"]');
+    if (cityStrip) {
+      cityStrip.querySelectorAll('div[style*="cursor:pointer"]').forEach(function(card) {
+        var img = card.querySelector('img');
+        if (!img) return;
+        card.addEventListener('mousemove', function(e) {
+          var rect = card.getBoundingClientRect();
+          var cx = (e.clientX - rect.left) / rect.width - 0.5;
+          var cy = (e.clientY - rect.top) / rect.height - 0.5;
+          img.style.transition = 'transform 0.12s linear';
+          img.style.transform = 'translate(' + (cx * -24) + 'px,' + (cy * -16) + 'px) scale(1.1)';
+          var overlay = card.querySelector('.co');
+          if (overlay) overlay.style.opacity = '1';
+          var label = card.querySelector('.cl');
+          if (label) { label.style.transform = 'translateY(0)'; label.style.opacity = '1'; }
+        }, {passive: true});
+        card.addEventListener('mouseleave', function() {
+          img.style.transition = 'transform 1.4s cubic-bezier(.16,1,.3,1)';
+          img.style.transform = 'scale(1)';
+          var overlay = card.querySelector('.co');
+          if (overlay) overlay.style.opacity = '0';
+          var label = card.querySelector('.cl');
+          if (label) { label.style.transform = 'translateY(8px)'; label.style.opacity = '0'; }
+        });
+      });
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+    // Why card icon restore
+    document.querySelectorAll('.why-card').forEach(card => {
+      card.addEventListener('mouseleave', () => {
+        const box = card.querySelector('.icon-box');
+        if (box) box.style.background = '';
+      });
+    });
+
+    // Counter animations — count up when scrolled into view
+    const easeOut = t => 1 - Math.pow(1 - t, 3);
+    const animateCounter = (el) => {
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const dur = 2000;
+      const start = Date.now();
+      const tick = () => {
+        const p = Math.min((Date.now() - start) / dur, 1);
+        const val = Math.round(easeOut(p) * target);
+        el.textContent = (target >= 1000 ? val.toLocaleString() : val) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      tick();
+    };
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
+
+    // ── Testimonial Marquee Builder ──
+    const _testiSection = document.getElementById('testi-section');
+    if (_testiSection) {
+      const _innerWrap = _testiSection.firstElementChild;
+      const _tGrid = _innerWrap ? _innerWrap.children[1] : null;
+      const _tInnerCTA = _innerWrap ? _innerWrap.children[2] : null;
+      if (_tGrid) _tGrid.style.display = 'none';
+      if (_tInnerCTA) _tInnerCTA.style.display = 'none';
+      const _td = [
+        { i:'RK', n:'Rahul Kumar', r:'IT Engineer · Melbourne', q:'Truvia made the entire Australia 190 process feel manageable. My case manager was always available on WhatsApp. Professional, honest, and results-driven.', b:'190 · AU', bc:'#2F486D', ab:'#2F486D' },
+        { i:'FA', n:'Fatima Al-Rashidi', r:'Nurse · Toronto', q:'After being misled by two other agencies, Truvia was completely transparent. We moved to Canada with our three kids under PNP. Dreams really do come true.', b:'PNP · CA', bc:'#9E8548', ab:'linear-gradient(135deg,#9E8548,#B8994E)' },
+        { i:'MP', n:'Mohammed Patel', r:'Civil Engineer · Sydney', q:'As a civil engineer in Kuwait, Truvia knew exactly which skills assessment body to use. My Subclass 189 was approved in 10 months. Absolutely exceptional.', b:'189 · AU', bc:'#2F486D', ab:'#2F486D' },
+        { i:'MC', n:'Maria Cruz', r:'Nurse · Brisbane', q:'I had worked in Kuwait for 10 years and almost given up on migration. Truvia made it happen in 7 months through Australia 190. Eternally grateful.', b:'190 · AU', bc:'#2F486D', ab:'linear-gradient(135deg,#9E8548,#B8994E)' },
+        { i:'AH', n:'Ahmed Hassan', r:'Accountant · Perth', q:'Truvia helped me achieve IELTS 8.0 and then lodged my Subclass 189. Training and migration under one roof was invaluable. Now living in Perth!', b:'189 · AU', bc:'#2F486D', ab:'#2F486D' },
+        { i:'SK', n:'Sana Khan', r:'Developer · Calgary', q:'I applied for Express Entry through Truvia after failing twice on my own. They maximised my CRS score and got my ITA within 3 months. Life-changing.', b:'EE+PNP · CA', bc:'#9E8548', ab:'linear-gradient(135deg,#9E8548,#B8994E)' },
+      ];
+      const _sts = Array(5).fill('<svg width="12" height="12" fill="#9E8548" viewBox="0 0 14 14"><path d="M7 1L8.5 5H13L9.5 7.5L10.8 12L7 9.5L3.2 12L4.5 7.5L1 5H5.5L7 1Z"/></svg>').join('');
+      const _mk = (t) => '<div style="flex-shrink:0;width:330px;background:#fff;border-radius:18px;padding:24px;border:1px solid rgba(47,72,109,0.07);box-shadow:0 2px 16px rgba(47,72,109,0.05);position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform=\'translateY(-4px)\';this.style.boxShadow=\'0 16px 44px rgba(30,60,120,0.12)\'" onmouseout="this.style.transform=\'translateY(0)\';this.style.boxShadow=\'0 2px 16px rgba(47,72,109,0.05)\'"><div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9E8548,rgba(158,133,72,0.1));"></div><div style="display:flex;gap:2px;margin-bottom:11px;">' + _sts + '</div><p style="font-family:\'Inter\',sans-serif;font-size:13.5px;color:#374151;line-height:1.7;margin-bottom:14px;">"' + t.q + '"</p><div style="display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid #E8F0F8;"><div style="display:flex;align-items:center;gap:9px;"><div style="width:34px;height:34px;border-radius:50%;background:' + t.ab + ';display:flex;align-items:center;justify-content:center;font-family:\'Manrope\',sans-serif;font-weight:800;font-size:11px;color:#fff;flex-shrink:0;">' + t.i + '</div><div><div style="font-family:\'Manrope\',sans-serif;font-weight:700;font-size:13px;color:#1C2B3A;">' + t.n + '</div><div style="font-family:\'Inter\',sans-serif;font-size:11px;color:#9CA3AF;">' + t.r + '</div></div></div><div style="background:rgba(47,72,109,0.07);border-radius:6px;padding:3px 8px;flex-shrink:0;"><span style="font-family:\'Inter\',sans-serif;font-size:10px;font-weight:700;color:' + t.bc + ';text-transform:uppercase;letter-spacing:0.06em;">' + t.b + '</span></div></div></div>';
+      function _mkRow(animCss) {
+        const wrap = document.createElement('div');
+        wrap.style.cssText = 'overflow:hidden;padding:14px 0;';
+        const track = document.createElement('div');
+        track.style.cssText = 'display:flex;gap:20px;width:max-content;animation:' + animCss + ';';
+        track.addEventListener('mouseover', function(){ track.style.animationPlayState = 'paused'; });
+        track.addEventListener('mouseout', function(){ track.style.animationPlayState = 'running'; });
+        wrap.appendChild(track);
+        return { wrap: wrap, track: track };
+      }
+      const r1 = _mkRow('marqueeScroll 38s linear infinite');
+      const r2 = _mkRow('marqueeScroll 46s linear infinite reverse');
+      r1.track.innerHTML = [..._td, ..._td].map(_mk).join('');
+      const _rot = [..._td.slice(3), ..._td.slice(0, 3)];
+      r2.track.innerHTML = [..._rot, ..._rot].map(_mk).join('');
+      const _newCTA = document.createElement('div');
+      _newCTA.style.cssText = 'text-align:center;margin-top:48px;padding:0 48px;';
+      _newCTA.innerHTML = '<a href="success-stories.html" style="font-family:\'Inter\',sans-serif;font-size:14px;font-weight:600;color:#2F486D;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(47,72,109,0.2);border-radius:100px;padding:13px 28px;transition:all 0.2s;background:#ffffff;" onmouseover="this.style.background=\'#2F486D\';this.style.color=\'#ffffff\';this.style.borderColor=\'#2F486D\'" onmouseout="this.style.background=\'#ffffff\';this.style.color=\'#2F486D\';this.style.borderColor=\'rgba(47,72,109,0.2)\'">View all success stories <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="margin-left:4px"><path d="M3 7H11M7 3L11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>';
+      if (_innerWrap) {
+        _innerWrap.after(r1.wrap);
+        r1.wrap.after(r2.wrap);
+        r2.wrap.after(_newCTA);
+      }
+    }
+
+    // ── Premium motion engine (scroll reveals + extras) ──
+    setTimeout(function(){
+      function hide(el){ var d=el.getAttribute('data-om-delay')||0; el.style.opacity='0'; el.style.transform='translateY(34px)'; el.style.transition='opacity .85s cubic-bezier(.16,1,.3,1) '+d+'ms,transform .85s cubic-bezier(.16,1,.3,1) '+d+'ms'; }
+      function show(el){ el.style.opacity='1'; el.style.transform='translateY(0)'; el.setAttribute('data-om-shown','1'); setTimeout(function(){ el.style.transition=''; if(!/reveal/.test(el.className)){ el.style.transform=''; el.style.opacity=''; } },900); }
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } }); },{ threshold:0.1, rootMargin:'0px 0px -40px 0px' });
+      function tag(el,delay){ if(el.getAttribute('data-om-tagged')) return; el.setAttribute('data-om-tagged','1'); if(delay) el.setAttribute('data-om-delay',delay); hide(el); var r=el.getBoundingClientRect(); if(r.top<(window.innerHeight||800)&&r.bottom>-40){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ show(el); }); }); } else { io.observe(el); } }
+
+      // Stagger cards in grids
+      document.querySelectorAll('section [style*="grid-template-columns"] > *').forEach(function(el,i){ tag(el,(i%4)*95); });
+      // Reveal section h2s
+      document.querySelectorAll('section h2').forEach(function(h){ tag(h,0); });
+
+      // Gold accent lines before h2
+      document.querySelectorAll('section h2').forEach(function(h2){
+        if(h2.previousElementSibling && h2.previousElementSibling.classList.contains('om-line')) return;
+        var line=document.createElement('span');
+        line.style.cssText='display:block;height:2px;background:linear-gradient(90deg,#9E8548,transparent);border-radius:2px;transform-origin:left;width:60px;margin-bottom:14px;transform:scaleX(0);';
+        h2.parentNode.insertBefore(line,h2);
+        var lio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.style.transition='transform 0.9s cubic-bezier(.16,1,.3,1)'; e.target.style.transform='scaleX(1)'; lio.unobserve(e.target); } }); },{threshold:0.5});
+        lio.observe(line);
+      });
+
+      // Cursor glow
+      var glow=document.getElementById('om-cursor-glow');
+      if(!glow){ glow=document.createElement('div'); glow.id='om-cursor-glow'; glow.style.cssText='pointer-events:none;position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.07) 0%,transparent 60%);transform:translate(-50%,-50%);z-index:9999;transition:opacity 0.4s;opacity:0;'; document.body.appendChild(glow); }
+      document.addEventListener('mousemove',function(e){ glow.style.left=e.clientX+'px'; glow.style.top=e.clientY+'px'; var el=document.elementFromPoint(e.clientX,e.clientY); glow.style.opacity=(el&&el.closest('section[style*="background:#09"],section[style*="background:#2F"],footer,nav'))?'1':'0'; });
+
+      // Shimmer on CTAs
+      document.querySelectorAll('a[style*="#9E8548"],a[style*="#2F486D"]').forEach(function(btn){
+        if(btn.classList.contains('om-btn-gold')) return;
+        btn.classList.add('om-btn-gold');
+        btn.style.position='relative'; btn.style.overflow='hidden';
+      });
+
+      // Page transitions
+      document.querySelectorAll('a[href$=".dc.html"]').forEach(function(a){
+        a.addEventListener('click',function(e){
+          var href=a.getAttribute('href');
+          if(!href||href.startsWith('#')||href.startsWith('http')) return;
+          e.preventDefault();
+          document.body.style.transition='opacity 0.3s ease';
+          document.body.style.opacity='0';
+          setTimeout(function(){ window.location.href=href; },300);
+        });
+      });
+
+      // Safety net
+      setTimeout(function(){ document.querySelectorAll('[data-om-tagged]:not([data-om-shown])').forEach(function(el){ show(el); }); },2600);
+    }, 120);
+  
+});
+</script>
+<script src="motion-engine.js" defer></script>
+<script src="mobile.js" defer></script>
+</body>
+</html>

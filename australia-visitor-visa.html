@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visitor Visa (Subclass 600) — Truvia Consultants</title>
+<meta name="description" content="Kuwait's leading immigration consultancy. MARA-registered specialists in Australian skilled migration and more.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @media(max-width:900px){.mara-chip{display:none !important;}}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #EBE8E8; color: #1C2B3A; overflow-x: hidden; }
+    .nav-link { font-family:'Inter',sans-serif; font-size:13px; font-weight:500; color:#4A5568; text-decoration:none; padding:7px 11px; border-radius:6px; transition:color 0.2s,background 0.2s; white-space:nowrap; background:none; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:4px; line-height:1; }
+    .nav-link:hover { color:#2F486D; background:rgba(47,72,109,0.07); }
+    .dd-panel { position:absolute; top:calc(100% + 10px); left:0; background:#ffffff; border:1px solid #E2DDD9; border-radius:10px; padding:6px; min-width:190px; box-shadow:0 8px 28px rgba(47,72,109,0.13); opacity:0; pointer-events:none; transform:translateY(-6px); transition:opacity 0.18s,transform 0.18s; z-index:300; }
+    .dd-wrap::after { content:''; position:absolute; left:0; right:0; top:100%; height:14px; }
+    .dd-panel.open { opacity:1; pointer-events:auto; transform:translateY(0); }
+    .dd-wrap:hover .dd-panel { opacity:1; pointer-events:auto; transform:translateY(0); }
+    .dd-link { display:block; font-family:'Inter',sans-serif; font-size:13px; font-weight:500; color:#374151; text-decoration:none; padding:8px 12px; border-radius:6px; transition:color 0.15s,background 0.15s; white-space:nowrap; }
+    .dd-link:hover { color:#2F486D; background:rgba(47,72,109,0.07); }
+    .dd-sub-wrap{position:relative;} .dd-sub-parent{display:flex;align-items:center;justify-content:space-between;gap:10px;} .dd-sub-panel{position:absolute;top:-7px;left:calc(100% + 8px);background:#ffffff;border:1px solid #E2DDD9;border-radius:10px;padding:6px;min-width:210px;box-shadow:0 12px 34px rgba(47,72,109,0.16);opacity:0;pointer-events:none;transform:translateX(-6px);transition:opacity .2s cubic-bezier(.16,1,.3,1),transform .2s cubic-bezier(.16,1,.3,1);z-index:400;} .dd-sub-wrap:hover .dd-sub-panel{opacity:1;pointer-events:auto;transform:translateX(0);}
+    .section-tag { display:inline-flex; align-items:center; background:rgba(158,133,72,0.1); border:1px solid rgba(158,133,72,0.25); border-radius:100px; padding:5px 14px; font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#9E8548; letter-spacing:0.08em; text-transform:uppercase; }
+    .btn-primary { background:#2F486D; color:#ffffff; font-family:'Inter',sans-serif; font-weight:600; font-size:14px; padding:13px 26px; border-radius:8px; text-decoration:none; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:background 0.2s; }
+    .btn-primary:hover { background:#3d5f8f; }
+    .btn-outline { background:transparent; color:#2F486D; font-family:'Inter',sans-serif; font-weight:600; font-size:14px; padding:12px 24px; border-radius:8px; text-decoration:none; border:1.5px solid #2F486D; display:inline-flex; align-items:center; gap:8px; transition:all 0.2s; }
+    .btn-outline:hover { background:#2F486D; color:#ffffff; }
+    ::-webkit-scrollbar { width:5px; } ::-webkit-scrollbar-track { background:#EBE8E8; } ::-webkit-scrollbar-thumb { background:#C8C4C4; border-radius:3px; }
+  
+    /* ── Premium motion system ── */
+    @keyframes omFadeUp { from{opacity:0;transform:translateY(38px);} to{opacity:1;transform:translateY(0);} }
+    @keyframes omMaskUp { from{transform:translateY(110%);} to{transform:translateY(0);} }
+    @keyframes omFloat { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(30px,-26px) scale(1.08);} }
+    @keyframes omFloat2 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(-26px,20px);} }
+    @keyframes omPulseDot { 0%,100%{opacity:0.6;transform:scale(1);} 50%{opacity:1;transform:scale(1.35);} }
+    .om-r{opacity:0;will-change:opacity,transform;}
+    .om-r.om-in{animation:omFadeUp .9s cubic-bezier(.16,1,.3,1) forwards;}
+    .om-ml{display:block;overflow:hidden;padding-bottom:0.12em;margin-bottom:-0.12em;}
+    .om-ml > .om-ml-i{display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.16,1,.3,1);will-change:transform;}
+    .om-ml.om-in > .om-ml-i{transform:translateY(0);}
+    .om-mag{transition:transform .3s cubic-bezier(.16,1,.3,1);}
+  
+  
+    /* ── Premium upgrade CSS ── */
+    @keyframes omLineGrow { from{transform:scaleX(0);} to{transform:scaleX(1);} }
+    @keyframes omShimmer { 0%{transform:translateX(-100%) skewX(-20deg);} 100%{transform:translateX(400%) skewX(-20deg);} }
+    @keyframes omWordIn { from{opacity:0;transform:translateY(18px);filter:blur(6px);} to{opacity:1;transform:translateY(0);filter:blur(0);} }
+    @keyframes omPageIn { from{opacity:0;transform:translateY(12px);} to{opacity:1;transform:translateY(0);} }
+    @keyframes omPulseRing { 0%{box-shadow:0 0 0 0 rgba(158,133,72,0.35);} 70%{box-shadow:0 0 0 14px rgba(158,133,72,0);} 100%{box-shadow:0 0 0 0 rgba(158,133,72,0);} }
+    @keyframes omBarFill { from{width:0%;} to{width:var(--bar-w,80%);} }
+
+    /* Page entrance */
+    body { animation: omPageIn 0.6s cubic-bezier(.16,1,.3,1) both; }
+
+    /* Gold shimmer buttons */
+    .om-btn-gold { position:relative; overflow:hidden; }
+    .om-btn-gold::after { content:''; position:absolute; top:0; left:0; width:35%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent); transform:translateX(-100%) skewX(-20deg); pointer-events:none; }
+    .om-btn-gold:hover::after { animation:omShimmer 0.7s ease forwards; }
+
+    /* Pulse ring on CTA */
+    .om-pulse { animation: omPulseRing 2.4s ease-out infinite; }
+
+    /* Section line accent */
+    .om-line { display:block; height:2px; background:linear-gradient(90deg,#9E8548,transparent); border-radius:2px; transform-origin:left; transform:scaleX(0); margin-bottom:16px; }
+    .om-line.om-in { animation:omLineGrow 0.9s cubic-bezier(.16,1,.3,1) forwards; }
+
+    /* Cursor spotlight */
+    #om-cursor-glow { pointer-events:none; position:fixed; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(158,133,72,0.06) 0%,transparent 60%); transform:translate(-50%,-50%); z-index:9999; transition:opacity 0.4s; opacity:0; }
+  
+  </style>
+
+</head>
+<body>
+
+
+
+<!-- NAV -->
+<nav id="navbar" style="position:sticky;top:0;z-index:200;background:#ffffff;border-bottom:2px solid #2F486D;height:68px;display:flex;align-items:center;padding:0 40px;box-shadow:0 2px 12px rgba(47,72,109,0.07);">
+  <a href="index.html" style="text-decoration:none;margin-right:32px;flex-shrink:0;display:flex;align-items:center;">
+    <img src="uploads/truvia-logo.png" alt="Truvia Consultants" style="height:50px;width:auto;display:block;">
+  </a>
+  <div style="display:flex;align-items:center;gap:0;flex:1;">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="dd-wrap" style="position:relative;"><a href="about.html" class="nav-link">About Us <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="about.html" class="dd-link">Company Profile</a><a href="about.html#why" class="dd-link">Why Choose Truvia</a></div></div>
+    <div class="dd-wrap" style="position:relative;"><a href="australia-migration.html" class="nav-link" style="color:#2F486D;font-weight:600;">Australia <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel" style="min-width:248px;"><a href="australia-migration.html" class="dd-link">Australia Overview</a><a href="australia-gsm.html" class="dd-link">General Skilled Migration (GSM)</a><a href="australia-employer-sponsored.html" class="dd-link">Employer Sponsored Visas</a><a href="australia-visitor-visa.html" class="dd-link">Visitor Visa (Subclass 600)</a><a href="australia-national-innovation-visa.html" class="dd-link">National Innovation Visa</a><a href="australia-skills-assessment.html" class="dd-link">Skills Assessment Authorities</a><a href="australia-appeals.html" class="dd-link">Appeals &amp; Reviews</a><div style="height:1px;background:#EBE8E8;margin:6px 8px;"></div><a href="australia-salaries.html" class="dd-link">Salaries in Australia</a><a href="australia-cost-of-living.html" class="dd-link">Cost of Living in Australia</a><a href="australia-pr-points-calculator.html" class="dd-link">PR Points Calculator</a><a href="australia-processing-times.html" class="dd-link">Processing Times</a><div class="dd-sub-wrap"><a href="australia-occupations-in-demand.html" class="dd-link dd-sub-parent">Occupations in Demand<svg width="8" height="8" viewBox="0 0 9 9" fill="none" style="transform:rotate(-90deg);flex-shrink:0;"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-sub-panel"><a href="australia-engineer-pr.html" class="dd-link">Engineers</a><a href="australia-it-jobs.html" class="dd-link">IT Professionals</a><a href="australia-nurse-salary.html" class="dd-link">Nurses &amp; Medical</a><a href="australia-trades-pr.html" class="dd-link">Trades &amp; Welders</a><a href="australia-accountant-pr.html" class="dd-link">Accountants</a><a href="australia-chef-hospitality-pr.html" class="dd-link">Chefs &amp; Hospitality</a></div></div></div></div>
+    <div class="dd-wrap" style="position:relative;"><a href="canada-immigration.html" class="nav-link">Canada <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="canada-immigration.html" class="dd-link">Express Entry</a><a href="canada-immigration.html#pnp" class="dd-link">PNP</a><a href="canada-immigration.html#aip" class="dd-link">AIP &amp; RCIP</a></div></div>
+    <div class="dd-wrap" style="position:relative;"><a href="training.html" class="nav-link">Training <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="training.html" class="dd-link">IELTS Preparation</a><a href="training.html#pte" class="dd-link">PTE Academic Training</a><a href="training.html#oet" class="dd-link">OET Preparation</a><a href="training.html#nclex" class="dd-link">NCLEX Training</a></div></div>
+    <div class="dd-wrap" style="position:relative;"><a href="other-services.html" class="nav-link">Other Services <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="other-services.html" class="dd-link">Study Visa</a><a href="other-services.html#visitor" class="dd-link">Visitor Visas</a><a href="other-services.html#investment" class="dd-link">Residency by Investment</a></div></div>
+    <a href="success-stories.html" class="nav-link">Success Stories</a>
+    <div class="dd-wrap" style="position:relative;"><a href="blog.html" class="nav-link">Blog <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg></a><div class="dd-panel"><a href="blog.html" class="dd-link">Canada Immigration News</a><a href="blog.html#australia" class="dd-link">Australia Updates</a></div></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;flex-shrink:0;">
+    <a href="index.html#why-mara" class="mara-chip" title="MARA Registered Migration Agents — Australian Government authorised" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(59,92,138,0.92) 0%,rgba(36,60,94,0.96) 100%);backdrop-filter:blur(12px) saturate(1.4);-webkit-backdrop-filter:blur(12px) saturate(1.4);border:1px solid rgba(255,255,255,0.22);border-radius:100px;padding:7px 15px;text-decoration:none;box-shadow:0 4px 14px rgba(36,60,94,0.30),inset 0 1px 0 rgba(255,255,255,0.35),inset 0 -2px 4px rgba(0,0,0,0.10);transition:box-shadow .3s ease,transform .3s ease,background .3s ease;" onmouseover="this.style.background='linear-gradient(135deg,rgba(66,102,150,0.96) 0%,rgba(42,68,104,0.98) 100%)';this.style.boxShadow='0 7px 22px rgba(36,60,94,0.42),inset 0 1px 0 rgba(255,255,255,0.45),inset 0 -2px 5px rgba(0,0,0,0.12)';this.style.transform='translateY(-1.5px)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(59,92,138,0.92) 0%,rgba(36,60,94,0.96) 100%)';this.style.boxShadow='0 4px 14px rgba(36,60,94,0.30),inset 0 1px 0 rgba(255,255,255,0.35),inset 0 -2px 4px rgba(0,0,0,0.10)';this.style.transform='translateY(0)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#E8C87A" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L15.5 9.5" stroke="#E8C87A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#E8C87A;letter-spacing:0.04em;white-space:nowrap;">MARA Registered</span></a>
+    <a href="tel:+96550610991" style="font-family:'Inter',sans-serif;font-size:13px;color:#2F486D;font-weight:600;text-decoration:none;">+965 5061 0991</a>
+    <a href="index.html#contact" class="btn-primary" style="font-size:13px;padding:10px 20px;border-radius:7px;">Free Consultation</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section style="background:url('uploads/pexels-talharesitoglu-36983174.jpg') center 46%/cover no-repeat;padding:96px 40px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(20,40,66,0.74) 0%,rgba(30,56,90,0.52) 55%,rgba(20,40,66,0.42) 100%);"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,28,48,0.55) 0%,transparent 55%);"></div>
+  <div style="max-width:1200px;margin:0 auto;position:relative;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+      <a href="index.html" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none;">Home</a><span style="color:rgba(255,255,255,0.4);">/</span>
+      <a href="australia-migration.html" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none;">Australia</a><span style="color:rgba(255,255,255,0.4);">/</span>
+      <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.95);">Visitor Visa (600)</span>
+    </div>
+    <div class="section-tag" style="background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.35);color:#ffffff;margin-bottom:20px;">Subclass 600</div>
+    <h1 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(34px,4.6vw,54px);color:#ffffff;line-height:1.06;letter-spacing:-1.4px;max-width:720px;margin-bottom:16px;text-shadow:0 2px 18px rgba(0,0,0,0.35);">Visitor Visa — visit Australia with confidence.</h1>
+    <p style="font-family:'Inter',sans-serif;font-size:17px;color:rgba(255,255,255,0.92);max-width:600px;line-height:1.75;text-shadow:0 1px 8px rgba(0,0,0,0.3);">For tourism, family visits and business activities. We prepare a clear, well-evidenced application that demonstrates genuine temporary intent.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:30px;"><a href="#about" style="background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:rgba(255,255,255,0.92);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,0.28);box-shadow:0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Overview</a><a href="#streams" style="background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:rgba(255,255,255,0.92);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,0.28);box-shadow:0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Who Can Apply</a><a href="#docs" style="background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:rgba(255,255,255,0.92);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,0.28);box-shadow:0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Documents</a><a href="#tips" style="background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:rgba(255,255,255,0.92);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,0.28);box-shadow:0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">Stronger Applications</a><a href="#faq" style="background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:rgba(255,255,255,0.92);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,0.28);box-shadow:0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">FAQ</a></div>
+  </div>
+</section><section id="about" style="background:#ffffff;padding:76px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start;">
+      <div>
+        <div class="section-tag" style="margin-bottom:18px;">Overview</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,38px);color:#1C2B3A;line-height:1.1;letter-spacing:-1px;margin-bottom:18px;">What the Subclass 600 covers</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:15px;color:#6B7A8D;line-height:1.78;margin-bottom:16px;">The Subclass 600 Visitor visa allows you to travel to Australia for a temporary stay — to holiday, see family, or take part in approved business visitor activities. Most grants allow a stay of up to 3, 6 or 12 months per entry, depending on your circumstances.</p>
+        <p style="font-family:'Inter',sans-serif;font-size:15px;color:#6B7A8D;line-height:1.78;">Decisions hinge on the <strong style="color:#2F486D;">Genuine Temporary Entrant</strong> principle: you must satisfy the department that you intend a genuine, temporary visit and will depart before your visa expires. A clear purpose, sound finances and ties to your home country are central.</p>
+      </div>
+      <div style="background:#EBE8E8;border:1px solid #D8D4D4;border-radius:18px;padding:28px;">
+        <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">At a Glance</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #D8D4D4;"><span style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;">Purpose</span><span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#2F486D;text-align:right;">Tourism · Family · Business</span></div><div style="display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #D8D4D4;"><span style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;">Typical stay</span><span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#2F486D;text-align:right;">3, 6 or 12 months</span></div><div style="display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #D8D4D4;"><span style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;">Key test</span><span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#2F486D;text-align:right;">Genuine Temporary Entrant</span></div><div style="display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #D8D4D4;"><span style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;">Work rights</span><span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#2F486D;text-align:right;">Not permitted</span></div><div style="display:flex;justify-content:space-between;align-items:center;padding:13px 0;"><span style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;">Study</span><span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#2F486D;text-align:right;">Up to 3 months</span></div>
+      </div>
+    </div>
+  </div>
+</section><section id="streams" style="background:#EBE8E8;padding:76px 40px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-tag" style="margin-bottom:18px;">Who Can Apply</div>
+    <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,38px);color:#1C2B3A;line-height:1.1;letter-spacing:-1px;margin-bottom:30px;">Three common visitor purposes</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+      <div style="background:#ffffff;border:1px solid #E2DDD9;border-radius:16px;padding:30px 28px;"><div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;color:#1C2B3A;margin-bottom:12px;">Tourist Stream</div><div style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.7;margin-bottom:18px;">Holidays, sightseeing, cruises and recreational travel across Australia.</div><div style="border-top:1px solid #EBE8E8;padding-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:#9E8548;font-weight:600;line-height:1.7;">Genuine tourism itinerary · Sufficient funds · Return intent</div></div><div style="background:#ffffff;border:1px solid #E2DDD9;border-radius:16px;padding:30px 28px;"><div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;color:#1C2B3A;margin-bottom:12px;">Family Visit</div><div style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.7;margin-bottom:18px;">Visiting relatives or friends who are citizens or permanent residents.</div><div style="border-top:1px solid #EBE8E8;padding-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:#9E8548;font-weight:600;line-height:1.7;">Invitation letter · Relationship evidence · Host support (where relevant)</div></div><div style="background:#ffffff;border:1px solid #E2DDD9;border-radius:16px;padding:30px 28px;"><div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;color:#1C2B3A;margin-bottom:12px;">Business Visitor</div><div style="font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.7;margin-bottom:18px;">Meetings, conferences, negotiations and exploratory business activities — not employment.</div><div style="border-top:1px solid #EBE8E8;padding-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:#9E8548;font-weight:600;line-height:1.7;">Conference / meeting evidence · Employer letter · No paid local work</div></div>
+    </div>
+  </div>
+</section><section id="docs" style="background:#ffffff;padding:76px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+      <div>
+        <div class="section-tag" style="margin-bottom:18px;">Documentation</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,36px);color:#1C2B3A;line-height:1.12;letter-spacing:-1px;margin-bottom:18px;">What you’ll typically need</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:15px;color:#6B7A8D;line-height:1.78;">A visitor application is only as strong as its evidence. We help you assemble a complete, consistent file that pre-empts the questions a case officer will ask.</p>
+        <div style="margin-top:24px;"><a href="index.html#contact" class="btn-primary">Get a Document Checklist</a></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:start;gap:12px;background:#EBE8E8;border:1px solid #D8D4D4;border-radius:10px;padding:14px 18px;"><div style="width:18px;height:18px;border-radius:50%;background:#2F486D;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.5;">Valid passport with adequate validity</span></div><div style="display:flex;align-items:start;gap:12px;background:#EBE8E8;border:1px solid #D8D4D4;border-radius:10px;padding:14px 18px;"><div style="width:18px;height:18px;border-radius:50%;background:#2F486D;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.5;">Evidence of sufficient funds (bank statements)</span></div><div style="display:flex;align-items:start;gap:12px;background:#EBE8E8;border:1px solid #D8D4D4;border-radius:10px;padding:14px 18px;"><div style="width:18px;height:18px;border-radius:50%;background:#2F486D;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.5;">Employment or business standing in home country</span></div><div style="display:flex;align-items:start;gap:12px;background:#EBE8E8;border:1px solid #D8D4D4;border-radius:10px;padding:14px 18px;"><div style="width:18px;height:18px;border-radius:50%;background:#2F486D;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.5;">Travel itinerary and accommodation details</span></div><div style="display:flex;align-items:start;gap:12px;background:#EBE8E8;border:1px solid #D8D4D4;border-radius:10px;padding:14px 18px;"><div style="width:18px;height:18px;border-radius:50%;background:#2F486D;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.5;">Invitation letter for family or business visits</span></div><div style="display:flex;align-items:start;gap:12px;background:#EBE8E8;border:1px solid #D8D4D4;border-radius:10px;padding:14px 18px;"><div style="width:18px;height:18px;border-radius:50%;background:#2F486D;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.5;">Ties to home country — property, family, employment</span></div><div style="display:flex;align-items:start;gap:12px;background:#EBE8E8;border:1px solid #D8D4D4;border-radius:10px;padding:14px 18px;"><div style="width:18px;height:18px;border-radius:50%;background:#2F486D;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.5;">Travel history and previous visa compliance</span></div><div style="display:flex;align-items:start;gap:12px;background:#EBE8E8;border:1px solid #D8D4D4;border-radius:10px;padding:14px 18px;"><div style="width:18px;height:18px;border-radius:50%;background:#2F486D;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:#374151;line-height:1.5;">Health insurance for the period of stay</span></div>
+      </div>
+    </div>
+  </div>
+</section><section id="tips" style="background:#2F486D;padding:76px 40px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+      <div>
+        <div class="section-tag" style="background:rgba(158,133,72,0.2);border-color:rgba(158,133,72,0.4);color:#d4b06a;margin-bottom:18px;">Stronger Applications</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,36px);color:#ffffff;line-height:1.12;letter-spacing:-1px;margin-bottom:20px;">Tips for a confident approval</h2>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:18px 22px;"><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#ffffff;margin-bottom:5px;">Demonstrate genuine intent</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.62);line-height:1.6;">A clear purpose and return plan reassure the case officer of temporary intent.</div></div><div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:18px 22px;"><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#ffffff;margin-bottom:5px;">Show financial capacity</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.62);line-height:1.6;">Evidence funds that comfortably cover travel, accommodation and daily costs.</div></div><div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:18px 22px;"><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#ffffff;margin-bottom:5px;">Highlight home-country ties</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.62);line-height:1.6;">Stable employment, family and assets show strong incentive to return.</div></div><div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:18px 22px;"><div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#ffffff;margin-bottom:5px;">Be consistent</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.62);line-height:1.6;">Ensure dates, finances and purpose align across every document.</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag" style="background:rgba(220,140,120,0.18);border-color:rgba(220,140,120,0.35);color:#e8a08c;margin-bottom:18px;">Common Refusal Reasons</div>
+        <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,36px);color:#ffffff;line-height:1.12;letter-spacing:-1px;margin-bottom:20px;">What to avoid</h2>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:13px 18px;"><div style="width:7px;height:7px;border-radius:50%;background:#e8a08c;flex-shrink:0;"></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;">Insufficient evidence of funds</span></div><div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:13px 18px;"><div style="width:7px;height:7px;border-radius:50%;background:#e8a08c;flex-shrink:0;"></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;">Weak ties to the home country</span></div><div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:13px 18px;"><div style="width:7px;height:7px;border-radius:50%;background:#e8a08c;flex-shrink:0;"></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;">Unclear or inconsistent travel purpose</span></div><div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:13px 18px;"><div style="width:7px;height:7px;border-radius:50%;background:#e8a08c;flex-shrink:0;"></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;">Limited or adverse travel history</span></div><div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:13px 18px;"><div style="width:7px;height:7px;border-radius:50%;background:#e8a08c;flex-shrink:0;"></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;">Incomplete or contradictory documentation</span></div><div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:13px 18px;"><div style="width:7px;height:7px;border-radius:50%;background:#e8a08c;flex-shrink:0;"></div><span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.5;">Doubts over genuine temporary intent</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section id="faq" style="background:#EBE8E8;padding:76px 40px;">
+  <div style="max-width:860px;margin:0 auto;">
+    <div class="section-tag" style="margin-bottom:18px;">Frequently Asked</div>
+    <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,38px);color:#1C2B3A;line-height:1.08;letter-spacing:-1px;margin-bottom:30px;">Visitor visa questions</h2>
+    <details style="background:#ffffff;border:1px solid #E2DDD9;border-radius:12px;margin-bottom:12px;overflow:hidden;"><summary style="font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;color:#1C2B3A;padding:20px 24px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;">How long can I stay on a Subclass 600?<span style="color:#9E8548;font-size:22px;flex-shrink:0;">+</span></summary><div style="padding:0 24px 22px;font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.75;">Most visitor visas allow a stay of 3, 6 or 12 months per entry, set by the case officer based on your circumstances and purpose. The grant notice specifies your permitted stay and whether single or multiple entries apply.</div></details>
+    <details style="background:#ffffff;border:1px solid #E2DDD9;border-radius:12px;margin-bottom:12px;overflow:hidden;"><summary style="font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;color:#1C2B3A;padding:20px 24px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;">Can I work on a visitor visa?<span style="color:#9E8548;font-size:22px;flex-shrink:0;">+</span></summary><div style="padding:0 24px 22px;font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.75;">No. The Subclass 600 does not permit work in Australia. You may undertake limited study of up to three months and approved business visitor activities such as meetings or conferences — but not paid local employment.</div></details>
+    <details style="background:#ffffff;border:1px solid #E2DDD9;border-radius:12px;margin-bottom:12px;overflow:hidden;"><summary style="font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;color:#1C2B3A;padding:20px 24px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;">What is the Genuine Temporary Entrant requirement?<span style="color:#9E8548;font-size:22px;flex-shrink:0;">+</span></summary><div style="padding:0 24px 22px;font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.75;">It is the principle that you genuinely intend to visit temporarily and will leave before your visa expires. Strong financial evidence, a clear purpose and solid ties to your home country all support a genuine temporary intent.</div></details>
+    <details style="background:#ffffff;border:1px solid #E2DDD9;border-radius:12px;margin-bottom:12px;overflow:hidden;"><summary style="font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;color:#1C2B3A;padding:20px 24px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;">Does travel history matter?<span style="color:#9E8548;font-size:22px;flex-shrink:0;">+</span></summary><div style="padding:0 24px 22px;font-family:'Inter',sans-serif;font-size:14px;color:#6B7A8D;line-height:1.75;">Yes. A record of complying with visa conditions on previous trips strengthens your application. If you have limited travel history, a well-evidenced, consistent application becomes even more important — which is where our guidance helps.</div></details>
+  </div>
+</section><section style="background:#EBE8E8;padding:72px 40px;"><div style="max-width:1200px;margin:0 auto;"><div class="section-tag" style="margin-bottom:18px;">Related Visa Pathways</div><h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(26px,3vw,34px);color:#1C2B3A;letter-spacing:-1px;margin-bottom:28px;">Explore other Australia pathways</h2><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;"><a href="australia-gsm.html" style="background:#ffffff;border:1px solid #E2DDD9;border-radius:16px;padding:26px;text-decoration:none;display:block;transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(47,72,109,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">Skilled PR</div><div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:18px;color:#1C2B3A;margin-bottom:8px;line-height:1.2;">General Skilled Migration</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;line-height:1.6;">Points-tested permanent residence pathways.</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:#2F486D;font-weight:600;margin-top:14px;">Learn more →</div></a><a href="australia-employer-sponsored.html" style="background:#ffffff;border:1px solid #E2DDD9;border-radius:16px;padding:26px;text-decoration:none;display:block;transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(47,72,109,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">Work Visas</div><div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:18px;color:#1C2B3A;margin-bottom:8px;line-height:1.2;">Employer Sponsored Visas</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;line-height:1.6;">Sponsored work routes with PR transitions.</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:#2F486D;font-weight:600;margin-top:14px;">Learn more →</div></a><a href="other-services.html" style="background:#ffffff;border:1px solid #E2DDD9;border-radius:16px;padding:26px;text-decoration:none;display:block;transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(47,72,109,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:#9E8548;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">More</div><div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:18px;color:#1C2B3A;margin-bottom:8px;line-height:1.2;">Study & Other Visas</div><div style="font-family:'Inter',sans-serif;font-size:13px;color:#6B7A8D;line-height:1.6;">Study visas, residency by investment and more.</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:#2F486D;font-weight:600;margin-top:14px;">Learn more →</div></a></div></div></section><section id="contact" style="background:#1C2B3A;padding:80px 40px;"><div style="max-width:900px;margin:0 auto;text-align:center;"><div class="section-tag" style="background:rgba(158,133,72,0.15);border-color:rgba(158,133,72,0.3);color:#d4b06a;margin-bottom:24px;">Free Assessment</div><h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(32px,4vw,48px);color:#ffffff;line-height:1.05;letter-spacing:-1.5px;margin-bottom:16px;">Planning a visit to Australia?</h2><p style="font-family:'Inter',sans-serif;font-size:17px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:40px;">Let us prepare a clear, well-evidenced visitor application that gives your travel plans the best chance of approval.</p><div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;"><a href="tel:+96550610991" class="btn-primary" style="font-size:15px;padding:15px 32px;">Call +965 5061 0991</a><a href="mailto:info@truviaconsultants.com" class="btn-outline" style="color:#ffffff;border-color:rgba(255,255,255,0.3);font-size:15px;padding:14px 32px;">Email Us</a></div></div></section><!-- FOOTER -->
+<footer style="background:#0F1C2E;padding:72px 40px 36px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1.8fr 1fr 1.2fr 1fr 1fr;gap:40px;margin-bottom:56px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;"><img src="uploads/truvia-logo.png" alt="Truvia Consultants" style="height:46px;width:auto;display:block;"></div>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:240px;margin-bottom:20px;">Kuwait's leading immigration consultancy. Specialists in Australia PR and Canada immigration.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;"><a href="tel:+96550610991" style="font-family:'Inter',sans-serif;font-size:13px;color:#9E8548;text-decoration:none;font-weight:600;">+965 5061 0991</a><a href="mailto:info@truviaconsultants.com" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">info@truviaconsultants.com</a><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6;">Salmiya, Block 2, Salem Al Mubarak Street, Floor 1, Office 15</span></div>
+      </div>
+      <div><div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">Company</div><div style="display:flex;flex-direction:column;gap:10px;"><a href="about.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Company Profile</a><a href="about.html#why" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Why Choose Truvia</a><a href="success-stories.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Success Stories</a><a href="blog.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Blog &amp; Resources</a></div></div>
+      <div><div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">Australia</div><div style="display:flex;flex-direction:column;gap:10px;"><a href="australia-migration.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Overview</a><a href="australia-gsm.html#189" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Subclass 189</a><a href="australia-gsm.html#190" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Subclass 190</a><a href="australia-gsm.html#491" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Subclass 491</a><a href="australia-employer-sponsored.html#482" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Employer 482</a><a href="australia-skills-assessment.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Skills Assessment</a></div></div>
+      <div><div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">Canada</div><div style="display:flex;flex-direction:column;gap:10px;"><a href="canada-immigration.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Express Entry</a><a href="canada-immigration.html#pnp" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">PNP</a><a href="canada-immigration.html#aip" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">AIP &amp; RCIP</a></div></div>
+      <div><div style="font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">Other</div><div style="display:flex;flex-direction:column;gap:10px;"><a href="training.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Training</a><a href="other-services.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Other Services</a><a href="success-stories.html" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Success Stories</a></div></div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.3);">© 2025 Truvia Consultants. All rights reserved.</p>
+      <a href="index.html" style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;" onmouseover="this.style.color='#9E8548'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">← Back to Home</a>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/96550610991" target="_blank" style="position:fixed;bottom:28px;right:28px;z-index:1000;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);text-decoration:none;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><svg width="26" height="26" viewBox="0 0 26 26" fill="white"><path d="M13 2C7 2 2 7 2 13c0 2 .6 3.9 1.6 5.5L2 24l5.7-1.5C9.2 23.4 11 24 13 24c6 0 11-5 11-11S19 2 13 2zm5.8 15.2c-.3.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.7-.1s-1.3-.5-2.1-.9c-3.4-1.7-5.6-5.1-5.8-5.4-.2-.3-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.9-.4h.6c.2 0 .4 0 .6.5l1.1 2.7c.1.2.1.4 0 .6l-.6.9c-.1.1-.2.3-.1.5.5.9 1.2 1.7 2 2.4.7.6 1.6 1.1 2.4 1.3.2.1.3 0 .5-.1l.8-.9c.2-.2.4-.3.6-.2l2.7 1.3c.2.1.4.3.4.5v.8z"/></svg></a>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    window.openDD = (wrap) => { const p = wrap.querySelector('.dd-panel'); if (p) p.classList.add('open'); };
+    window.closeDD = (wrap) => { const p = wrap.querySelector('.dd-panel'); if (p) p.classList.remove('open'); };
+
+    // ── Premium motion engine ──
+    setTimeout(function(){
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(reduce) return;
+      function hide(el){
+        var d = el.getAttribute('data-om-delay') || 0;
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(34px)';
+        el.style.transition = 'opacity .85s cubic-bezier(.16,1,.3,1) '+d+'ms, transform .85s cubic-bezier(.16,1,.3,1) '+d+'ms';
+      }
+      function show(el){ el.style.opacity='1'; el.style.transform='translateY(0)'; el.setAttribute('data-om-shown','1'); setTimeout(function(){ el.style.transition=''; if(!/reveal/.test(el.className)){ el.style.transform=''; el.style.opacity=''; } },900); }
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      function tag(el, delay){
+        if(el.getAttribute('data-om-tagged')) return;
+        el.setAttribute('data-om-tagged','1');
+        if(delay) el.setAttribute('data-om-delay', delay);
+        hide(el);
+        var r = el.getBoundingClientRect();
+        if(r.top < (window.innerHeight||800) && r.bottom > -40){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ show(el); }); }); }
+        else { io.observe(el); }
+      }
+
+      // 1) Headings
+      document.querySelectorAll('section h1, section h2').forEach(function(h){ tag(h, 0); });
+      // 2) Grid cards — staggered
+      document.querySelectorAll('section [style*="grid-template-columns"] > *').forEach(function(el,i){ tag(el, (i%4)*95); });
+      // 3) Subheads + standalone paragraphs
+      document.querySelectorAll('section h3, section > div > p').forEach(function(el){ if(!el.closest('[style*="grid-template-columns"]')) tag(el, 0); });
+
+      // 4) Magnetic buttons
+      document.querySelectorAll('.btn-primary, a[class*="btn"]').forEach(function(btn){
+        var base = btn.style.transition || '';
+        btn.style.transition = (base ? base + ',' : '') + 'transform .3s cubic-bezier(.16,1,.3,1)';
+        btn.addEventListener('mousemove', function(e){ var r=btn.getBoundingClientRect(); btn.style.transform='translate('+((e.clientX-r.left-r.width/2)*0.22)+'px,'+((e.clientY-r.top-r.height/2)*0.34)+'px)'; });
+        btn.addEventListener('mouseleave', function(){ btn.style.transform='translate(0,0)'; });
+      });
+
+      // 5) Hero parallax
+      var heroBg = document.querySelector('section [style*="cover"]');
+      if(heroBg){ heroBg.style.transform='scale(1.06)'; heroBg.style.willChange='transform'; window.addEventListener('scroll', function(){ var y=window.scrollY; if(y<800) heroBg.style.transform='translateY('+(y*0.16)+'px) scale(1.06)'; }, {passive:true}); }
+
+      // 6) Floating ambient orbs
+      var hero = document.querySelector('section');
+      if(hero){
+        if(getComputedStyle(hero).position==='static') hero.style.position='relative';
+        var o1=document.createElement('div'); o1.style.cssText='position:absolute;top:-120px;left:8%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(47,72,109,0.16) 0%,transparent 65%);animation:omFloat 22s ease-in-out infinite;pointer-events:none;z-index:1;';
+        var o2=document.createElement('div'); o2.style.cssText='position:absolute;bottom:-80px;right:14%;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(158,133,72,0.12) 0%,transparent 65%);animation:omFloat2 18s ease-in-out infinite;pointer-events:none;z-index:1;';
+        hero.appendChild(o1); hero.appendChild(o2);
+      }
+
+
+
+      // ── Premium cursor-reactive interactions ──
+      (function(){
+        function addCursorGlow(cards, gc) {
+          cards.forEach(function(card) {
+            var gl=document.createElement('div');
+            gl.style.cssText='position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 0.4s;z-index:1;';
+            if(getComputedStyle(card).position==='static') card.style.position='relative';
+            card.insertBefore(gl,card.firstChild);
+            card.addEventListener('mousemove',function(e){
+              var r=card.getBoundingClientRect();
+              var cx=((e.clientX-r.left)/r.width*100).toFixed(1)+'%';
+              var cy=((e.clientY-r.top)/r.height*100).toFixed(1)+'%';
+              gl.style.background='radial-gradient(circle at '+cx+' '+cy+','+(gc||'rgba(158,133,72,0.14)')+' 0%,transparent 55%)';
+              gl.style.opacity='1';
+            },{passive:true});
+            card.addEventListener('mouseleave',function(){gl.style.opacity='0';});
+          });
+        }
+        function addCardTilt(cards,opts) {
+          opts=opts||{};
+          cards.forEach(function(card) {
+            var mo=card.getAttribute('onmouseover')||'';
+            if(mo.indexOf('translateY')!==-1){card.removeAttribute('onmouseover');card.removeAttribute('onmouseout');}
+            var gl=document.createElement('div');
+            gl.style.cssText='position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 0.4s;z-index:1;';
+            if(getComputedStyle(card).position==='static') card.style.position='relative';
+            card.insertBefore(gl,card.firstChild);
+            var t=opts.maxTilt||7; var gc=opts.glow||'rgba(158,133,72,0.14)';
+            card.addEventListener('mousemove',function(e){
+              var r=card.getBoundingClientRect();
+              var cx=(e.clientX-r.left)/r.width; var cy=(e.clientY-r.top)/r.height;
+              var rx=(cy-0.5)*-t; var ry=(cx-0.5)*t;
+              card.style.transition='transform 0.1s linear,box-shadow 0.1s linear';
+              card.style.transform='perspective(900px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateZ(10px)';
+              card.style.boxShadow='0 24px 56px rgba(0,0,0,0.2),0 8px 20px rgba(0,0,0,0.1)';
+              gl.style.background='radial-gradient(circle at '+(cx*100).toFixed(1)+'% '+(cy*100).toFixed(1)+'%,'+gc+' 0%,transparent 55%)';
+              gl.style.opacity='1';
+            },{passive:true});
+            card.addEventListener('mouseleave',function(){
+              card.style.transition='transform 0.7s cubic-bezier(.16,1,.3,1),box-shadow 0.7s cubic-bezier(.16,1,.3,1)';
+              card.style.transform='perspective(900px) rotateX(0) rotateY(0) translateZ(0)';
+              card.style.boxShadow=''; gl.style.opacity='0';
+            });
+          });
+        }
+        function upgradeCTA() {
+          var cta=document.getElementById('contact');
+          if(!cta) return;
+          cta.style.background='#07111F'; cta.style.padding='110px 48px';
+          cta.style.position='relative'; cta.style.overflow='hidden';
+          ['position:absolute;inset:0;background:radial-gradient(ellipse 85% 60% at 50% 110%,rgba(47,72,109,0.62) 0%,transparent 60%);pointer-events:none;',
+           'position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 76% 48%,rgba(158,133,72,0.1) 0%,transparent 56%);pointer-events:none;',
+           'position:absolute;inset:0;background:radial-gradient(ellipse 40% 40% at 18% 28%,rgba(47,72,109,0.25) 0%,transparent 52%);pointer-events:none;',
+           'position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 5%,rgba(158,133,72,0.3) 28%,rgba(232,200,112,0.55) 50%,rgba(158,133,72,0.3) 72%,transparent 95%);'
+          ].forEach(function(css){var d=document.createElement('div');d.style.cssText=css;cta.insertBefore(d,cta.firstChild);});
+          cta.querySelectorAll('a.btn-primary').forEach(function(btn){
+            btn.style.background='linear-gradient(135deg,#2F486D,#3d5f8f)';
+            btn.style.fontSize='15px'; btn.style.padding='18px 38px'; btn.style.borderRadius='13px';
+            btn.style.boxShadow='0 8px 32px rgba(47,72,109,0.38)';
+            btn.style.transition='transform 0.25s cubic-bezier(.16,1,.3,1),box-shadow 0.25s';
+            btn.addEventListener('mouseover',function(){btn.style.transform='translateY(-4px)';btn.style.boxShadow='0 18px 56px rgba(47,72,109,0.5)';});
+            btn.addEventListener('mouseout',function(){btn.style.transform='translateY(0)';btn.style.boxShadow='0 8px 32px rgba(47,72,109,0.38)';});
+          });
+          cta.querySelectorAll('a.btn-outline').forEach(function(btn){
+            btn.style.fontSize='15px'; btn.style.padding='18px 38px'; btn.style.borderRadius='13px';
+            btn.style.transition='transform 0.25s cubic-bezier(.16,1,.3,1),box-shadow 0.25s';
+            btn.addEventListener('mouseover',function(){btn.style.transform='translateY(-4px)';btn.style.boxShadow='0 8px 28px rgba(47,72,109,0.2)';});
+            btn.addEventListener('mouseout',function(){btn.style.transform='translateY(0)';btn.style.boxShadow='';});
+          });
+        }
+        // All content cards
+        addCardTilt(Array.from(document.querySelectorAll('section [style*="border-radius:20px"][style*="padding"]')),{maxTilt:7,glow:'rgba(158,133,72,0.12)'});
+        addCardTilt(Array.from(document.querySelectorAll('section [style*="border-radius:16px"][style*="padding"]')),{maxTilt:6,glow:'rgba(158,133,72,0.1)'});
+        addCardTilt(Array.from(document.querySelectorAll('section [style*="border-radius:14px"][style*="padding:24px"]')),{maxTilt:5,glow:'rgba(47,72,109,0.1)'});
+        upgradeCTA();
+      })();
+      // ── Premium upgrades ──
+
+      // A) Cursor spotlight
+      var glow = document.getElementById('om-cursor-glow');
+      if(!glow){ glow = document.createElement('div'); glow.id='om-cursor-glow'; document.body.appendChild(glow); }
+      document.addEventListener('mousemove', function(e){
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+        var el = document.elementFromPoint(e.clientX, e.clientY);
+        var dark = el && el.closest('section,nav,footer');
+        glow.style.opacity = dark ? '1' : '0';
+      });
+
+      // B) Gold shimmer on CTAs
+      document.querySelectorAll('a[style*="background:#9E8548"], a[style*="background:#2F486D"], a[style*="background: #9E8548"], a[style*="background: #2F486D"], a[style*="background:linear-gradient"][style*="9E8548"], a[style*="background:linear-gradient"][style*="2F486D"]').forEach(function(btn){
+        btn.classList.add('om-btn-gold');
+      });
+      // Also catch any a/button with inline background set by hover handlers
+      document.querySelectorAll('section a, section button').forEach(function(btn){
+        var s = btn.getAttribute('style') || '';
+        if(s.includes('#9E8548') || s.includes('#2F486D') || s.includes('background:#C09040')) btn.classList.add('om-btn-gold');
+      });
+
+      // C) Accent lines before every h2
+      document.querySelectorAll('section h2').forEach(function(h2){
+        if(h2.previousElementSibling && h2.previousElementSibling.classList.contains('om-line')) return;
+        var line = document.createElement('span');
+        line.className = 'om-line';
+        line.style.cssText = 'display:block;height:2px;background:linear-gradient(90deg,#9E8548,transparent);border-radius:2px;transform-origin:left;width:60px;margin-bottom:14px;';
+        h2.parentNode.insertBefore(line, h2);
+        var lio = new IntersectionObserver(function(es){
+          es.forEach(function(e){
+            if(e.isIntersecting){
+              e.target.style.animation = 'omLineGrow 0.9s cubic-bezier(.16,1,.3,1) forwards';
+              lio.unobserve(e.target);
+            }
+          });
+        },{threshold:0.5});
+        lio.observe(line);
+      });
+
+      // D) Word-by-word hero h1
+      var heroH1 = document.querySelector('section:first-of-type h1');
+      if(heroH1 && !heroH1.getAttribute('data-words-done')){
+        heroH1.setAttribute('data-words-done','1');
+        var words = heroH1.textContent.trim().split(/\s+/);
+        heroH1.innerHTML = words.map(function(w,i){
+          return '<span style="display:inline-block;opacity:0;animation:omWordIn 0.7s cubic-bezier(.16,1,.3,1) '+(180+i*90)+'ms both;">'+w+'<\/span>';
+        }).join(' ');
+      }
+
+      // E) Counter animations
+      function omCount(el){
+        var target = parseFloat(el.getAttribute('data-count'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        var dur = 1800;
+        var start = Date.now();
+        var tick = function(){
+          var p = Math.min((Date.now()-start)/dur,1);
+          var ease = 1-Math.pow(1-p,3);
+          el.textContent = (target>=1000 ? Math.round(ease*target).toLocaleString() : (Number.isInteger(target) ? Math.round(ease*target) : (ease*target).toFixed(1))) + suffix;
+          if(p<1) requestAnimationFrame(tick);
+        };
+        tick();
+      }
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ omCount(e.target); cio.unobserve(e.target); } });
+      },{threshold:0.6});
+      document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+
+      // F) Page transition
+      document.querySelectorAll('a[href$=".dc.html"]').forEach(function(a){
+        a.addEventListener('click', function(e){
+          var href = a.getAttribute('href');
+          if(!href || href.startsWith('#') || href.startsWith('http')) return;
+          e.preventDefault();
+          document.body.style.transition = 'opacity 0.3s ease';
+          document.body.style.opacity = '0';
+          setTimeout(function(){ window.location.href = href; }, 300);
+        });
+      });
+
+      // 7) Hard safety net — guarantee everything visible
+      setTimeout(function(){ document.querySelectorAll('[data-om-tagged]:not([data-om-shown])').forEach(function(el){ show(el); }); }, 2600);
+    }, 120);
+
+  
+});
+</script>
+<script src="motion-engine.js" defer></script>
+<script src="mobile.js" defer></script>
+</body>
+</html>
