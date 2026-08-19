@@ -166,6 +166,11 @@ src="https://www.facebook.com/tr?id=961453140374969&ev=PageView&noscript=1"
     .visa-badge { display:inline-block;background:rgba(158,133,72,0.18);color:#9E8548;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px; }
 
     ::-webkit-scrollbar { width:5px; } ::-webkit-scrollbar-track { background:#E8E5E0; } ::-webkit-scrollbar-thumb { background:#9EB4CC;border-radius:3px; }
+
+    #ctaForm.was-validated :invalid { border-color:#ff5c5c !important; background:rgba(255,92,92,0.1) !important; }
+    #ctaForm .field-error { display:none; color:#ff8080; font-family:'Inter',sans-serif; font-size:11.5px; margin-top:6px; }
+    #ctaForm.was-validated :invalid ~ .field-error,
+    #ctaForm.was-validated select:invalid + .field-error { display:block; }
   </style>
 
 </head>
@@ -952,22 +957,25 @@ src="https://www.facebook.com/tr?id=961453140374969&ev=PageView&noscript=1"
           <!-- Form fields -->
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
             <div>
-              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Full Name</label>
+              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Full Name <span style="color:#ff8080;">*</span></label>
               <input type="text" name="name" required placeholder="Your name" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
+              <div class="field-error">Please enter your name.</div>
             </div>
             <div>
-              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">WhatsApp</label>
+              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">WhatsApp <span style="color:#ff8080;">*</span></label>
               <input type="tel" name="whatsapp" required placeholder="+965 XXXX XXXX" inputmode="numeric" pattern="[0-9+\s\-]+" title="Please enter numbers only" oninput="this.value=this.value.replace(/[^0-9+\s\-]/g,'')" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
+              <div class="field-error">Please enter a valid WhatsApp number.</div>
             </div>
           </div>
           <div style="margin-bottom:14px;">
-            <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Email Address</label>
+            <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Email Address <span style="color:#ff8080;">*</span></label>
             <input type="email" name="email" required placeholder="you@example.com" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:#F8FBFF;outline:none;transition:border-color 0.25s,background 0.25s;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)';this.style.background='rgba(255,255,255,0.1)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)';this.style.background='rgba(255,255,255,0.07)'">
+            <div class="field-error">Please enter a valid email address.</div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
             <div>
-              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Occupation</label>
-              <select name="occupation" style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
+              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Occupation <span style="color:#ff8080;">*</span></label>
+              <select name="occupation" required style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
                 <option value="">Select occupation</option>
                 <option>Engineering (Civil, Mechanical, Electrical, Petroleum, Mining, etc.)</option>
                 <option>Healthcare / Nursing</option>
@@ -989,21 +997,23 @@ src="https://www.facebook.com/tr?id=961453140374969&ev=PageView&noscript=1"
                 <option>Creative Arts / Design (Graphic Design, Media)</option>
                 <option>Other</option>
               </select>
+              <div class="field-error">Please select your occupation.</div>
             </div>
             <div>
-              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Destination</label>
-              <select name="destination" style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
+              <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Destination <span style="color:#ff8080;">*</span></label>
+              <select name="destination" required style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
                 <option value="">Preferred country</option>
                 <option>Australia</option>
                 <option>Canada</option>
                 <option>New Zealand</option>
                 <option>Not sure yet</option>
               </select>
+              <div class="field-error">Please select a destination.</div>
             </div>
           </div>
           <div style="margin-bottom:14px;">
-            <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">How did you hear about us?</label>
-            <select name="how_did_you_hear_about_us" style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
+            <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">How did you hear about us? <span style="color:#ff8080;">*</span></label>
+            <select name="how_did_you_hear_about_us" required style="width:100%;box-sizing:border-box;background:rgba(20,36,58,0.9);border:1px solid rgba(255,255,255,0.13);border-radius:11px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.85);outline:none;transition:border-color 0.25s;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='rgba(158,133,72,0.65)'" onblur="this.style.borderColor='rgba(255,255,255,0.13)'">
               <option value="">Select an option</option>
               <option>Instagram</option>
               <option>Facebook</option>
@@ -1014,6 +1024,7 @@ src="https://www.facebook.com/tr?id=961453140374969&ev=PageView&noscript=1"
               <option>WhatsApp</option>
               <option>Other</option>
             </select>
+            <div class="field-error">Please let us know how you heard about us.</div>
           </div>
           <div style="margin-bottom:20px;">
             <label style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:7px;">Anything specific you'd like to discuss? <span style="color:rgba(255,255,255,0.18);font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
@@ -1038,8 +1049,15 @@ src="https://www.facebook.com/tr?id=961453140374969&ev=PageView&noscript=1"
       (function(){
         var form = document.getElementById('ctaForm');
         if (!form) return;
+        form.addEventListener('invalid', function(){ form.classList.add('was-validated'); }, true);
         form.addEventListener('submit', function(e){
           e.preventDefault();
+          if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            form.reportValidity();
+            return;
+          }
+          form.classList.remove('was-validated');
           var btn = document.getElementById('ctaSubmitBtn');
           var errorEl = document.getElementById('ctaFormError');
           errorEl.style.display = 'none';
