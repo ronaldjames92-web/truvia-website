@@ -1024,6 +1024,10 @@ src="https://www.facebook.com/tr?id=961453140374969&ev=PageView&noscript=1"
             Request Free Consultation &nbsp;→
           </button>
           <div id="ctaFormError" style="display:none;color:#ff8080;font-family:'Inter',sans-serif;font-size:12.5px;text-align:center;margin-top:12px;">Something went wrong. Please try again or WhatsApp us directly.</div>
+          <div id="ctaFollowPrompt" style="display:none;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;">
+            <p style="font-family:'Inter',sans-serif;font-size:12.5px;color:rgba(255,255,255,0.5);margin-bottom:10px;">While you wait, stay updated with visa tips &amp; success stories:</p>
+            <a href="https://www.instagram.com/truvia_consultants" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#F47133,#BC3081,#4C63D2);color:#ffffff;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;padding:11px 20px;border-radius:10px;text-decoration:none;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="#fff"/></svg> Follow us on Instagram</a>
+          </div>
           <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;">
             <div style="width:5px;height:5px;border-radius:50%;background:rgba(158,133,72,0.5);"></div>
             <p style="font-family:'Inter',sans-serif;font-size:11.5px;color:rgba(255,255,255,0.22);margin:0;">No spam. Confidential. Response within 24 hours.</p>
@@ -1052,6 +1056,8 @@ src="https://www.facebook.com/tr?id=961453140374969&ev=PageView&noscript=1"
               btn.style.background = 'linear-gradient(135deg,#1a7a3a,#22a050)';
               form.reset();
               if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+              var followPrompt = document.getElementById('ctaFollowPrompt');
+              if (followPrompt) { followPrompt.style.display = 'block'; }
             } else {
               btn.innerHTML = originalHTML;
               btn.style.pointerEvents = 'auto';
