@@ -161,7 +161,7 @@
       '</div>' +
       '<nav>' + buildMenu() +
         '<div class="mnav-cta">' +
-          '<a class="call" href="tel:+96551591932">Call +965 5159 1932</a>' +
+          '<a class="call" href="tel:+96550610991">Call +965 5061 0991</a>' +
           '<a class="book" href="index.html#contact">Free Consultation</a>' +
         '</div>' +
       '</nav>';
