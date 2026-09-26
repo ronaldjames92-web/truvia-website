@@ -28,10 +28,11 @@
     '  #navbar > div{ display:none !important; }',
     '  #navbar > a[href]{ margin-right:0 !important; }',
     '  #mnav-btn{ display:flex !important; }',
-    /* MARA badge: move to its own centered row under the logo/hamburger on mobile */
-    '  #navbar > div:has(.mara-chip){ display:flex !important; order:3; width:100%; justify-content:center; }',
-    '  #navbar > div:has(.mara-chip) > a:not(.mara-chip){ display:none !important; }',
-    '  .mara-chip{ display:inline-flex !important; }',
+    /* single-row header: logo | search | menu. The MARA badge is left to the headline and trust section on mobile. */
+    '  #navbar > div:has(.mara-chip){ display:flex !important; margin-left:auto; gap:2px !important; }',
+    '  #navbar > div:has(.mara-chip) > a{ display:none !important; }',
+    '  #navbar .ss-trigger{ width:44px; height:44px; }',
+    '  #navbar #mnav-btn{ margin-left:0; }',
     '}',
     /* ---- hamburger button (hidden until mobile media query flips it on) ---- */
     '#mnav-btn{ display:none; margin-left:auto; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; padding:0; border:none; background:transparent; cursor:pointer; flex-shrink:0; }',
