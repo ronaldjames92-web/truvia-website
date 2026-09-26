@@ -59,7 +59,7 @@ def build():
         entries.append({
             "url": path,
             "title": title,
-            "section": SECTION.get(path, "Australia"),
+            "section": "Blog" if path.startswith("news-") else SECTION.get(path, "Australia"),
             "description": description,
             "headings": headings,
             "body": body,

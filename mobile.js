@@ -107,10 +107,7 @@
       ['Residency by Investment', 'other-services.html#investment']
     ]],
     ['Success Stories', 'success-stories.html', null],
-    ['Blog', 'blog.html', [
-      ['Canada Immigration News', 'blog.html'],
-      ['Australia Updates', 'blog.html#australia']
-    ]]
+    ['Blog', 'blog.html', null]
   ];
 
   var CARET = '<svg class="mnav-caret" width="12" height="12" viewBox="0 0 9 9" fill="none"><path d="M1 3L4.5 6.5L8 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
