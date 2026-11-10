@@ -52,10 +52,11 @@ src="https://www.facebook.com/tr?id=1937357283786150&ev=PageView&noscript=1"
   "description": "MARA-registered immigration consultancy in Kuwait specializing in Australia skilled migration, Canada Express Entry, and English exam coaching (PTE, IELTS, OET).",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Salmiya, Block 2, Salem Al Mubarak Street, Floor 1, Office 15",
+    "streetAddress": "First Mall, Floor 1, Office 15, Salem Al Mubarak Street, Block 2",
     "addressLocality": "Salmiya",
     "addressCountry": "KW"
   },
+  "hasMap": "https://maps.google.com/?cid=5854586339433703971",
   "sameAs": [
     "https://www.instagram.com/truvia_consultants",
     "https://www.facebook.com/share/1Ba8Vwnfud/",
@@ -293,6 +294,10 @@ src="https://www.facebook.com/tr?id=1937357283786150&ev=PageView&noscript=1"
   .testi-btn:hover{ background:#2F486D; color:#ffffff; border-color:#2F486D; }
   @media(max-width:520px){ .pc-card .pc-badge, .pc-card .pc-note{ display:none !important; } .pc-card .pc-title{ font-size:17px !important; } }
   @media(max-width:860px){ .testi-rating{ text-align:left !important; } .testi-stars{ justify-content:flex-start !important; } }
+  /* contact map */
+  .contact-map{ margin-top:24px; position:relative; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); background:#0d1b2e; }
+  .contact-map iframe{ display:block; width:100%; height:240px; border:0; filter:saturate(0.85); }
+  .contact-map-link{ position:absolute; right:12px; bottom:12px; display:inline-flex; align-items:center; gap:7px; background:#ffffff; color:#1C2B3A; font-family:"Inter",sans-serif; font-size:13px; font-weight:700; text-decoration:none; padding:9px 14px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.25); }
 </style>
 
 </head>
@@ -997,15 +1002,31 @@ src="https://www.facebook.com/tr?id=1937357283786150&ev=PageView&noscript=1"
               <a href="mailto:info@truviaconsultants.com" style="font-family:'Manrope',sans-serif;font-size:16px;color:#F8FBFF;font-weight:700;text-decoration:none;letter-spacing:-0.2px;">info@truviaconsultants.com</a>
             </div>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:18px;padding:20px 0;">
+          <div style="display:flex;align-items:flex-start;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
             <div style="width:48px;height:48px;background:linear-gradient(135deg,rgba(158,133,72,0.15),rgba(158,133,72,0.06));border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(158,133,72,0.22);margin-top:2px;">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="3" stroke="#9E8548" stroke-width="1.4"/><path d="M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#9E8548" stroke-width="1.4" stroke-linecap="round"/></svg>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 18s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10z" stroke="#9E8548" stroke-width="1.4"/><circle cx="10" cy="8" r="2.2" stroke="#9E8548" stroke-width="1.4"/></svg>
             </div>
             <div>
               <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:4px;">Office</div>
-              <span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.65);line-height:1.65;display:block;">Salmiya, Block 2<br>Salem Al Mubarak St, Floor 1, Office 15</span>
+              <span style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,0.65);line-height:1.65;display:block;">First Mall, Floor 1, Office 15<br>Salem Al Mubarak St, Block 2, Salmiya</span>
             </div>
           </div>
+          <div style="display:flex;align-items:flex-start;gap:18px;padding:20px 0;">
+            <div style="width:48px;height:48px;background:linear-gradient(135deg,rgba(158,133,72,0.15),rgba(158,133,72,0.06));border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(158,133,72,0.22);margin-top:2px;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="#9E8548" stroke-width="1.4"/><path d="M10 6v4.2l2.8 1.8" stroke="#9E8548" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:4px;">Office Hours</div>
+              <span style="font-family:'Manrope',sans-serif;font-size:16px;color:#F8FBFF;font-weight:700;display:block;letter-spacing:-0.2px;">10:00 am – 7:00 pm</span>
+              <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.55);line-height:1.6;display:block;margin-top:2px;">By prior appointment only. Please book before you visit.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="contact-map">
+          <iframe src="https://maps.google.com/maps?cid=5854586339433703971&amp;output=embed&amp;hl=en" title="Truvia Consultants office on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a href="https://maps.google.com/?cid=5854586339433703971" target="_blank" rel="noopener" class="contact-map-link"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10z" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="8" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>Get directions</a>
         </div>
 
         <!-- Trust note -->
