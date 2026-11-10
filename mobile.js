@@ -1,6 +1,6 @@
 /* Truvia Consultants — mobile responsive layer.
-   Injected on every page. Desktop (>860px) is completely unaffected:
-   every rule below lives inside a max-width media query. */
+   Injected on every page. Phone rules live inside max-width:860px; a small
+   861-1440px block only tightens the header so it fits laptop screens. */
 (function () {
   'use strict';
 
@@ -33,6 +33,17 @@
     '  #navbar > div:has(.mara-chip) > a{ display:none !important; }',
     '  #navbar .ss-trigger{ width:44px; height:44px; }',
     '  #navbar #mnav-btn{ margin-left:0; }',
+    '}',
+    /* ---- laptop / tablet widths: the full desktop header is ~1370px wide, so tighten it to avoid sideways scrolling ---- */
+    '@media (min-width: 861px) and (max-width: 1440px){',
+    '  #navbar{ padding-left:28px !important; padding-right:28px !important; }',
+    '  #navbar a[href^="tel:"]{ display:none !important; }',
+    '  #navbar .nav-link{ padding-left:9px !important; padding-right:9px !important; }',
+    '}',
+    '@media (min-width: 861px) and (max-width: 1180px){',
+    '  #navbar{ padding-left:20px !important; padding-right:20px !important; }',
+    '  #navbar .mara-chip{ display:none !important; }',
+    '  #navbar .nav-link{ padding-left:6px !important; padding-right:6px !important; font-size:12.5px !important; }',
     '}',
     /* ---- hamburger button (hidden until mobile media query flips it on) ---- */
     '#mnav-btn{ display:none; margin-left:auto; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; padding:0; border:none; background:transparent; cursor:pointer; flex-shrink:0; }',
