@@ -300,12 +300,6 @@ src="https://www.facebook.com/tr?id=1937357283786150&ev=PageView&noscript=1"
   .contact-map{ margin-top:24px; position:relative; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); background:#0d1b2e; }
   .contact-map iframe{ display:block; width:100%; height:240px; border:0; filter:saturate(0.85); }
   .contact-map-link{ position:absolute; right:12px; bottom:12px; display:inline-flex; align-items:center; gap:7px; background:#ffffff; color:#1C2B3A; font-family:"Inter",sans-serif; font-size:13px; font-weight:700; text-decoration:none; padding:9px 14px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.25); }
-  /* hero trust line */
-  .hero-trust{ display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px 12px; margin-top:4px; padding:12px 16px; border-radius:14px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); }
-  .hero-trust a{ display:inline-flex; align-items:center; gap:6px; font-family:"Inter",sans-serif; font-size:12.5px; font-weight:600; color:rgba(255,255,255,0.82); text-decoration:none; }
-  .hero-trust a:hover{ color:#ffffff; }
-  .hero-trust .ht-stars{ color:#E8C870; letter-spacing:1px; font-size:12px; }
-  .hero-trust .ht-dot{ width:4px; height:4px; border-radius:50%; background:rgba(255,255,255,0.3); }
   /* Sydney photo strip: swipeable row on phones instead of four stacked photos */
   @media(max-width:860px){
     section .city-strip{ display:flex !important; gap:2px !important; height:340px !important; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
@@ -476,11 +470,48 @@ src="https://www.facebook.com/tr?id=1937357283786150&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <!-- Trust line -->
-      <div class="hero-trust">
-        <a href="https://maps.google.com/?cid=5854586339433703971" target="_blank" rel="noopener"><span class="ht-stars">★★★★★</span> 4.9 Google rating</a>
-        <span class="ht-dot"></span>
-        <a href="#why-mara"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L20 6V12C20 16.4 16.4 20.8 12 22C7.6 20.8 4 16.4 4 12V6L12 2Z" stroke="#D4B26A" stroke-width="2"/><path d="M8.5 12l2.5 2.5 5-5" stroke="#D4B26A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> MARA-registered agent</a>
+      <!-- Migration Routes Card -->
+      <div style="animation:floatY2 4.8s 1.2s ease-in-out infinite;background:rgba(255,255,255,0.09);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(255,255,255,0.16);border-radius:18px;padding:17px 20px;box-shadow:0 16px 48px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.1);">
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:11px;">Active Migration Routes</div>
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border-radius:10px;padding:9px 11px;">
+            <div style="width:26px;height:26px;border-radius:7px;background:rgba(47,72,109,0.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;">🇦🇺</div>
+            <div style="flex:1;"><div style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#ffffff;">Kuwait → Australia</div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.35);">Skilled Migration · 189 / 190 / 491</div></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#22a050;animation:dotPulse 2s ease-in-out infinite;flex-shrink:0;"></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);border-radius:10px;padding:9px 11px;">
+            <div style="width:26px;height:26px;border-radius:7px;background:rgba(47,72,109,0.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;">🇦🇺</div>
+            <div style="flex:1;"><div style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#ffffff;">GCC → Australia</div><div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,0.35);">Employer Sponsored · 482 / 186</div></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#22a050;animation:dotPulse 2.4s 0.4s ease-in-out infinite;flex-shrink:0;"></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;background:rgba(158,133,72,0.08);border:1px solid rgba(158,133,72,0.18);border-radius:10px;padding:9px 11px;">
+            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;color:#9E8548;flex-shrink:0;">20+</div>
+            <div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,0.5);">Locations in our global network</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compact Pathways card -->
+      <div style="animation:floatY 5.2s 0.9s ease-in-out infinite;background:rgba(158,133,72,0.08);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(158,133,72,0.22);border-radius:18px;padding:20px 22px;box-shadow:0 16px 48px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.1);">
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:rgba(232,200,112,0.85);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:13px;">Australia PR Pathways</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="australia-gsm.html#189" style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.14)';this.style.borderColor='rgba(255,255,255,0.22)';this.style.transform='translateX(4px)'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateX(0)'">
+            <span style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#ffffff;">Subclass 189 — Skilled Independent</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="australia-gsm.html#190" style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.14)';this.style.borderColor='rgba(255,255,255,0.22)';this.style.transform='translateX(4px)'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateX(0)'">
+            <span style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#ffffff;">Subclass 190 — State Nominated</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="australia-gsm.html#491" style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.14)';this.style.borderColor='rgba(255,255,255,0.22)';this.style.transform='translateX(4px)'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateX(0)'">
+            <span style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#ffffff;">Subclass 491 — Regional Skilled</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="australia-employer-sponsored.html#482" style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 18px;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.14)';this.style.borderColor='rgba(255,255,255,0.22)';this.style.transform='translateX(4px)'" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateX(0)'">
+            <span style="font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#ffffff;">Subclass 482 — Employer Sponsor</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M7 3L11 7L7 11" stroke="#9E8548" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
       </div>
       </div>
     </div>
