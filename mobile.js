@@ -103,6 +103,7 @@
       ['— Engineers', 'australia-engineer-pr.html'],
       ['— IT Professionals', 'australia-it-jobs.html'],
       ['— Nurses & Medical', 'australia-nurse-salary.html'],
+      ['— Nurse Pathway: AHPRA & OSCE', 'australia-nurse-pathway.html'],
       ['— Trades & Welding', 'australia-trades-pr.html'],
       ['— Accountants', 'australia-accountant-pr.html'],
       ['— Chefs & Hospitality', 'australia-chef-hospitality-pr.html']
