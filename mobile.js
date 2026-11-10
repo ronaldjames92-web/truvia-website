@@ -33,6 +33,10 @@
     '  #navbar > div:has(.mara-chip) > a{ display:none !important; }',
     '  #navbar .ss-trigger{ width:44px; height:44px; }',
     '  #navbar #mnav-btn{ margin-left:0; }',
+    /* ---- bottom action bar replaces the floating WhatsApp bubble on phones ---- */
+    '  #mbar{ display:flex !important; }',
+    '  a[href^="https://wa.me/"][style*="position:fixed"]{ display:none !important; }',
+    '  body{ padding-bottom:calc(70px + env(safe-area-inset-bottom)) !important; }',
     '}',
     /* ---- laptop / tablet widths: the full desktop header is ~1370px wide, so tighten it to avoid sideways scrolling ---- */
     '@media (min-width: 861px) and (max-width: 1440px){',
@@ -50,6 +54,13 @@
     '  #navbar .nav-link[href="index.html"]{ display:none !important; }',
     '  #navbar .nav-link{ padding-left:4px !important; padding-right:4px !important; font-size:12px !important; }',
     '}',
+    /* ---- phone action bar (Call / WhatsApp / Free Assessment) ---- */
+    '#mbar{ display:none; position:fixed; left:0; right:0; bottom:0; z-index:990; gap:8px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:rgba(255,255,255,0.97); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border-top:1px solid rgba(47,72,109,0.12); box-shadow:0 -6px 24px rgba(7,15,28,0.08); }',
+    '#mbar a{ flex:1; display:flex; align-items:center; justify-content:center; gap:6px; height:46px; border-radius:11px; font-family:Inter,sans-serif; font-size:13.5px; font-weight:700; text-decoration:none; white-space:nowrap; }',
+    '#mbar .mb-call{ color:#2F486D; border:1.5px solid rgba(47,72,109,0.25); background:#fff; flex:0.8; }',
+    '#mbar .mb-wa{ color:#fff; background:#25D366; flex:1; }',
+    '#mbar .mb-book{ color:#fff; background:linear-gradient(135deg,#9E8548,#B8994E); flex:1.25; }',
+    '#mbar svg{ flex-shrink:0; }',
     /* ---- hamburger button (hidden until mobile media query flips it on) ---- */
     '#mnav-btn{ display:none; margin-left:auto; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; padding:0; border:none; background:transparent; cursor:pointer; flex-shrink:0; }',
     '#mnav-btn span{ display:block; width:24px; height:2px; border-radius:2px; background:#2F486D; transition:transform .3s cubic-bezier(.16,1,.3,1), opacity .2s; }',
@@ -151,7 +162,21 @@
     return html;
   }
 
+  function initBar() {
+    if (document.getElementById('mbar')) return;
+    // the homepage has the form on the page; everywhere else goes to it
+    var book = document.getElementById('ctaForm') ? '#contact' : 'index.html#contact';
+    var bar = document.createElement('div');
+    bar.id = 'mbar';
+    bar.innerHTML =
+      '<a class="mb-call" href="tel:+96550610991" aria-label="Call Truvia"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M4 4C4 3 5 2 6 2h2l2 5-1.5 1.5S9 10 11 12s3.5 2.5 3.5 2.5L16 13l5 2v2c0 1-1 2-2 2C8 19 1 12 4 4z" stroke="#2F486D" stroke-width="1.6"/></svg>Call</a>' +
+      '<a class="mb-wa" href="https://wa.me/96550610991" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M12 .2C5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.6c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8S18.5.2 12 .2zm5.5 14.2c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.4 1 2.9.8 3.4.7.6-.1 1.8-.7 2-1.5.2-.7.2-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>WhatsApp</a>' +
+      '<a class="mb-book" href="' + book + '">Free Assessment</a>';
+    document.body.appendChild(bar);
+  }
+
   function init() {
+    initBar();
     var nav = document.getElementById('navbar');
     if (!nav || document.getElementById('mnav-btn')) return;
 
