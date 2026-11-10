@@ -45,6 +45,11 @@
     '  #navbar .mara-chip{ display:none !important; }',
     '  #navbar .nav-link{ padding-left:6px !important; padding-right:6px !important; font-size:12.5px !important; }',
     '}',
+    '@media (min-width: 861px) and (max-width: 1000px){',
+    '  #navbar{ padding-left:14px !important; padding-right:14px !important; }',
+    '  #navbar .nav-link[href="index.html"]{ display:none !important; }',
+    '  #navbar .nav-link{ padding-left:4px !important; padding-right:4px !important; font-size:12px !important; }',
+    '}',
     /* ---- hamburger button (hidden until mobile media query flips it on) ---- */
     '#mnav-btn{ display:none; margin-left:auto; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; padding:0; border:none; background:transparent; cursor:pointer; flex-shrink:0; }',
     '#mnav-btn span{ display:block; width:24px; height:2px; border-radius:2px; background:#2F486D; transition:transform .3s cubic-bezier(.16,1,.3,1), opacity .2s; }',
