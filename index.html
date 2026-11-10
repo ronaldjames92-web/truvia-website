@@ -306,6 +306,12 @@ src="https://www.facebook.com/tr?id=1937357283786150&ev=PageView&noscript=1"
   .hero-trust a:hover{ color:#ffffff; }
   .hero-trust .ht-stars{ color:#E8C870; letter-spacing:1px; font-size:12px; }
   .hero-trust .ht-dot{ width:4px; height:4px; border-radius:50%; background:rgba(255,255,255,0.3); }
+  /* Sydney photo strip: swipeable row on phones instead of four stacked photos */
+  @media(max-width:860px){
+    section .city-strip{ display:flex !important; gap:2px !important; height:340px !important; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+    section .city-strip::-webkit-scrollbar{ display:none; }
+    section .city-strip > .city-card{ flex:0 0 84%; height:100% !important; scroll-snap-align:start; }
+  }
 </style>
 
 </head>
@@ -730,7 +736,7 @@ src="https://www.facebook.com/tr?id=1937357283786150&ev=PageView&noscript=1"
 <section style="background:#050D1A;padding:0;overflow:hidden;position:relative;">
 
   <!-- Full-bleed photo grid — headline lives INSIDE Card 1 -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#050D1A;height:400px;">
+  <div class="city-strip" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#050D1A;height:400px;">
 
     <!-- Card 1: St Kilda — carries the editorial headline -->
     <div class="city-card" style="position:relative;overflow:hidden;cursor:pointer;">
