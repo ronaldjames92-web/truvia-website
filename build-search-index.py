@@ -11,7 +11,7 @@ import json
 import re
 
 # Pages excluded from search results
-EXCLUDE = {"privacy.html"}
+EXCLUDE = {"privacy.html", "404.html"}
 
 # Friendly section labels shown next to each result
 SECTION = {
